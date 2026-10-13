@@ -32,8 +32,11 @@ def main():
     # 2. チラシ画像の高解像度ブロック分割
     run_step("2. チラシ高解像度ブロック分割処理", "flyer_image_processor.py")
     
-    # 3. 買い出し提案レポート生成＆アプリ用JSON出力
-    run_step("3. 提案レポート生成＆JSON出力", "notifier.py")
+    # 3. Gemini AIによるチラシ画像解析＆特売品抽出
+    run_step("3. Gemini AIによるチラシ画像解析＆特売品抽出", "auto_gemini_crawler.py")
+    
+    # 4. 買い出し提案レポート生成＆アプリ用JSON出力
+    run_step("4. 提案レポート生成＆JSON出力", "notifier.py")
     
     print("\n🎉 すべての自動更新プロセスが完了しました！")
 
