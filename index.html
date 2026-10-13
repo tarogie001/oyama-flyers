@@ -527,41 +527,61 @@
         return;
       }
 
-      // 配列（best_buy_schedule）の場合
+      // 配列（best_buy_schedule）の場合：日付ごとにグループ化して大きな仕切りを表示
       if (Array.isArray(schedule)) {
         if (schedule.length === 0) {
           listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">現在有効な週間特売情報はありません。</div>`;
           return;
         }
 
-        listEl.innerHTML = schedule.map(item => `
-          <div class="card deal-card" style="margin-bottom: 10px; padding: 12px 14px;">
-            <div class="deal-info">
-              <div class="deal-name" style="font-size: 1.05rem;">
-                <span>${item.ingredient}</span>
-                ${item.is_best_today ? `<span class="badge-today">今日が最安！</span>` : `<span style="background:#e0e0e0; color:#555; font-size:0.7rem; padding:2px 6px; border-radius:4px; font-weight:600;">後日最安</span>`}
+        // 日付ごとにグループ化
+        const grouped = {};
+        schedule.forEach(item => {
+          const groupKey = item.best_day_label || "その他の特売日";
+          if (!grouped[groupKey]) grouped[groupKey] = [];
+          grouped[groupKey].push(item);
+        });
+
+        listEl.innerHTML = Object.keys(grouped).map(groupKey => {
+          const items = grouped[groupKey];
+          const isToday = items.some(it => it.is_best_today);
+
+          return `
+            <div class="day-group" style="margin-bottom: 20px;">
+              <div class="day-header ${isToday ? 'today' : ''}" style="padding: 10px 14px; font-size: 1.05rem; border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+                <span>📅 ${groupKey}</span>
+                ${isToday ? `<span style="background: #ff5722; color: white; font-size: 0.75rem; padding: 2px 8px; border-radius: 12px;">★ 本日買い！</span>` : `<span style="font-size: 0.75rem; opacity: 0.85;">特売日</span>`}
               </div>
-              ${item.raw_name && item.raw_name !== item.ingredient ? `
-                <div style="font-size:0.75rem; color:#d84315; margin-bottom: 3px; font-weight:600;">🏷️ チラシ表記: ${item.raw_name}</div>
-              ` : ''}
-              <div style="font-size: 0.85rem; font-weight: 700; color: #2e7d32; margin-bottom: 2px;">
-                🗓️ 最安日: ${item.best_day_label}
+              <div style="margin-top: 8px;">
+                ${items.map(item => `
+                  <div class="card deal-card" style="margin-bottom: 8px; padding: 12px 14px;">
+                    <div class="deal-info">
+                      <div class="deal-name" style="font-size: 1.05rem;">
+                        <span>${item.ingredient}</span>
+                        ${item.is_best_today ? `<span class="badge-today">今週最安</span>` : `<span style="background:#e0e0e0; color:#555; font-size:0.7rem; padding:2px 6px; border-radius:4px; font-weight:600;">予約チェック</span>`}
+                      </div>
+                      ${item.raw_name && item.raw_name !== item.ingredient ? `
+                        <div style="font-size:0.8rem; color:#d84315; margin-bottom: 3px; font-weight:600;">🏷️ チラシ表記: ${item.raw_name}</div>
+                      ` : ''}
+                      <div class="deal-store" style="margin-bottom: 2px;">
+                        📍 <strong>${item.store}</strong>（${item.store_name || ''}）
+                      </div>
+                      <div style="font-size: 0.75rem; color: #666; margin-bottom: 4px;">規格: ${item.unit || '1個'} | ${item.advice}</div>
+                      ${item.flyer_url ? `
+                        <a href="${item.flyer_url}" target="_blank" rel="noopener" class="btn-flyer">
+                          📄 チラシを確認 ↗
+                        </a>
+                      ` : ''}
+                    </div>
+                    <div class="deal-price-area">
+                      <div class="deal-price">${item.best_price}<small>円</small></div>
+                    </div>
+                  </div>
+                `).join('')}
               </div>
-              <div class="deal-store" style="margin-bottom: 2px;">
-                📍 <strong>${item.store}</strong>（${item.store_name || ''}）
-              </div>
-              <div style="font-size: 0.75rem; color: #777; margin-bottom: 4px;">規格: ${item.unit || '1個'} | ${item.advice}</div>
-              ${item.flyer_url ? `
-                <a href="${item.flyer_url}" target="_blank" rel="noopener" class="btn-flyer">
-                  📄 チラシを確認 ↗
-                </a>
-              ` : ''}
             </div>
-            <div class="deal-price-area">
-              <div class="deal-price">${item.best_price}<small>円</small></div>
-            </div>
-          </div>
-        `).join('');
+          `;
+        }).join('');
         return;
       }
 
