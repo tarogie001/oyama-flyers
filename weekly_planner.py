@@ -162,11 +162,55 @@ class WeeklyPlanner:
             day_key = f"{display_date.strftime('%m/%d')}({b_weekday})"
             weekly_schedule.setdefault(day_key, []).append(best_deal_in_week)
 
+        # 食材ごとに「今日以降で最安になる購入日・店舗」を算出
+        best_buy_schedule = []
+        for ing_name, deals in ingredient_deals.items():
+            valid_deals = [d for d in deals if datetime.date.fromisoformat(d["valid_to"]) >= today_date]
+            if not valid_deals:
+                continue
+            # 今日以降で最安値
+            cheapest = min(valid_deals, key=lambda x: x["price"])
+            c_start = datetime.date.fromisoformat(cheapest["valid_from"])
+            c_end = datetime.date.fromisoformat(cheapest["valid_to"])
+            
+            # 最安日ラベルの算出
+            is_best_today = (c_start <= today_date <= c_end)
+            if is_best_today:
+                if c_end == today_date:
+                    best_day_label = f"本日 {today_date.strftime('%m/%d')} 限り！"
+                    advice = "本日が今週の底値！今日中に買いましょう"
+                else:
+                    best_day_label = f"本日〜{c_end.strftime('%m/%d')}まで"
+                    advice = "現在底値！今日買ってもOKです"
+            else:
+                w_jp = ["月", "火", "水", "木", "金", "土", "日"][c_start.weekday()]
+                best_day_label = f"{c_start.strftime('%m/%d')}({w_jp})から"
+                advice = f"{c_start.strftime('%m/%d')}の特売開始まで待機推奨"
+
+            best_buy_schedule.append({
+                "ingredient": ing_name,
+                "raw_name": cheapest.get("product_raw_name", ing_name),
+                "category": cheapest["category"],
+                "best_price": cheapest["price"],
+                "unit": cheapest["unit"],
+                "store": cheapest["chain"],
+                "store_id": cheapest["store_id"],
+                "store_name": cheapest["store_name"],
+                "best_day_label": best_day_label,
+                "is_best_today": is_best_today,
+                "advice": advice,
+                "sort_date": max(c_start, today_date).isoformat()
+            })
+
+        # 最安日が近い順（今日最安のものを上に）ソート
+        best_buy_schedule.sort(key=lambda x: (0 if x["is_best_today"] else 1, x["sort_date"], x["best_price"]))
+
         return {
             "today": today_date,
             "buy_today": buy_today,
             "wait_for_later": wait_for_later,
-            "weekly_schedule": weekly_schedule
+            "weekly_schedule": weekly_schedule,
+            "best_buy_schedule": best_buy_schedule
         }
 
     def generate_optimized_report(self, target_date: Optional[str] = None) -> str:
@@ -287,6 +331,20 @@ class WeeklyPlanner:
                 })
             enriched_weekly[day_k] = enriched_items
 
+        # best_buy_schedule にも店舗チラシURLを付与
+        enriched_best_buy = []
+        for item in plan["best_buy_schedule"]:
+            s_info = None
+            for s in self.stores:
+                if s["chain"] == item.get("store") or s["id"] == item.get("store_id"):
+                    s_info = s
+                    break
+            enriched_best_buy.append({
+                **item,
+                "store_name": s_info["name"] if s_info else item.get("store_name", item["store"]),
+                "flyer_url": s_info["url"] if s_info else ""
+            })
+
         export_data = {
             "updated_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
             "target_date": plan["today"].isoformat(),
@@ -295,6 +353,7 @@ class WeeklyPlanner:
             "wait_for_later": plan["wait_for_later"],
             "no_deal_staples": no_deal_staples,
             "weekly_schedule": enriched_weekly,
+            "best_buy_schedule": enriched_best_buy,
             "stores": self.stores
         }
 

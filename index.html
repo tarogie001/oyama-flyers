@@ -458,8 +458,8 @@
         // 2. 「今日買うもの」の描画
         try { renderBuyToday(data.buy_today, data.no_deal_staples); } catch(e) { console.error("buy_today render error", e); }
 
-        // 3. 「週間スケジュール」の描画
-        try { renderWeekly(data.weekly_schedule); } catch(e) { console.error("weekly render error", e); }
+        // 3. 「週間スケジュール」の描画（食材別最安購入日）
+        try { renderWeekly(data.best_buy_schedule || data.weekly_schedule); } catch(e) { console.error("weekly render error", e); }
 
         // 4. 「15店舗チラシ一覧」の描画
         try { renderStores(data.stores); } catch(e) { console.error("stores render error", e); }
@@ -519,52 +519,68 @@
       }
     }
 
-    // 「週間スケジュール」レンダリング
+    // 「週間スケジュール」レンダリング（食材ごとの最安日ナビゲーション）
     function renderWeekly(schedule) {
       const listEl = document.getElementById('weeklyScheduleList');
-      if (!schedule || typeof schedule !== 'object' || Object.keys(schedule).length === 0) {
+      if (!schedule) {
         listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">週間スケジュールはありません。</div>`;
         return;
       }
 
-      // 日付順にソートして描画
-      const dayKeys = Object.keys(schedule).sort();
-      listEl.innerHTML = dayKeys.map(dayKey => {
-        const items = schedule[dayKey] || [];
-        const isToday = dayKey.includes('本日') || (document.getElementById('lblTargetDate') && dayKey.includes(document.getElementById('lblTargetDate').textContent.slice(-5)));
-        
-        return `
-          <div class="day-group">
-            <div class="day-header ${isToday ? 'today' : ''}">
-              📅 ${dayKey} ${isToday ? '★ 本日' : ''}
-            </div>
-            ${items.length === 0 ? `
-              <div class="card" style="color: #888; font-size: 0.85rem; padding: 10px 14px;">この日の特売予定はありません</div>
-            ` : items.map(item => `
-              <div class="card deal-card" style="margin-bottom: 6px; padding: 10px 14px;">
-                <div class="deal-info">
-                  <div class="deal-name" style="font-size: 0.95rem;">
-                    <span>${item.ingredient_name || item.ingredient}</span>
-                    <span style="font-size: 0.8rem; font-weight: normal; color: #666;">(${item.unit || ''})</span>
-                  </div>
-                  ${item.product_raw_name && item.product_raw_name !== item.ingredient_name ? `
-                    <div style="font-size:0.75rem; color:#d84315; margin-bottom: 2px;">🏷️ ${item.product_raw_name}</div>
-                  ` : ''}
-                  <div class="deal-store" style="margin-bottom: 0;">📍 ${item.store_name || item.chain || item.store}</div>
-                  ${item.flyer_url ? `
-                    <a href="${item.flyer_url}" target="_blank" rel="noopener" class="btn-flyer" style="margin-top: 4px;">
-                      📄 チラシを確認 ↗
-                    </a>
-                  ` : ''}
-                </div>
-                <div class="deal-price-area">
-                  <div class="deal-price" style="font-size: 1.15rem;">${item.price}<small>円</small></div>
-                </div>
+      // 配列（best_buy_schedule）の場合
+      if (Array.isArray(schedule)) {
+        if (schedule.length === 0) {
+          listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">現在有効な週間特売情報はありません。</div>`;
+          return;
+        }
+
+        listEl.innerHTML = schedule.map(item => `
+          <div class="card deal-card" style="margin-bottom: 10px; padding: 12px 14px;">
+            <div class="deal-info">
+              <div class="deal-name" style="font-size: 1.05rem;">
+                <span>${item.ingredient}</span>
+                ${item.is_best_today ? `<span class="badge-today">今日が最安！</span>` : `<span style="background:#e0e0e0; color:#555; font-size:0.7rem; padding:2px 6px; border-radius:4px; font-weight:600;">後日最安</span>`}
               </div>
-            `).join('')}
+              ${item.raw_name && item.raw_name !== item.ingredient ? `
+                <div style="font-size:0.75rem; color:#d84315; margin-bottom: 3px; font-weight:600;">🏷️ チラシ表記: ${item.raw_name}</div>
+              ` : ''}
+              <div style="font-size: 0.85rem; font-weight: 700; color: #2e7d32; margin-bottom: 2px;">
+                🗓️ 最安日: ${item.best_day_label}
+              </div>
+              <div class="deal-store" style="margin-bottom: 2px;">
+                📍 <strong>${item.store}</strong>（${item.store_name || ''}）
+              </div>
+              <div style="font-size: 0.75rem; color: #777; margin-bottom: 4px;">規格: ${item.unit || '1個'} | ${item.advice}</div>
+              ${item.flyer_url ? `
+                <a href="${item.flyer_url}" target="_blank" rel="noopener" class="btn-flyer">
+                  📄 チラシを確認 ↗
+                </a>
+              ` : ''}
+            </div>
+            <div class="deal-price-area">
+              <div class="deal-price">${item.best_price}<small>円</small></div>
+            </div>
           </div>
-        `;
-      }).join('');
+        `).join('');
+        return;
+      }
+
+      // 互換性フォールバック（辞書型の場合）
+      const dayKeys = Object.keys(schedule).sort();
+      listEl.innerHTML = dayKeys.map(dayKey => `
+        <div class="day-group">
+          <div class="day-header">📅 ${dayKey}</div>
+          ${(schedule[dayKey] || []).map(item => `
+            <div class="card deal-card" style="margin-bottom: 6px; padding: 10px 14px;">
+              <div class="deal-info">
+                <div class="deal-name" style="font-size: 0.95rem;">${item.ingredient_name || item.ingredient} (${item.unit || ''})</div>
+                <div class="deal-store">📍 ${item.store_name || item.chain}</div>
+              </div>
+              <div class="deal-price-area"><div class="deal-price">${item.price}<small>円</small></div></div>
+            </div>
+          `).join('')}
+        </div>
+      `).join('');
     }
 
     // 「15店舗チラシ一覧」レンダリング
