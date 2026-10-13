@@ -1,85 +1,8 @@
 {
-  "updated_at": "2026-10-13 19:20",
-  "target_date": "2026-10-13",
-  "target_date_label": "2026年10月13日",
+  "updated_at": "2026-10-14 00:05",
+  "target_date": "2026-10-14",
+  "target_date_label": "2026年10月14日",
   "buy_today": [
-    {
-      "ingredient": "ニンジン",
-      "category": "野菜",
-      "price": 38,
-      "unit": "1本",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
-      "ingredient": "玉ねぎ",
-      "category": "野菜",
-      "price": 38,
-      "unit": "1個",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
-      "ingredient": "ジャガイモ",
-      "category": "野菜",
-      "price": 38,
-      "unit": "1個",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
-      "ingredient": "かぼちゃ",
-      "category": "野菜",
-      "price": 39,
-      "unit": "100g",
-      "store": "ベルク",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ベルク フォルテ間々田店",
-      "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
-    },
-    {
-      "ingredient": "しめじ",
-      "category": "きのこ類",
-      "price": 78,
-      "unit": "1パック",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
-      "ingredient": "えのき",
-      "category": "きのこ類",
-      "price": 78,
-      "unit": "1パック",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
-      "ingredient": "鶏手羽元",
-      "category": "精肉（鶏肉）",
-      "price": 78,
-      "unit": "100g",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
     {
       "ingredient": "【チラシ】すべてのチラシを見る(全6枚)",
       "category": "その他",
@@ -202,17 +125,6 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "【チラシ】10/7号 焼肉＆食の記念日",
-      "category": "その他",
-      "price": 99,
-      "unit": "チラシ掲載品",
-      "store": "ベイシア",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ベイシア Foods Park 結城店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
       "ingredient": "【チラシ】フードオアシス オータニ 小山店 本日の特売情報",
       "category": "その他",
       "price": 99,
@@ -277,28 +189,6 @@
       "note": "今週最安値",
       "store_name": "ヤオハン 城東店",
       "flyer_url": "https://tokubai.co.jp/%E3%83%A4%E3%82%AA%E3%83%8F%E3%83%B3/259695"
-    },
-    {
-      "ingredient": "【チラシ】ジョイフーズ★10/10～10/13★",
-      "category": "その他",
-      "price": 99,
-      "unit": "チラシ掲載品",
-      "store": "ジョイフーズ",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ジョイフーズ 小山城南店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/860898/"
-    },
-    {
-      "ingredient": "【チラシ】ジョイフーズ★10/6～10/13★",
-      "category": "その他",
-      "price": 99,
-      "unit": "チラシ掲載品",
-      "store": "ジョイフーズ",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ジョイフーズ 小山城南店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/860898/"
     },
     {
       "ingredient": "【チラシ】ジョイフーズ　9/18～10/31",
@@ -988,8 +878,8 @@
       "price": 99,
       "unit": "1袋",
       "store": "とりせん",
-      "is_today_only": false,
-      "note": "今週最安値",
+      "is_today_only": true,
+      "note": "本日限り！",
       "store_name": "とりせん 小山土塔店",
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
@@ -999,8 +889,8 @@
       "price": 99,
       "unit": "100g",
       "store": "とりせん",
-      "is_today_only": false,
-      "note": "今週最安値",
+      "is_today_only": true,
+      "note": "本日限り！",
       "store_name": "とりせん 小山土塔店",
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
@@ -1010,8 +900,8 @@
       "price": 99,
       "unit": "100g",
       "store": "とりせん",
-      "is_today_only": false,
-      "note": "今週最安値",
+      "is_today_only": true,
+      "note": "本日限り！",
       "store_name": "とりせん 小山土塔店",
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
@@ -1423,17 +1313,6 @@
       "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
     },
     {
-      "ingredient": "鶏むね肉",
-      "category": "精肉（鶏肉）",
-      "price": 108,
-      "unit": "100g",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
       "ingredient": "さけ",
       "category": "その他",
       "price": 108,
@@ -1443,72 +1322,6 @@
       "note": "今週最安値",
       "store_name": "ベルク フォルテ間々田店",
       "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
-    },
-    {
-      "ingredient": "豚肩ロース",
-      "category": "精肉（豚肉）",
-      "price": 118,
-      "unit": "100g",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
-      "ingredient": "豚もも（こま切れ・切り落とし）",
-      "category": "精肉（豚肉）",
-      "price": 118,
-      "unit": "100g",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
-      "ingredient": "豚ロース",
-      "category": "精肉（豚肉）",
-      "price": 138,
-      "unit": "100g",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
-      "ingredient": "鮭",
-      "category": "魚介類",
-      "price": 148,
-      "unit": "1切",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
-      "ingredient": "鶏もも肉",
-      "category": "精肉（鶏肉）",
-      "price": 158,
-      "unit": "100g",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
-    },
-    {
-      "ingredient": "まぐろ",
-      "category": "魚介類",
-      "price": 298,
-      "unit": "1パック",
-      "store": "かましん",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "かましん 小山天神町店",
-      "flyer_url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
     }
   ],
   "wait_for_later": [],
