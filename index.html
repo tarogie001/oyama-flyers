@@ -522,34 +522,44 @@
     // 「週間スケジュール」レンダリング
     function renderWeekly(schedule) {
       const listEl = document.getElementById('weeklyScheduleList');
-      if (!schedule || schedule.length === 0) {
+      if (!schedule || typeof schedule !== 'object' || Object.keys(schedule).length === 0) {
         listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">週間スケジュールはありません。</div>`;
         return;
       }
 
-      listEl.innerHTML = schedule.map(day => `
-        <div class="day-group">
-          <div class="day-header ${day.is_today ? 'today' : ''}">
-            ${day.day_label} ${day.is_today ? '★ 本日' : ''}
-          </div>
-          ${day.items.length === 0 ? `
-            <div class="card" style="color: #888; font-size: 0.85rem; padding: 10px 14px;">この日の特売予定はありません</div>
-          ` : day.items.map(item => `
-            <div class="card deal-card" style="margin-bottom: 6px; padding: 10px 14px;">
-              <div class="deal-info">
-                <div class="deal-name" style="font-size: 0.95rem;">
-                  <span>${item.ingredient}</span>
-                  <span style="font-size: 0.8rem; font-weight: normal; color: #666;">(${item.unit})</span>
-                </div>
-                <div class="deal-store" style="margin-bottom: 0;">📍 ${item.store}</div>
-              </div>
-              <div class="deal-price-area">
-                <div class="deal-price" style="font-size: 1.15rem;">${item.price}<small>円</small></div>
-              </div>
+      // 日付順にソートして描画
+      const dayKeys = Object.keys(schedule).sort();
+      listEl.innerHTML = dayKeys.map(dayKey => {
+        const items = schedule[dayKey] || [];
+        const isToday = dayKey.includes('本日') || (document.getElementById('lblTargetDate') && dayKey.includes(document.getElementById('lblTargetDate').textContent.slice(-5)));
+        
+        return `
+          <div class="day-group">
+            <div class="day-header ${isToday ? 'today' : ''}">
+              📅 ${dayKey} ${isToday ? '★ 本日' : ''}
             </div>
-          `).join('')}
-        </div>
-      `).join('');
+            ${items.length === 0 ? `
+              <div class="card" style="color: #888; font-size: 0.85rem; padding: 10px 14px;">この日の特売予定はありません</div>
+            ` : items.map(item => `
+              <div class="card deal-card" style="margin-bottom: 6px; padding: 10px 14px;">
+                <div class="deal-info">
+                  <div class="deal-name" style="font-size: 0.95rem;">
+                    <span>${item.ingredient_name || item.ingredient}</span>
+                    <span style="font-size: 0.8rem; font-weight: normal; color: #666;">(${item.unit || ''})</span>
+                  </div>
+                  ${item.product_raw_name && item.product_raw_name !== item.ingredient_name ? `
+                    <div style="font-size:0.75rem; color:#d84315; margin-bottom: 2px;">🏷️ ${item.product_raw_name}</div>
+                  ` : ''}
+                  <div class="deal-store" style="margin-bottom: 0;">📍 ${item.store_name || item.chain || item.store}</div>
+                </div>
+                <div class="deal-price-area">
+                  <div class="deal-price" style="font-size: 1.15rem;">${item.price}<small>円</small></div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }).join('');
     }
 
     // 「15店舗チラシ一覧」レンダリング
