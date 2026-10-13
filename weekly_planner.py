@@ -126,6 +126,7 @@ class WeeklyPlanner:
                         "price": best_deal_today["price"],
                         "unit": best_deal_today["unit"],
                         "store": best_deal_today["chain"],
+                        "store_id": best_deal_today["store_id"],
                         "is_today_only": is_today_only,
                         "note": "本日限り！" if is_today_only else "今週最安値"
                     })

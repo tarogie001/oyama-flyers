@@ -71,9 +71,24 @@ class DealAnalyzer:
                         }
         return None
 
+    def validate_deal_name(self, raw_name: str) -> bool:
+        """不自然な合成文字列やOCR誤読ノイズを弾くバリデーション"""
+        if not raw_name or len(raw_name) < 2:
+            return False
+        # 不自然な肉の部位混同（例: 豚肉とスティックなど）
+        if "豚" in raw_name and "スティック" in raw_name:
+            return False
+        # チラシのボタンやUIノイズ
+        if any(w in raw_name for w in ["チラシ", "クリック", "更新", "ページ", "セール", "全6枚", "全5枚", "全4枚"]):
+            return False
+        return True
+
     def add_deal(self, store_id: str, product_raw_name: str, price: int,
                  unit: str, valid_from: str, valid_to: str, note: str = "") -> bool:
         """特売品をデータベースに登録"""
+        if not self.validate_deal_name(product_raw_name):
+            return False
+
         match = self.match_ingredient(product_raw_name)
         category = match["category"] if match else "その他"
         ingredient_name = match["ingredient_name"] if match else product_raw_name
