@@ -1,0 +1,51 @@
+name: Daily Flyer Crawler & Deals Update
+
+on:
+  schedule:
+    # UTC時刻で指定（JST = UTC + 9時間）
+    # 22:00 UTC = JST 07:00 (朝の速報)
+    # 00:00 UTC = JST 09:00 (朝の更新本番)
+    # 06:00 UTC = JST 15:00 (夕方のチラシ・特売追加)
+    - cron: '0 22,0,6 * * *'
+  workflow_dispatch: # 手動実行も可能
+
+jobs:
+  crawl-and-update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 playwright pypdf pillow
+          playwright install --with-deps chromium
+
+      - name: Run Crawler & Update Deals
+        run: |
+          python run_daily.py
+
+      - name: Commit & Push Updated Data
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add latest_deals.json deals.db today_report.txt flyer_images/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(auto): update deals data [skip ci]" && git push)
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages

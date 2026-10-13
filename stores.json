@@ -1,0 +1,123 @@
+[
+  {
+    "id": "york_benimaru",
+    "chain": "ヨークベニマル",
+    "name": "ヨークベニマル 小山雨ヶ谷店",
+    "type": "tokubai",
+    "area": "小山市雨ケ谷町",
+    "url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+  },
+  {
+    "id": "torisen",
+    "chain": "とりせん",
+    "name": "とりせん 小山土塔店",
+    "type": "official",
+    "area": "小山市土塔",
+    "shufoo_id": "269396",
+    "url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+  },
+  {
+    "id": "tairaya",
+    "chain": "たいらや",
+    "name": "たいらや 粟宮店",
+    "type": "official",
+    "area": "小山市粟宮",
+    "url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+  },
+  {
+    "id": "beisia",
+    "chain": "ベイシア",
+    "name": "ベイシア Foods Park 結城店",
+    "type": "shufoo",
+    "area": "結城市・小山日常圏",
+    "url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+  },
+  {
+    "id": "otani",
+    "chain": "オータニ",
+    "name": "フードオアシス オータニ 小山店",
+    "type": "official",
+    "area": "小山市城東",
+    "url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
+  },
+  {
+    "id": "kamashin",
+    "chain": "かましん",
+    "name": "かましん 小山天神町店",
+    "type": "official",
+    "area": "小山市天神町",
+    "url": "https://kamashin-supermarket.jp/shop/%e5%b0%8f%e5%b1%b1%e5%a4%a9%e7%a5%9e%e7%94%ba%e5%ba%97/#flyer"
+  },
+  {
+    "id": "yaohan",
+    "chain": "ヤオハン",
+    "name": "ヤオハン 城東店",
+    "type": "tokubai",
+    "area": "小山市城東",
+    "url": "https://tokubai.co.jp/%E3%83%A4%E3%82%AA%E3%83%8F%E3%83%B3/259695"
+  },
+  {
+    "id": "joyfoods",
+    "chain": "ジョイフーズ",
+    "name": "ジョイフーズ 小山城南店",
+    "type": "shufoo",
+    "area": "小山市西城南",
+    "url": "https://www.shufoo.net/pntweb/shopDetail/860898/"
+  },
+  {
+    "id": "trial",
+    "chain": "トライアル",
+    "name": "トライアル 間々田店",
+    "type": "official",
+    "area": "小山市乙女",
+    "url": "https://www.trial-net.co.jp/shops/446"
+  },
+  {
+    "id": "belc",
+    "chain": "ベルク",
+    "name": "ベルク フォルテ間々田店",
+    "type": "delish",
+    "area": "小山市美しが丘",
+    "url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
+  },
+  {
+    "id": "maruetsu",
+    "chain": "マルエツ",
+    "name": "マルエツ 小山店",
+    "type": "official",
+    "area": "小山市城山町",
+    "url": "https://www.maruetsu.co.jp/store/9219/"
+  },
+  {
+    "id": "japanmeat",
+    "chain": "ジャパンミート",
+    "name": "ジャパンミート生鮮館 小山店",
+    "type": "shufoo",
+    "area": "小山市喜沢",
+    "url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+  },
+  {
+    "id": "kawachi",
+    "chain": "カワチ薬品",
+    "name": "カワチ薬品 小山雨ケ谷店",
+    "type": "shufoo",
+    "area": "小山市雨ケ谷町",
+    "url": "https://www.shufoo.net/pntweb/shopDetail/879245/"
+  },
+  {
+    "id": "sugi",
+    "chain": "スギ薬局",
+    "name": "スギ薬局 小山西城南店",
+    "type": "shufoo",
+    "area": "小山市西城南",
+    "url": "https://www.shufoo.net/pntweb/shopDetail/102717/"
+  },
+  {
+    "id": "welcia",
+    "chain": "ウエルシア",
+    "name": "ウエルシア 小山西城南店",
+    "type": "shufoo",
+    "area": "小山市西城南",
+    "url": "https://www.shufoo.net/pntweb/shopDetail/298837/"
+  }
+]

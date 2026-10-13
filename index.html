@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#2e7d32">
+  <title>小山市特売チラシ案内</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --primary-light: #e8f5e9;
+      --primary-dark: #1b5e20;
+      --accent: #e65100;
+      --accent-light: #fff3e0;
+      --bg: #f5f6f8;
+      --card-bg: #ffffff;
+      --text-main: #212121;
+      --text-sub: #666666;
+      --border: #e0e0e0;
+      --radius: 12px;
+      --shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      padding-bottom: 75px;
+    }
+
+    /* ヘッダー */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--primary);
+      color: white;
+      padding: 14px 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-update {
+      font-size: 0.75rem;
+      opacity: 0.9;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 8px;
+      border-radius: 20px;
+    }
+
+    /* メインコンテナ */
+    main {
+      padding: 12px 14px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* セクション見出し */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 14px 0 10px 0;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-count {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    /* カードUI */
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 14px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .deal-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .deal-info {
+      flex: 1;
+      padding-right: 10px;
+    }
+
+    .deal-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-today {
+      background: var(--accent);
+      color: white;
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .deal-store {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .deal-unit {
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    .deal-price-area {
+      text-align: right;
+      min-width: 90px;
+    }
+
+    .deal-price {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .deal-price small {
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-left: 2px;
+    }
+
+    .btn-flyer {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 5px 10px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-flyer:hover, .btn-flyer:active {
+      background: #c8e6c9;
+    }
+
+    /* 通常店頭価格・定番セクション */
+    .staples-box {
+      background: #fafafa;
+      border: 1px dashed #cccccc;
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin-top: 14px;
+    }
+
+    .staples-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #666;
+      margin-bottom: 6px;
+    }
+
+    .staple-tag {
+      display: inline-block;
+      background: #eeeeee;
+      color: #555;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin: 3px 4px 3px 0;
+    }
+
+    /* 週間カレンダー */
+    .day-group {
+      margin-bottom: 16px;
+    }
+
+    .day-header {
+      background: #e0e0e0;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .day-header.today {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* 15店舗チラシ一覧 */
+    .store-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .store-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .store-details {
+      flex: 1;
+    }
+
+    .store-chain {
+      font-size: 0.75rem;
+      color: var(--text-sub);
+    }
+
+    .store-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 2px 0;
+    }
+
+    .btn-store-flyer {
+      background: var(--primary);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+
+    .btn-store-flyer:active {
+      background: var(--primary-dark);
+    }
+
+    /* 下部ナビゲーションバー */
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: white;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+    }
+
+    .nav-btn {
+      flex: 1;
+      height: 100%;
+      border: none;
+      background: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: #888;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .nav-btn.active {
+      color: var(--primary);
+    }
+
+    .nav-icon {
+      font-size: 1.25rem;
+    }
+
+    /* リロードボタン */
+    .btn-reload {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-title">
+      <span>🛒</span>
+      <span>小山市特売案内</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span class="header-update" id="lblUpdated">更新確認中...</span>
+      <button class="btn-reload" onclick="loadDealsData()" title="最新情報を再取得">🔄</button>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <!-- タブ 1: 今日買うもの -->
+    <div id="tab-today" class="tab-content active">
+      <div class="section-header">
+        <div class="section-title">
+          <span>🎯</span>
+          <span>本日（<span id="lblTargetDate">今日</span>）買うべき特売品</span>
+        </div>
+        <span class="badge-count" id="badgeBuyTodayCount">0品</span>
+      </div>
+
+      <div id="buyTodayList">
+        <div class="card" style="text-align: center; color: #888; padding: 24px;">データを読み込み中...</div>
+      </div>
+
+      <!-- チラシ目玉特売なし（店頭通常価格）の定番食材 -->
+      <div class="staples-box" id="staplesBox" style="display: none;">
+        <div class="staples-title">ℹ️ 本日のチラシ特売なし（店頭平常価格）</div>
+        <div id="staplesList"></div>
+      </div>
+    </div>
+
+    <!-- タブ 2: 週間スケジュール -->
+    <div id="tab-weekly" class="tab-content">
+      <div class="section-header">
+        <div class="section-title">
+          <span>📅</span>
+          <span>週間 最安買い出しスケジュール</span>
+        </div>
+      </div>
+      <div id="weeklyScheduleList">
+        <div class="card" style="text-align: center; color: #888; padding: 24px;">データを読み込み中...</div>
+      </div>
+    </div>
+
+    <!-- タブ 3: 15店舗チラシ一覧 -->
+    <div id="tab-stores" class="tab-content">
+      <div class="section-header">
+        <div class="section-title">
+          <span>📰</span>
+          <span>小山市周辺 15店舗チラシ一覧</span>
+        </div>
+        <span class="badge-count">15店舗</span>
+      </div>
+      <div class="store-grid" id="storesList">
+        <div class="card" style="text-align: center; color: #888; padding: 24px;">店舗情報を読み込み中...</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 下部ナビゲーション -->
+  <nav>
+    <button class="nav-btn active" onclick="switchTab('tab-today', this)">
+      <span class="nav-icon">🛒</span>
+      <span>今日買うもの</span>
+    </button>
+    <button class="nav-btn" onclick="switchTab('tab-weekly', this)">
+      <span class="nav-icon">📅</span>
+      <span>週間予定</span>
+    </button>
+    <button class="nav-btn" onclick="switchTab('tab-stores', this)">
+      <span class="nav-icon">📰</span>
+      <span>15店チラシ</span>
+    </button>
+  </nav>
+
+  <script>
+    // タブ切り替え
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+    // データ取得＆描画
+    async function loadDealsData() {
+      const lblUpdated = document.getElementById('lblUpdated');
+      lblUpdated.textContent = "更新中...";
+
+      try {
+        // キャッシュを防ぎつつ最新の latest_deals.json を取得
+        const response = await fetch('latest_deals.json?t=' + new Date().getTime());
+        if (!response.ok) throw new Error("データ取得失敗");
+        const data = await response.json();
+
+        // 1. ヘッダー情報の更新
+        lblUpdated.textContent = data.updated_at ? data.updated_at + " 更新" : "最新";
+        if (data.target_date_label) {
+          document.getElementById('lblTargetDate').textContent = data.target_date_label;
+        }
+
+        // 2. 「今日買うもの」の描画
+        renderBuyToday(data.buy_today, data.no_deal_staples);
+
+        // 3. 「週間スケジュール」の描画
+        renderWeekly(data.weekly_schedule);
+
+        // 4. 「15店舗チラシ一覧」の描画
+        renderStores(data.stores);
+
+      } catch (err) {
+        console.error(err);
+        lblUpdated.textContent = "オフライン表示";
+      }
+    }
+
+    // 「今日買うもの」レンダリング
+    function renderBuyToday(deals, staples) {
+      const listEl = document.getElementById('buyTodayList');
+      const countEl = document.getElementById('badgeBuyTodayCount');
+      
+      if (!deals || deals.length === 0) {
+        listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">本日限りの特売情報はありません。</div>`;
+        countEl.textContent = "0品";
+        return;
+      }
+
+      countEl.textContent = deals.length + "品";
+      listEl.innerHTML = deals.map(item => `
+        <div class="card deal-card">
+          <div class="deal-info">
+            <div class="deal-name">
+              <span>${item.ingredient}</span>
+              ${item.is_today_only ? `<span class="badge-today">本日限り</span>` : ''}
+            </div>
+            <div class="deal-store">
+              📍 <strong>${item.store}</strong>（${item.store_name || ''}）
+            </div>
+            <div class="deal-unit">規格: ${item.unit} | 分類: ${item.category}</div>
+            ${item.flyer_url ? `
+              <a href="${item.flyer_url}" target="_blank" rel="noopener" class="btn-flyer">
+                📄 チラシを確認 ↗
+              </a>
+            ` : ''}
+          </div>
+          <div class="deal-price-area">
+            <div class="deal-price">${item.price}<small>円</small></div>
+          </div>
+        </div>
+      `).join('');
+
+      // 定番平常価格
+      const staplesBox = document.getElementById('staplesBox');
+      const staplesList = document.getElementById('staplesList');
+      if (staples && staples.length > 0) {
+        staplesBox.style.display = 'block';
+        staplesList.innerHTML = staples.map(s => `
+          <span class="staple-tag">${s.ingredient} (${s.note})</span>
+        `).join('');
+      } else {
+        staplesBox.style.display = 'none';
+      }
+    }
+
+    // 「週間スケジュール」レンダリング
+    function renderWeekly(schedule) {
+      const listEl = document.getElementById('weeklyScheduleList');
+      if (!schedule || schedule.length === 0) {
+        listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">週間スケジュールはありません。</div>`;
+        return;
+      }
+
+      listEl.innerHTML = schedule.map(day => `
+        <div class="day-group">
+          <div class="day-header ${day.is_today ? 'today' : ''}">
+            ${day.day_label} ${day.is_today ? '★ 本日' : ''}
+          </div>
+          ${day.items.length === 0 ? `
+            <div class="card" style="color: #888; font-size: 0.85rem; padding: 10px 14px;">この日の特売予定はありません</div>
+          ` : day.items.map(item => `
+            <div class="card deal-card" style="margin-bottom: 6px; padding: 10px 14px;">
+              <div class="deal-info">
+                <div class="deal-name" style="font-size: 0.95rem;">
+                  <span>${item.ingredient}</span>
+                  <span style="font-size: 0.8rem; font-weight: normal; color: #666;">(${item.unit})</span>
+                </div>
+                <div class="deal-store" style="margin-bottom: 0;">📍 ${item.store}</div>
+              </div>
+              <div class="deal-price-area">
+                <div class="deal-price" style="font-size: 1.15rem;">${item.price}<small>円</small></div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `).join('');
+    }
+
+    // 「15店舗チラシ一覧」レンダリング
+    function renderStores(stores) {
+      const listEl = document.getElementById('storesList');
+      if (!stores || stores.length === 0) {
+        listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">店舗情報がありません。</div>`;
+        return;
+      }
+
+      listEl.innerHTML = stores.map(store => `
+        <div class="store-card">
+          <div class="store-details">
+            <div class="store-chain">${store.chain}</div>
+            <div class="store-name">${store.name}</div>
+          </div>
+          <a href="${store.flyer_url}" target="_blank" rel="noopener" class="btn-store-flyer">
+            <span>チラシを見る</span>
+            <span>↗</span>
+          </a>
+        </div>
+      `).join('');
+    }
+
+    // 初回読み込み
+    window.addEventListener('DOMContentLoaded', loadDealsData);
+  </script>
+</body>
+</html>

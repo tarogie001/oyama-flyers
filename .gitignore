@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+env/
+.venv/
+
+# Playwright
+.playwright/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large flyer raw dumps (keep blocks/crops if needed, ignore massive downloads)
+flyer_images/*.tmp
+flyer_images/*.part

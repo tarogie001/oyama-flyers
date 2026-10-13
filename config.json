@@ -1,0 +1,16 @@
+{
+  "notification": {
+    "method": "file",
+    "line": {
+      "channel_access_token": "ここにLINE公式アカウントのチャネルアクセストークンを入力",
+      "user_id": "ここに通知を受け取るLINEのユーザーIDを入力"
+    },
+    "email": {
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "sender_email": "送信元のメールアドレス@gmail.com",
+      "sender_password": "Googleアプリパスワード",
+      "recipient_email": "通知を受け取るスマホのメールアドレス"
+    }
+  }
+}
