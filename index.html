@@ -489,6 +489,7 @@
               <span>${item.ingredient}</span>
               ${item.is_today_only ? `<span class="badge-today">本日限り</span>` : ''}
             </div>
+            ${item.raw_name && item.raw_name !== item.ingredient ? `<div style="font-size:0.8rem; color:#d84315; margin-bottom:4px; font-weight:600;">🏷️ チラシ表記: ${item.raw_name}</div>` : ''}
             <div class="deal-store">
               📍 <strong>${item.store}</strong>（${item.store_name || ''}）
             </div>

@@ -121,6 +121,7 @@ class WeeklyPlanner:
                     is_today_only = (best_deal_today["valid_to"] == today_str)
                     buy_today.append({
                         "ingredient": ing_name,
+                        "raw_name": best_deal_today.get("product_raw_name", ing_name),
                         "category": best_deal_today["category"],
                         "price": best_deal_today["price"],
                         "unit": best_deal_today["unit"],

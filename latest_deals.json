@@ -1,10 +1,11 @@
 {
-  "updated_at": "2026-10-14 00:11",
+  "updated_at": "2026-10-14 00:20",
   "target_date": "2026-10-14",
   "target_date_label": "2026年10月14日",
   "buy_today": [
     {
       "ingredient": "まいたけ",
+      "raw_name": "まいたけ 1パック",
       "category": "きのこ類",
       "price": 99,
       "unit": "1パック",
@@ -16,6 +17,7 @@
     },
     {
       "ingredient": "しいたけ",
+      "raw_name": "生しいたけ 1袋",
       "category": "きのこ類",
       "price": 99,
       "unit": "1袋",
@@ -27,6 +29,7 @@
     },
     {
       "ingredient": "豚肉",
+      "raw_name": "国産豚肉 味付スティック",
       "category": "精肉（豚肉）",
       "price": 99,
       "unit": "100g",
@@ -38,6 +41,7 @@
     },
     {
       "ingredient": "豚バラ（うすぎり）",
+      "raw_name": "豚バラ お好み焼き用",
       "category": "精肉（豚肉）",
       "price": 99,
       "unit": "100g",
@@ -49,6 +53,7 @@
     },
     {
       "ingredient": "ベーコン",
+      "raw_name": "ベーコン",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -60,6 +65,7 @@
     },
     {
       "ingredient": "ソーセージ・ウインナー",
+      "raw_name": "ソーセージ・ウインナー",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -71,6 +77,7 @@
     },
     {
       "ingredient": "ハム",
+      "raw_name": "ハム",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -82,6 +89,7 @@
     },
     {
       "ingredient": "牛ステーキ用",
+      "raw_name": "牛ステーキ用",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -93,6 +101,7 @@
     },
     {
       "ingredient": "牛タン",
+      "raw_name": "牛タン",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -104,6 +113,7 @@
     },
     {
       "ingredient": "鶏ムネ",
+      "raw_name": "鶏ムネ",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -115,6 +125,7 @@
     },
     {
       "ingredient": "牛カルビ",
+      "raw_name": "牛カルビ",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -126,6 +137,7 @@
     },
     {
       "ingredient": "牛モツ",
+      "raw_name": "牛モツ",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -137,6 +149,7 @@
     },
     {
       "ingredient": "まぐろ（たたき）",
+      "raw_name": "まぐろ（たたき）",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -148,6 +161,7 @@
     },
     {
       "ingredient": "ほたて（ベビー）",
+      "raw_name": "ほたて（ベビー）",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -159,6 +173,7 @@
     },
     {
       "ingredient": "まぐろ赤身",
+      "raw_name": "まぐろ赤身",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -170,6 +185,7 @@
     },
     {
       "ingredient": "うなぎの蒲焼き",
+      "raw_name": "うなぎの蒲焼き",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -181,6 +197,7 @@
     },
     {
       "ingredient": "たこ（刺身）",
+      "raw_name": "たこ（刺身）",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -192,6 +209,7 @@
     },
     {
       "ingredient": "さけ（切り身）",
+      "raw_name": "さけ（切り身）",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -203,6 +221,7 @@
     },
     {
       "ingredient": "かつお（たたき）",
+      "raw_name": "かつお（たたき）",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -214,6 +233,7 @@
     },
     {
       "ingredient": "かつお（刺身）",
+      "raw_name": "かつお（刺身）",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -225,6 +245,7 @@
     },
     {
       "ingredient": "いか",
+      "raw_name": "いか",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -236,6 +257,7 @@
     },
     {
       "ingredient": "たこ（ボイル）",
+      "raw_name": "たこ（ボイル）",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -247,6 +269,7 @@
     },
     {
       "ingredient": "まぐろ（刺身）",
+      "raw_name": "まぐろ（刺身）",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -258,6 +281,7 @@
     },
     {
       "ingredient": "たらこ",
+      "raw_name": "たらこ",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -269,6 +293,7 @@
     },
     {
       "ingredient": "かつお",
+      "raw_name": "かつお",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -280,6 +305,7 @@
     },
     {
       "ingredient": "えび",
+      "raw_name": "えび",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -291,6 +317,7 @@
     },
     {
       "ingredient": "ながいも",
+      "raw_name": "ながいも",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -302,6 +329,7 @@
     },
     {
       "ingredient": "ミニトマト",
+      "raw_name": "ミニトマト",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -313,6 +341,7 @@
     },
     {
       "ingredient": "ピーマン",
+      "raw_name": "ピーマン",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -324,6 +353,7 @@
     },
     {
       "ingredient": "さといも",
+      "raw_name": "さといも",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -335,6 +365,7 @@
     },
     {
       "ingredient": "アスパラガス",
+      "raw_name": "アスパラガス",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -346,6 +377,7 @@
     },
     {
       "ingredient": "レンコン",
+      "raw_name": "レンコン",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -357,6 +389,7 @@
     },
     {
       "ingredient": "ながねぎ",
+      "raw_name": "ながねぎ",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -368,6 +401,7 @@
     },
     {
       "ingredient": "にら",
+      "raw_name": "にら",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -379,6 +413,7 @@
     },
     {
       "ingredient": "さつまいも",
+      "raw_name": "さつまいも",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -390,6 +425,7 @@
     },
     {
       "ingredient": "ひらたけ",
+      "raw_name": "ひらたけ",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -401,6 +437,7 @@
     },
     {
       "ingredient": "にんにく",
+      "raw_name": "にんにく",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
@@ -412,6 +449,7 @@
     },
     {
       "ingredient": "さけ",
+      "raw_name": "さけ",
       "category": "その他",
       "price": 108,
       "unit": "チラシ特売品",
