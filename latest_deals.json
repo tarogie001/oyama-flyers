@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 00:51",
+  "updated_at": "2026-10-14 01:11",
   "target_date": "2026-10-14",
   "target_date_label": "2026年10月14日",
   "buy_today": [
@@ -69,9 +69,9 @@
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
-      "ingredient": "国産味彩鶏",
-      "raw_name": "国産味彩鶏",
-      "category": "その他",
+      "ingredient": "鶏もも肉（唐揚げ用・角切り）",
+      "raw_name": "国産味彩鶏 モモ肉唐揚げ用",
+      "category": "精肉（鶏肉）",
       "price": 148,
       "unit": "100g",
       "store": "とりせん",
@@ -348,9 +348,9 @@
         "store_id": "torisen",
         "store_name": "とりせん 小山土塔店",
         "chain": "とりせん",
-        "product_raw_name": "国産味彩鶏",
-        "category": "その他",
-        "ingredient_name": "国産味彩鶏",
+        "product_raw_name": "国産味彩鶏 モモ肉唐揚げ用",
+        "category": "精肉（鶏肉）",
+        "ingredient_name": "鶏もも肉（唐揚げ用・角切り）",
         "price": 148,
         "unit": "100g",
         "valid_from": "2026-10-14",
