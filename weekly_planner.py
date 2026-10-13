@@ -79,6 +79,12 @@ class WeeklyPlanner:
         # 食材ごとに全期間の特売をまとめる
         ingredient_deals: Dict[str, List[Dict[str, Any]]] = {}
         for r in rows:
+            ing_name = r[3]
+            # チラシのボタン文言やノイズを除外
+            if not ing_name or "チラシ" in ing_name or "見る" in ing_name or "更新" in ing_name or "セール" in ing_name:
+                continue
+            if r[2] == "その他" and ("全" in ing_name or "枚" in ing_name):
+                continue
             store_info = self.store_dict.get(r[0], {"name": r[0], "chain": r[0]})
             d = {
                 "store_id": r[0],
