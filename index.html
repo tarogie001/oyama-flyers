@@ -95,6 +95,39 @@
       margin: 14px 0 10px 0;
     }
 
+    /* VIEW切り替えボタングループ */
+    .view-switch {
+      display: flex;
+      background: #e5e7eb;
+      border-radius: 8px;
+      padding: 3px;
+      margin-bottom: 12px;
+      gap: 4px;
+    }
+
+    .view-btn {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 8px 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #4b5563;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .view-btn.active {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
     .section-title {
       font-size: 1.05rem;
       font-weight: 700;
@@ -373,6 +406,17 @@
         <span class="badge-count" id="badgeBuyTodayCount">0品</span>
       </div>
 
+      <!-- VIEW切替スイッチ（今日買うもの） -->
+      <div class="view-switch">
+        <button class="view-btn active" id="btnTodayCat" onclick="setTodayView('category')">
+          <span>🏷️ カテゴリー別</span>
+          <span style="font-size:0.7rem; opacity:0.85;">(標準)</span>
+        </button>
+        <button class="view-btn" id="btnTodayStore" onclick="setTodayView('store')">
+          <span>🏪 スーパー別</span>
+        </button>
+      </div>
+
       <div id="buyTodayList">
         <div class="card" style="text-align: center; color: #888; padding: 24px;">データを読み込み中...</div>
       </div>
@@ -392,6 +436,18 @@
           <span>週間 最安買い出しスケジュール</span>
         </div>
       </div>
+
+      <!-- VIEW切替スイッチ（週間予定） -->
+      <div class="view-switch">
+        <button class="view-btn active" id="btnWeeklyCat" onclick="setWeeklyView('category')">
+          <span>🏷️ カテゴリー別</span>
+          <span style="font-size:0.7rem; opacity:0.85;">(標準)</span>
+        </button>
+        <button class="view-btn" id="btnWeeklyStore" onclick="setWeeklyView('store')">
+          <span>🏪 スーパー別</span>
+        </button>
+      </div>
+
       <div id="weeklyScheduleList">
         <div class="card" style="text-align: center; color: #888; padding: 24px;">データを読み込み中...</div>
       </div>
@@ -429,6 +485,11 @@
   </nav>
 
   <script>
+    // グローバルデータ保持 & 表示状態
+    let globalDealsData = null;
+    let currentTodayView = 'category';   // 'category' (デフォルト) or 'store'
+    let currentWeeklyView = 'category';  // 'category' (デフォルト) or 'store'
+
     // タブ切り替え
     function switchTab(tabId, btn) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
@@ -438,16 +499,62 @@
       window.scrollTo(0, 0);
     }
 
+    // VIEW切替ハンドラー（今日買うもの）
+    function setTodayView(mode) {
+      currentTodayView = mode;
+      document.getElementById('btnTodayCat').classList.toggle('active', mode === 'category');
+      document.getElementById('btnTodayStore').classList.toggle('active', mode === 'store');
+      if (globalDealsData) {
+        renderBuyToday(globalDealsData.buy_today, globalDealsData.no_deal_staples);
+      }
+    }
+
+    // VIEW切替ハンドラー（週間予定）
+    function setWeeklyView(mode) {
+      currentWeeklyView = mode;
+      document.getElementById('btnWeeklyCat').classList.toggle('active', mode === 'category');
+      document.getElementById('btnWeeklyStore').classList.toggle('active', mode === 'store');
+      if (globalDealsData) {
+        renderWeekly(globalDealsData.best_buy_schedule || globalDealsData.weekly_schedule);
+      }
+    }
+
+    // 大カテゴリー判定ヘルパー
+    function getMajorCategory(item) {
+      const cat = (item.category || '').toLowerCase();
+      const name = ((item.ingredient || '') + ' ' + (item.raw_name || '')).toLowerCase();
+
+      if (cat.includes('肉') || name.includes('肉') || name.includes('チキン') || name.includes('ポーク') || name.includes('ウインナー') || name.includes('牛') || name.includes('豚') || name.includes('鶏') || name.includes('ささみ') || name.includes('手羽') || name.includes('ホルモン') || name.includes('挽肉')) {
+        return '🥩 お肉（精肉・加工肉）';
+      }
+      if (cat.includes('魚') || name.includes('魚') || name.includes('さば') || name.includes('サバ') || name.includes('鮭') || name.includes('サーモン') || name.includes('あじ') || name.includes('アジ') || name.includes('ほっけ') || name.includes('ホッケ') || name.includes('かつお') || name.includes('カツオ') || name.includes('まぐろ') || name.includes('マグロ') || name.includes('えび') || name.includes('エビ') || name.includes('しらす') || name.includes('ししゃも') || name.includes('サンマ') || name.includes('さんま') || name.includes('うなぎ') || name.includes('めかぶ') || name.includes('寿司')) {
+        return '🐟 お魚（鮮魚・水産）';
+      }
+      if (cat.includes('野菜') || name.includes('芋') || name.includes('じゃがいも') || name.includes('玉ねぎ') || name.includes('たまねぎ') || name.includes('にんじん') || name.includes('ニンジン') || name.includes('ネギ') || name.includes('ねぎ') || name.includes('キャベツ') || name.includes('白菜') || name.includes('大根') || name.includes('だいこん') || name.includes('ほうれん') || name.includes('小松菜') || name.includes('ブロッコリー') || name.includes('レタス') || name.includes('トマト') || name.includes('かぼちゃ') || name.includes('れんこん') || name.includes('ごぼう')) {
+        return '🥬 お野菜';
+      }
+      if (cat.includes('きのこ') || name.includes('茸') || name.includes('きのこ') || name.includes('しいたけ') || name.includes('しめじ') || name.includes('えのき') || name.includes('まいたけ') || name.includes('エリンギ')) {
+        return '🍄 きのこ類';
+      }
+      if (cat.includes('果物') || name.includes('みかん') || name.includes('りんご') || name.includes('なし') || name.includes('柿') || name.includes('ぶどう') || name.includes('キウイ')) {
+        return '🍎 季節の果物';
+      }
+      if (name.includes('とうふ') || name.includes('豆腐') || name.includes('納豆') || name.includes('ヨーグルト') || cat.includes('大豆')) {
+        return '🥚 日配品・大豆製品';
+      }
+      return '🏷️ その他・加工品';
+    }
+
     // データ取得＆描画
     async function loadDealsData() {
       const lblUpdated = document.getElementById('lblUpdated');
       lblUpdated.textContent = "更新中...";
 
       try {
-        // キャッシュを防ぎつつ最新の latest_deals.json を取得
         const response = await fetch('latest_deals.json?t=' + new Date().getTime());
         if (!response.ok) throw new Error("データ取得失敗");
         const data = await response.json();
+        globalDealsData = data;
 
         // 1. ヘッダー情報の更新
         lblUpdated.textContent = data.updated_at ? data.updated_at + " 更新" : "最新";
@@ -458,7 +565,7 @@
         // 2. 「今日買うもの」の描画
         try { renderBuyToday(data.buy_today, data.no_deal_staples); } catch(e) { console.error("buy_today render error", e); }
 
-        // 3. 「週間スケジュール」の描画（食材別最安購入日）
+        // 3. 「週間スケジュール」の描画
         try { renderWeekly(data.best_buy_schedule || data.weekly_schedule); } catch(e) { console.error("weekly render error", e); }
 
         // 4. 「15店舗チラシ一覧」の描画
@@ -470,30 +577,24 @@
       }
     }
 
-    // 「今日買うもの」レンダリング
-    function renderBuyToday(deals, staples) {
-      const listEl = document.getElementById('buyTodayList');
-      const countEl = document.getElementById('badgeBuyTodayCount');
-      
-      if (!deals || deals.length === 0) {
-        listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">本日限りの特売情報はありません。</div>`;
-        countEl.textContent = "0品";
-        return;
-      }
+    // カード単体のHTML生成
+    function createDealCardHtml(item, isWeekly = false) {
+      const priceVal = isWeekly ? item.best_price : item.price;
+      const isBest = isWeekly ? item.is_best_today : item.is_today_only;
+      const badgeText = isWeekly ? (isBest ? '今週最安' : '特売日') : (isBest ? '本日限り' : '目玉特売');
 
-      countEl.textContent = deals.length + "品";
-      listEl.innerHTML = deals.map(item => `
-        <div class="card deal-card">
+      return `
+        <div class="card deal-card" style="margin-bottom: 8px;">
           <div class="deal-info">
             <div class="deal-name">
               <span>${item.ingredient}</span>
-              ${item.is_today_only ? `<span class="badge-today">本日限り</span>` : ''}
+              ${isBest ? `<span class="badge-today">${badgeText}</span>` : `<span style="background:#eeeeee; color:#555; font-size:0.7rem; padding:2px 6px; border-radius:4px; font-weight:600;">${badgeText}</span>`}
             </div>
             ${item.raw_name && item.raw_name !== item.ingredient ? `<div style="font-size:0.8rem; color:#d84315; margin-bottom:4px; font-weight:600;">🏷️ チラシ表記: ${item.raw_name}</div>` : ''}
             <div class="deal-store">
               📍 <strong>${item.store}</strong>（${item.store_name || ''}）
             </div>
-            <div class="deal-unit">規格: ${item.unit} | 分類: ${item.category}</div>
+            <div class="deal-unit">規格: ${item.unit || '1個'} ${isWeekly && item.advice ? `| ${item.advice}` : `| 分類: ${item.category}`}</div>
             ${item.flyer_url ? `
               <a href="${item.flyer_url}" target="_blank" rel="noopener" class="btn-flyer">
                 📄 チラシを確認 ↗
@@ -501,10 +602,72 @@
             ` : ''}
           </div>
           <div class="deal-price-area">
-            <div class="deal-price">${item.price}<small>円</small></div>
+            <div class="deal-price">${priceVal}<small>円</small></div>
           </div>
         </div>
-      `).join('');
+      `;
+    }
+
+    // 「今日買うもの」レンダリング
+    function renderBuyToday(deals, staples) {
+      const listEl = document.getElementById('buyTodayList');
+      const countEl = document.getElementById('badgeBuyTodayCount');
+
+      if (!deals || deals.length === 0) {
+        listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">本日限りの特売情報はありません。</div>`;
+        countEl.textContent = "0品";
+        return;
+      }
+
+      countEl.textContent = deals.length + "品";
+
+      // グループ化キーを決定
+      const grouped = {};
+      deals.forEach(item => {
+        let key = "";
+        if (currentTodayView === 'store') {
+          key = `🏬 ${item.store}（${item.store_name || ''}）`;
+        } else {
+          key = getMajorCategory(item);
+        }
+        if (!grouped[key]) grouped[key] = [];
+        grouped[key].push(item);
+      });
+
+      // カテゴリーの並び順優先度
+      const catOrder = [
+        '🥩 お肉（精肉・加工肉）',
+        '🐟 お魚（鮮魚・水産）',
+        '🥬 お野菜',
+        '🍄 きのこ類',
+        '🍎 季節の果物',
+        '🥚 日配品・大豆製品',
+        '🏷️ その他・加工品'
+      ];
+
+      const sortedKeys = Object.keys(grouped).sort((a, b) => {
+        if (currentTodayView === 'category') {
+          const idxA = catOrder.indexOf(a) >= 0 ? catOrder.indexOf(a) : 99;
+          const idxB = catOrder.indexOf(b) >= 0 ? catOrder.indexOf(b) : 99;
+          return idxA - idxB;
+        }
+        return a.localeCompare(b, 'ja');
+      });
+
+      listEl.innerHTML = sortedKeys.map(groupKey => {
+        const items = grouped[groupKey];
+        return `
+          <div class="day-group" style="margin-bottom: 18px;">
+            <div class="day-header" style="background:#2e7d32; color:white; padding: 8px 12px; font-size: 0.95rem; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+              <span>${groupKey}</span>
+              <span style="font-size: 0.75rem; background: rgba(255,255,255,0.25); padding: 2px 8px; border-radius: 12px;">${items.length}品</span>
+            </div>
+            <div style="margin-top: 8px;">
+              ${items.map(item => createDealCardHtml(item, false)).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
 
       // 定番平常価格
       const staplesBox = document.getElementById('staplesBox');
@@ -519,88 +682,71 @@
       }
     }
 
-    // 「週間スケジュール」レンダリング（食材ごとの最安日ナビゲーション）
+    // 「週間スケジュール」レンダリング
     function renderWeekly(schedule) {
       const listEl = document.getElementById('weeklyScheduleList');
-      if (!schedule) {
+      if (!schedule || schedule.length === 0) {
         listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">週間スケジュールはありません。</div>`;
         return;
       }
 
-      // 配列（best_buy_schedule）の場合：日付ごとにグループ化して大きな仕切りを表示
-      if (Array.isArray(schedule)) {
-        if (schedule.length === 0) {
-          listEl.innerHTML = `<div class="card" style="text-align: center; color: #777;">現在有効な週間特売情報はありません。</div>`;
-          return;
+      // グループ化キーを決定
+      const grouped = {};
+      schedule.forEach(item => {
+        let key = "";
+        if (currentWeeklyView === 'store') {
+          key = `🏬 ${item.store}（${item.store_name || ''}）`;
+        } else {
+          key = getMajorCategory(item);
         }
+        if (!grouped[key]) grouped[key] = [];
+        grouped[key].push(item);
+      });
 
-        // 日付ごとにグループ化
-        const grouped = {};
-        schedule.forEach(item => {
-          const groupKey = item.best_day_label || "その他の特売日";
-          if (!grouped[groupKey]) grouped[groupKey] = [];
-          grouped[groupKey].push(item);
-        });
+      // カテゴリーの並び順優先度
+      const catOrder = [
+        '🥩 お肉（精肉・加工肉）',
+        '🐟 お魚（鮮魚・水産）',
+        '🥬 お野菜',
+        '🍄 きのこ類',
+        '🍎 季節の果物',
+        '🥚 日配品・大豆製品',
+        '🏷️ その他・加工品'
+      ];
 
-        listEl.innerHTML = Object.keys(grouped).map(groupKey => {
-          const items = grouped[groupKey];
-          const isToday = items.some(it => it.is_best_today);
+      const sortedKeys = Object.keys(grouped).sort((a, b) => {
+        if (currentWeeklyView === 'category') {
+          const idxA = catOrder.indexOf(a) >= 0 ? catOrder.indexOf(a) : 99;
+          const idxB = catOrder.indexOf(b) >= 0 ? catOrder.indexOf(b) : 99;
+          return idxA - idxB;
+        }
+        return a.localeCompare(b, 'ja');
+      });
 
-          return `
-            <div class="day-group" style="margin-bottom: 20px;">
-              <div class="day-header ${isToday ? 'today' : ''}" style="padding: 10px 14px; font-size: 1.05rem; border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
-                <span>📅 ${groupKey}</span>
-                ${isToday ? `<span style="background: #ff5722; color: white; font-size: 0.75rem; padding: 2px 8px; border-radius: 12px;">★ 本日買い！</span>` : `<span style="font-size: 0.75rem; opacity: 0.85;">特売日</span>`}
-              </div>
-              <div style="margin-top: 8px;">
-                ${items.map(item => `
-                  <div class="card deal-card" style="margin-bottom: 8px; padding: 12px 14px;">
-                    <div class="deal-info">
-                      <div class="deal-name" style="font-size: 1.05rem;">
-                        <span>${item.ingredient}</span>
-                        ${item.is_best_today ? `<span class="badge-today">今週最安</span>` : `<span style="background:#e0e0e0; color:#555; font-size:0.7rem; padding:2px 6px; border-radius:4px; font-weight:600;">予約チェック</span>`}
-                      </div>
-                      ${item.raw_name && item.raw_name !== item.ingredient ? `
-                        <div style="font-size:0.8rem; color:#d84315; margin-bottom: 3px; font-weight:600;">🏷️ チラシ表記: ${item.raw_name}</div>
-                      ` : ''}
-                      <div class="deal-store" style="margin-bottom: 2px;">
-                        📍 <strong>${item.store}</strong>（${item.store_name || ''}）
-                      </div>
-                      <div style="font-size: 0.75rem; color: #666; margin-bottom: 4px;">規格: ${item.unit || '1個'} | ${item.advice}</div>
-                      ${item.flyer_url ? `
-                        <a href="${item.flyer_url}" target="_blank" rel="noopener" class="btn-flyer">
-                          📄 チラシを確認 ↗
-                        </a>
-                      ` : ''}
-                    </div>
-                    <div class="deal-price-area">
-                      <div class="deal-price">${item.best_price}<small>円</small></div>
-                    </div>
+      listEl.innerHTML = sortedKeys.map(groupKey => {
+        const items = grouped[groupKey];
+        // 日付順・最安値順にソート
+        items.sort((a, b) => (a.best_day_label || '').localeCompare(b.best_day_label || '') || a.best_price - b.best_price);
+
+        return `
+          <div class="day-group" style="margin-bottom: 20px;">
+            <div class="day-header" style="background: #1b5e20; color: white; padding: 9px 14px; font-size: 1.0rem; border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+              <span>${groupKey}</span>
+              <span style="font-size: 0.75rem; background: rgba(255,255,255,0.25); padding: 2px 8px; border-radius: 12px;">${items.length}品</span>
+            </div>
+            <div style="margin-top: 8px;">
+              ${items.map(item => `
+                <div style="margin-bottom: 4px;">
+                  <div style="font-size: 0.8rem; font-weight: 700; color: #2e7d32; margin: 6px 0 2px 4px; display: flex; align-items: center; gap: 4px;">
+                    <span>📅 ${item.best_day_label || '特売日'}</span>
                   </div>
-                `).join('')}
-              </div>
+                  ${createDealCardHtml(item, true)}
+                </div>
+              `).join('')}
             </div>
-          `;
-        }).join('');
-        return;
-      }
-
-      // 互換性フォールバック（辞書型の場合）
-      const dayKeys = Object.keys(schedule).sort();
-      listEl.innerHTML = dayKeys.map(dayKey => `
-        <div class="day-group">
-          <div class="day-header">📅 ${dayKey}</div>
-          ${(schedule[dayKey] || []).map(item => `
-            <div class="card deal-card" style="margin-bottom: 6px; padding: 10px 14px;">
-              <div class="deal-info">
-                <div class="deal-name" style="font-size: 0.95rem;">${item.ingredient_name || item.ingredient} (${item.unit || ''})</div>
-                <div class="deal-store">📍 ${item.store_name || item.chain}</div>
-              </div>
-              <div class="deal-price-area"><div class="deal-price">${item.price}<small>円</small></div></div>
-            </div>
-          `).join('')}
-        </div>
-      `).join('');
+          </div>
+        `;
+      }).join('');
     }
 
     // 「15店舗チラシ一覧」レンダリング
