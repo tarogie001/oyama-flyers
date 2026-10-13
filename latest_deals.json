@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 00:33",
+  "updated_at": "2026-10-14 00:42",
   "target_date": "2026-10-14",
   "target_date_label": "2026年10月14日",
   "buy_today": [
@@ -35,19 +35,6 @@
       "category": "きのこ類",
       "price": 99,
       "unit": "1袋",
-      "store": "とりせん",
-      "store_id": "torisen",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "とりせん 小山土塔店",
-      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
-    },
-    {
-      "ingredient": "豚バラ（うすぎり）",
-      "raw_name": "豚バラ お好み焼き用",
-      "category": "精肉（豚肉）",
-      "price": 99,
-      "unit": "100g",
       "store": "とりせん",
       "store_id": "torisen",
       "is_today_only": true,
@@ -535,6 +522,19 @@
       "note": "本日限り！",
       "store_name": "とりせん 小山土塔店",
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+    },
+    {
+      "ingredient": "豚バラ（うすぎり）",
+      "raw_name": "国産豚肉 バラ薄切り",
+      "category": "精肉（豚肉）",
+      "price": 198,
+      "unit": "100g",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "とりせん 小山土塔店",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     }
   ],
   "wait_for_later": [],
@@ -681,19 +681,6 @@
         "note": "10/13-14均一大得市"
       },
       {
-        "store_id": "torisen",
-        "store_name": "とりせん 小山土塔店",
-        "chain": "とりせん",
-        "product_raw_name": "豚バラ お好み焼き用",
-        "category": "精肉（豚肉）",
-        "ingredient_name": "豚バラ（うすぎり）",
-        "price": 99,
-        "unit": "100g",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-14",
-        "note": "10/13-14均一大得市"
-      },
-      {
         "store_id": "belc",
         "store_name": "ベルク フォルテ間々田店",
         "chain": "ベルク",
@@ -820,6 +807,19 @@
         "category": "その他",
         "ingredient_name": "国産味彩鶏",
         "price": 148,
+        "unit": "100g",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-14",
+        "note": "本日限り！"
+      },
+      {
+        "store_id": "torisen",
+        "store_name": "とりせん 小山土塔店",
+        "chain": "とりせん",
+        "product_raw_name": "国産豚肉 バラ薄切り",
+        "category": "精肉（豚肉）",
+        "ingredient_name": "豚バラ（うすぎり）",
+        "price": 198,
         "unit": "100g",
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-14",

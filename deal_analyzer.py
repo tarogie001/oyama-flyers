@@ -61,7 +61,13 @@ class DealAnalyzer:
     def match_ingredient(self, product_raw_name: str) -> Optional[Dict[str, str]]:
         """商品名から食材とカテゴリを自動判定"""
         name_lower = product_raw_name.lower()
+        # 惣菜・加工品・調理済み品はお肉（精肉）から除外
+        processed_food_keywords = ["お好み焼き", "おこのみやき", "ピザ", "コロッケ", "カツ", "フライ", "弁当", "惣菜", "串カツ", "ギョーザ", "餃子"]
+        is_processed = any(kw in name_lower for kw in processed_food_keywords)
+
         for category, items in self.ingredients.items():
+            if is_processed and "精肉" in category:
+                continue
             for item in items:
                 for kw in item.get("keywords", []):
                     if kw.lower() in name_lower:
