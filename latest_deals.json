@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 01:11",
+  "updated_at": "2026-10-14 01:20",
   "target_date": "2026-10-14",
   "target_date_label": "2026年10月14日",
   "buy_today": [
@@ -105,205 +105,6 @@
     "レタス"
   ],
   "weekly_schedule": {
-    "10/10(土)": [
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "北海道産 人参 Lサイズ 1本",
-        "category": "野菜",
-        "ingredient_name": "ニンジン",
-        "price": 38,
-        "unit": "1本",
-        "valid_from": "2026-10-10",
-        "valid_to": "2026-10-13",
-        "note": "北海道フェア"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "北海道産 玉ねぎ Lサイズ 1個",
-        "category": "野菜",
-        "ingredient_name": "玉ねぎ",
-        "price": 38,
-        "unit": "1個",
-        "valid_from": "2026-10-10",
-        "valid_to": "2026-10-13",
-        "note": "北海道フェア"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "北海道産 じゃがいも Lサイズ 1個",
-        "category": "野菜",
-        "ingredient_name": "ジャガイモ",
-        "price": 38,
-        "unit": "1個",
-        "valid_from": "2026-10-10",
-        "valid_to": "2026-10-13",
-        "note": "北海道フェア"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "北海道産 北のこめこっこ 鶏ムネ肉",
-        "category": "精肉（鶏肉）",
-        "ingredient_name": "鶏むね肉",
-        "price": 108,
-        "unit": "100g",
-        "valid_from": "2026-10-10",
-        "valid_to": "2026-10-13",
-        "note": "北海道フェア"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "北海道産 北のこめこっこ 鶏モモ肉",
-        "category": "精肉（鶏肉）",
-        "ingredient_name": "鶏もも肉",
-        "price": 158,
-        "unit": "100g",
-        "valid_from": "2026-10-10",
-        "valid_to": "2026-10-13",
-        "note": "北海道フェア"
-      }
-    ],
-    "10/13(火)": [
-      {
-        "store_id": "belc",
-        "store_name": "ベルク フォルテ間々田店",
-        "chain": "ベルク",
-        "product_raw_name": "国産かぼちゃ",
-        "category": "野菜",
-        "ingredient_name": "かぼちゃ",
-        "price": 39,
-        "unit": "100g",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-13",
-        "note": "10/13火曜限り"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "生しめじ 1パック",
-        "category": "きのこ類",
-        "ingredient_name": "しめじ",
-        "price": 78,
-        "unit": "1パック",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-13",
-        "note": "10/13火曜均一祭"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "生えのき 1パック",
-        "category": "きのこ類",
-        "ingredient_name": "えのき",
-        "price": 78,
-        "unit": "1パック",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-13",
-        "note": "10/13火曜均一祭"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "国産 若鶏手羽元",
-        "category": "精肉（鶏肉）",
-        "ingredient_name": "鶏手羽元",
-        "price": 78,
-        "unit": "100g",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-13",
-        "note": "10/13火曜均一祭"
-      },
-      {
-        "store_id": "torisen",
-        "store_name": "とりせん 小山土塔店",
-        "chain": "とりせん",
-        "product_raw_name": "生しいたけ 1袋",
-        "category": "きのこ類",
-        "ingredient_name": "しいたけ",
-        "price": 99,
-        "unit": "1袋",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-14",
-        "note": "10/13-14均一大得市"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "メキシコ産 豚肩ロースステーキ用",
-        "category": "精肉（豚肉）",
-        "ingredient_name": "豚肩ロース",
-        "price": 118,
-        "unit": "100g",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-13",
-        "note": "10/13日替わり"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "国産 豚モモ肉ポテト炒め用",
-        "category": "精肉（豚肉）",
-        "ingredient_name": "豚もも（こま切れ・切り落とし）",
-        "price": 118,
-        "unit": "100g",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-13",
-        "note": "10/13日替わり"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "カナダ産 豚ロースステーキ用 味付",
-        "category": "精肉（豚肉）",
-        "ingredient_name": "豚ロース",
-        "price": 138,
-        "unit": "100g",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-13",
-        "note": "10/13日替わり"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "チリ産 銀鮭切身 1切",
-        "category": "魚介類",
-        "ingredient_name": "鮭",
-        "price": 148,
-        "unit": "1切",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-13",
-        "note": "10/13日替わり"
-      },
-      {
-        "store_id": "kamashin",
-        "store_name": "かましん 小山天神町店",
-        "chain": "かましん",
-        "product_raw_name": "まぐろねぎとろ 1パック",
-        "category": "魚介類",
-        "ingredient_name": "まぐろ",
-        "price": 298,
-        "unit": "1パック",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-13",
-        "note": "10/13日替わり"
-      }
-    ],
     "10/14(水)": [
       {
         "store_id": "torisen",
@@ -316,7 +117,36 @@
         "unit": "100g",
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-14",
-        "note": "本日限り！"
+        "note": "本日限り！",
+        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+      },
+      {
+        "store_id": "belc",
+        "store_name": "ベルク フォルテ間々田店",
+        "chain": "ベルク",
+        "product_raw_name": "まいたけ 1パック",
+        "category": "きのこ類",
+        "ingredient_name": "まいたけ",
+        "price": 99,
+        "unit": "1パック",
+        "valid_from": "2026-10-12",
+        "valid_to": "2026-10-16",
+        "note": "10/12-16くらし応援",
+        "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
+      },
+      {
+        "store_id": "torisen",
+        "store_name": "とりせん 小山土塔店",
+        "chain": "とりせん",
+        "product_raw_name": "生しいたけ 1袋",
+        "category": "きのこ類",
+        "ingredient_name": "しいたけ",
+        "price": 99,
+        "unit": "1袋",
+        "valid_from": "2026-10-13",
+        "valid_to": "2026-10-14",
+        "note": "10/13-14均一大得市",
+        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       },
       {
         "store_id": "torisen",
@@ -329,7 +159,8 @@
         "unit": "100g",
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-14",
-        "note": "本日限り！"
+        "note": "本日限り！",
+        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       },
       {
         "store_id": "torisen",
@@ -342,7 +173,8 @@
         "unit": "100g",
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-14",
-        "note": "本日限り！"
+        "note": "本日限り！",
+        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       },
       {
         "store_id": "torisen",
@@ -355,7 +187,8 @@
         "unit": "100g",
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-14",
-        "note": "本日限り！"
+        "note": "本日限り！",
+        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       },
       {
         "store_id": "torisen",
@@ -368,22 +201,8 @@
         "unit": "100g",
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-14",
-        "note": "本日限り！"
-      }
-    ],
-    "10/12(月)": [
-      {
-        "store_id": "belc",
-        "store_name": "ベルク フォルテ間々田店",
-        "chain": "ベルク",
-        "product_raw_name": "まいたけ 1パック",
-        "category": "きのこ類",
-        "ingredient_name": "まいたけ",
-        "price": 99,
-        "unit": "1パック",
-        "valid_from": "2026-10-12",
-        "valid_to": "2026-10-16",
-        "note": "10/12-16くらし応援"
+        "note": "本日限り！",
+        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       }
     ],
     "10/15(木)": [
@@ -398,7 +217,8 @@
         "unit": "1束",
         "valid_from": "2026-10-15",
         "valid_to": "2026-10-15",
-        "note": "10/15木曜限り"
+        "note": "10/15木曜限り",
+        "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
       },
       {
         "store_id": "belc",
@@ -411,7 +231,8 @@
         "unit": "2枚",
         "valid_from": "2026-10-15",
         "valid_to": "2026-10-15",
-        "note": "10/15木曜限り"
+        "note": "10/15木曜限り",
+        "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
       }
     ]
   },

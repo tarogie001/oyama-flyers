@@ -150,8 +150,16 @@ class WeeklyPlanner:
 
             # 週間スケジュール用（最安値の日に割り振り）
             best_start = datetime.date.fromisoformat(best_deal_in_week["valid_from"])
-            b_weekday = ["月", "火", "水", "木", "金", "土", "日"][best_start.weekday()]
-            day_key = f"{best_start.strftime('%m/%d')}({b_weekday})"
+            best_end = datetime.date.fromisoformat(best_deal_in_week["valid_to"])
+            
+            # 過ぎた日の特売（今日より前に終わったもの）は除外！
+            if best_end < today_date:
+                continue
+
+            # 表示用ラベル（今日以前から有効なものは今日付け、未来のものはその開始日）
+            display_date = max(best_start, today_date)
+            b_weekday = ["月", "火", "水", "木", "金", "土", "日"][display_date.weekday()]
+            day_key = f"{display_date.strftime('%m/%d')}({b_weekday})"
             weekly_schedule.setdefault(day_key, []).append(best_deal_in_week)
 
         return {
@@ -262,6 +270,23 @@ class WeeklyPlanner:
                 "flyer_url": s_info["url"] if s_info else ""
             })
 
+        # weekly_schedule にも店舗チラシURLを付与
+        enriched_weekly = {}
+        for day_k, d_items in plan["weekly_schedule"].items():
+            enriched_items = []
+            for item in d_items:
+                s_info = None
+                for s in self.stores:
+                    if s["chain"] == item.get("chain") or s["id"] == item.get("store_id"):
+                        s_info = s
+                        break
+                enriched_items.append({
+                    **item,
+                    "store_name": s_info["name"] if s_info else item.get("chain", ""),
+                    "flyer_url": s_info["url"] if s_info else ""
+                })
+            enriched_weekly[day_k] = enriched_items
+
         export_data = {
             "updated_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
             "target_date": plan["today"].isoformat(),
@@ -269,7 +294,7 @@ class WeeklyPlanner:
             "buy_today": enriched_buy_today,
             "wait_for_later": plan["wait_for_later"],
             "no_deal_staples": no_deal_staples,
-            "weekly_schedule": plan["weekly_schedule"],
+            "weekly_schedule": enriched_weekly,
             "stores": self.stores
         }
 

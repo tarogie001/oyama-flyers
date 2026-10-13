@@ -456,13 +456,13 @@
         }
 
         // 2. 「今日買うもの」の描画
-        renderBuyToday(data.buy_today, data.no_deal_staples);
+        try { renderBuyToday(data.buy_today, data.no_deal_staples); } catch(e) { console.error("buy_today render error", e); }
 
         // 3. 「週間スケジュール」の描画
-        renderWeekly(data.weekly_schedule);
+        try { renderWeekly(data.weekly_schedule); } catch(e) { console.error("weekly render error", e); }
 
         // 4. 「15店舗チラシ一覧」の描画
-        renderStores(data.stores);
+        try { renderStores(data.stores); } catch(e) { console.error("stores render error", e); }
 
       } catch (err) {
         console.error(err);
@@ -551,6 +551,11 @@
                     <div style="font-size:0.75rem; color:#d84315; margin-bottom: 2px;">🏷️ ${item.product_raw_name}</div>
                   ` : ''}
                   <div class="deal-store" style="margin-bottom: 0;">📍 ${item.store_name || item.chain || item.store}</div>
+                  ${item.flyer_url ? `
+                    <a href="${item.flyer_url}" target="_blank" rel="noopener" class="btn-flyer" style="margin-top: 4px;">
+                      📄 チラシを確認 ↗
+                    </a>
+                  ` : ''}
                 </div>
                 <div class="deal-price-area">
                   <div class="deal-price" style="font-size: 1.15rem;">${item.price}<small>円</small></div>
@@ -576,7 +581,7 @@
             <div class="store-chain">${store.chain}</div>
             <div class="store-name">${store.name}</div>
           </div>
-          <a href="${store.flyer_url}" target="_blank" rel="noopener" class="btn-store-flyer">
+          <a href="${store.flyer_url || store.url}" target="_blank" rel="noopener" class="btn-store-flyer">
             <span>チラシを見る</span>
             <span>↗</span>
           </a>
