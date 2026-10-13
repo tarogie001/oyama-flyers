@@ -214,34 +214,8 @@ class FlyerCrawler:
             today = datetime.date.today().isoformat()
             default_to = (datetime.date.today() + datetime.timedelta(days=3)).isoformat()
 
-            # デリッシュチラシ内のOCR解析済み特売食材アイテム（肉・魚・野菜）を取得
-            ocr_items = soup.find_all(class_=re.compile(r"delish-chirashi-shop-ocr-sales-item"))
-            for item in ocr_items:
-                h3 = item.find("h3")
-                if h3:
-                    item_name = h3.get_text(strip=True)
-                    # 想定特売価格
-                    deals.append({
-                        "store_id": store["id"],
-                        "product_name": item_name,
-                        "price": 108,
-                        "unit": "チラシ特売品",
-                        "valid_from": today,
-                        "valid_to": default_to,
-                        "note": "デリッシュチラシOCR抽出特売品"
-                    })
-
-            # チラシ画像自体も登録
-            deals.append({
-                "store_id": store["id"],
-                "product_name": f"【チラシ】{store['name']} 最新チラシ特売",
-                "price": 99,
-                "unit": "チラシ掲載品",
-                "valid_from": today,
-                "valid_to": default_to,
-                "note": f"チラシURL: {url}"
-            })
-
+            # 価格が明記されていないOCR品目は推測・ダミー登録を完全禁止（原本精読のみとする）
+            pass
         except Exception as e:
             print(f"  ❌ {store['name']} (デリッシュ) 巡回エラー: {e}")
 
