@@ -9,6 +9,8 @@ import json
 import base64
 import datetime
 import time
+import io
+from PIL import Image
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import requests
@@ -79,14 +81,25 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
     if not base_date:
         base_date = datetime.date.today().isoformat()
 
-    # 画像をbase64エンコード
-    with open(image_path, "rb") as f:
-        img_bytes = f.read()
-    b64_img = base64.b64encode(img_bytes).decode("utf-8")
+    # 画像を文字鮮明度を保ったまま最適サイズ・JPEGに自動軽量化（3MB -> 300~500KB）
+    try:
+        with Image.open(image_path) as img:
+            img = img.convert("RGB")
+            max_dimension = 1600
+            if max(img.width, img.height) > max_dimension:
+                scale = max_dimension / max(img.width, img.height)
+                new_size = (int(img.width * scale), int(img.height * scale))
+                img = img.resize(new_size, Image.Resampling.LANCZOS)
+            buf = io.BytesIO()
+            img.save(buf, format="JPEG", quality=85, optimize=True)
+            img_bytes = buf.getvalue()
+    except Exception as e:
+        print(f"[WARN] 画像の最適化に失敗したため生データを読み込みます: {e}")
+        with open(image_path, "rb") as f:
+            img_bytes = f.read()
 
-    # 拡張子判定
-    ext = image_path.suffix.lower()
-    mime_type = "image/png" if ext == ".png" else "image/jpeg"
+    b64_img = base64.b64encode(img_bytes).decode("utf-8")
+    mime_type = "image/jpeg"
 
     prompt = f"""
 あなたはスーパーのチラシ解析の最高峰エキスパートです。
