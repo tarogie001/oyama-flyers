@@ -29,14 +29,17 @@ def main():
     # 1. チラシ・特売情報の自動収集
     run_step("1. チラシ・特売情報の自動収集", "flyer_crawler.py")
     
-    # 2. チラシ画像の高解像度ブロック分割
-    run_step("2. チラシ高解像度ブロック分割処理", "flyer_image_processor.py")
+    # 2. 主力スーパーチラシ原本・大判画像の自動収集
+    run_step("2. 主力スーパーチラシ原本自動収集", "fetch_daily_flyer_images.py")
     
-    # 3. Gemini AIによるチラシ画像解析＆特売品抽出
-    run_step("3. Gemini AIによるチラシ画像解析＆特売品抽出", "auto_gemini_crawler.py")
+    # 3. チラシ画像の高解像度ブロック分割
+    run_step("3. チラシ高解像度ブロック分割処理", "flyer_image_processor.py")
     
-    # 4. 買い出し提案レポート生成＆アプリ用JSON出力
-    run_step("4. 提案レポート生成＆JSON出力", "notifier.py")
+    # 4. Gemini AIによるチラシ画像解析＆特売品抽出
+    run_step("4. Gemini AIによるチラシ画像解析＆特売品抽出", "auto_gemini_crawler.py")
+    
+    # 5. 買い出し提案レポート生成＆アプリ用JSON出力
+    run_step("5. 提案レポート生成＆JSON出力", "notifier.py")
     
     print("\n🎉 すべての自動更新プロセスが完了しました！")
 
