@@ -345,8 +345,14 @@ class WeeklyPlanner:
                 "flyer_url": s_info["url"] if s_info else ""
             })
 
+        try:
+            from zoneinfo import ZoneInfo
+            now_jst = datetime.datetime.now(ZoneInfo("Asia/Tokyo"))
+        except Exception:
+            now_jst = datetime.datetime.now()
+
         export_data = {
-            "updated_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "updated_at": now_jst.strftime("%Y-%m-%d %H:%M"),
             "target_date": plan["today"].isoformat(),
             "target_date_label": plan["today"].strftime("%Y年%m月%d日"),
             "buy_today": enriched_buy_today,
