@@ -8,6 +8,7 @@ import sys
 import json
 import base64
 import datetime
+import time
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import requests
@@ -47,18 +48,17 @@ def get_active_gemini_model(api_key: str) -> str:
                 for m in models
                 if "generateContent" in m.get("supportedGenerationMethods", [])
             ]
-            # flash 系（高速・高精度な画像解析モデル）を優先
-            flash_models = [m for m in supported if "flash" in m.lower()]
+            # 画像解析に強く混雑制限を受けにくい本格Flashモデルを優先（liteは除外）
+            flash_models = [m for m in supported if "flash" in m.lower() and "lite" not in m.lower()]
             candidate_list = flash_models if flash_models else supported
             if candidate_list:
-                # Googleから返ってきた公式名称を最新順に自動ソートして最上位をダイレクト採用
-                # (例: gemini-2.0-flash > gemini-1.5-flash-latest > gemini-1.5-flash-002 等)
+                # 'latest' が含まれる本格Flashモデルを最優先（例: gemini-1.5-flash-latest）
+                latest_models = [m for m in candidate_list if "latest" in m.lower()]
+                # バージョン順にソート
                 sorted_models = sorted(candidate_list, reverse=True)
-                # 'latest' が含まれるモデルがあれば最優先
-                latest_models = [m for m in sorted_models if "latest" in m.lower()]
                 chosen = latest_models[0] if latest_models else sorted_models[0]
                 _CACHED_ACTIVE_MODEL = chosen
-                print(f"[INFO] 🤖 Google公式APIから利用可能な最新現行モデルを動的検知・採用しました: {_CACHED_ACTIVE_MODEL}")
+                print(f"[INFO] 🤖 Google公式APIから利用可能な最新本格モデルを動的検知・採用しました: {_CACHED_ACTIVE_MODEL}")
                 return _CACHED_ACTIVE_MODEL
     except Exception as e:
         print(f"[WARN] モデル一覧の自動取得に失敗したため既定値を使用: {e}")
@@ -140,22 +140,38 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
 
     headers = {"Content-Type": "application/json"}
 
-    try:
-        res = requests.post(url, json=payload, headers=headers, timeout=40)
-        if res.status_code != 200:
-            print(f"[ERROR] Gemini API エラー (HTTP {res.status_code}): {res.text}")
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            res = requests.post(url, json=payload, headers=headers, timeout=60)
+            if res.status_code == 200:
+                data = res.json()
+                text_content = data["candidates"][0]["content"]["parts"][0]["text"]
+                deals = json.loads(text_content)
+                if isinstance(deals, list):
+                    print(f"[OK] Gemini AI が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！")
+                    return deals
+                return []
+            elif res.status_code == 503:
+                # 混雑エラーの場合は待機して再試行
+                wait_sec = (attempt + 1) * 3
+                print(f"[WARN] Gemini API が混雑中 (HTTP 503)。{wait_sec}秒後に再試行します... (試行 {attempt + 1}/{max_retries})")
+                time.sleep(wait_sec)
+                continue
+            else:
+                print(f"[ERROR] Gemini API エラー (HTTP {res.status_code}): {res.text}")
+                return []
+        except requests.exceptions.Timeout:
+            wait_sec = (attempt + 1) * 3
+            print(f"[WARN] Gemini API タイムアウト。{wait_sec}秒後に再試行します... (試行 {attempt + 1}/{max_retries})")
+            time.sleep(wait_sec)
+            continue
+        except Exception as e:
+            print(f"[ERROR] Gemini解析処理エラー: {e}")
             return []
 
-        data = res.json()
-        text_content = data["candidates"][0]["content"]["parts"][0]["text"]
-        deals = json.loads(text_content)
-        if isinstance(deals, list):
-            print(f"[OK] Gemini AI が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！")
-            return deals
-        return []
-    except Exception as e:
-        print(f"[ERROR] Gemini解析処理エラー: {e}")
-        return []
+    print(f"[-] {store_name}: 最大試行回数 ({max_retries}回) を超えたためスキップします")
+    return []
 
 if __name__ == "__main__":
     test_img = Path("flyers/beisia_day_1014.png")
