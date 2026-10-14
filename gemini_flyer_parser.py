@@ -48,6 +48,7 @@ def get_active_gemini_models(api_key: str) -> List[str]:
                 m["name"].replace("models/", "")
                 for m in models
                 if "generateContent" in m.get("supportedGenerationMethods", [])
+                and not any(x in m["name"].lower() for x in ["tts", "embedding", "aqa", "imagen"])
             ]
             print(f"[INFO] 🤖 Google公式APIから利用可能モデル一覧を取得しました ({len(supported)}件)")
 

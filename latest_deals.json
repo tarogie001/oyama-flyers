@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 07:25",
+  "updated_at": "2026-10-15 07:31",
   "target_date": "2026-10-15",
   "target_date_label": "2026年10月15日",
   "buy_today": [
@@ -316,6 +316,19 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
+      "ingredient": "生ラーメン",
+      "raw_name": "シマダヤ わが家の一杯 生ラーメン 3食（醤油・味噌・塩 各110g×3）",
+      "category": "麺類・インスタント",
+      "price": 159,
+      "unit": "1袋(3食)",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "is_today_only": false,
+      "note": "今週最安値",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
       "ingredient": "ネギ",
       "raw_name": "秋田県産 長ねぎ 1束",
       "category": "野菜",
@@ -472,6 +485,19 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "即席ラーメン",
+      "raw_name": "サンヨー食品 サッポロ一番（みそ・塩・しょうゆ 5食パック）",
+      "category": "麺類・インスタント",
+      "price": 328,
+      "unit": "1袋(5食)",
+      "store": "オータニ",
+      "store_id": "otani",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "フードオアシス オータニ 小山店",
+      "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
+    },
+    {
       "ingredient": "Umios 五目あんかけ焼そば (1人前)",
       "raw_name": "Umios 五目あんかけ焼そば (1人前)",
       "category": "その他",
@@ -496,19 +522,6 @@
       "note": "今週最安値",
       "store_name": "たいらや 粟宮店",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-    },
-    {
-      "ingredient": "即席ラーメン",
-      "raw_name": "日清食品 チキンラーメン",
-      "category": "麺類・インスタント",
-      "price": 399,
-      "unit": "5食パック",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "マルエツ 小山店",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
       "ingredient": "日清食品 焼そば",
@@ -1064,6 +1077,20 @@
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
+        "store_id": "japanmeat",
+        "store_name": "ジャパンミート生鮮館 小山店",
+        "chain": "ジャパンミート",
+        "product_raw_name": "シマダヤ わが家の一杯 生ラーメン 3食（醤油・味噌・塩 各110g×3）",
+        "category": "麺類・インスタント",
+        "ingredient_name": "生ラーメン",
+        "price": 159,
+        "unit": "1袋(3食)",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": "",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+      },
+      {
         "store_id": "belc",
         "store_name": "ベルク フォルテ間々田店",
         "chain": "ベルク",
@@ -1232,6 +1259,20 @@
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
+        "store_id": "otani",
+        "store_name": "フードオアシス オータニ 小山店",
+        "chain": "オータニ",
+        "product_raw_name": "サンヨー食品 サッポロ一番（みそ・塩・しょうゆ 5食パック）",
+        "category": "麺類・インスタント",
+        "ingredient_name": "即席ラーメン",
+        "price": 328,
+        "unit": "1袋(5食)",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "お一人様いずれか1袋限り",
+        "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
+      },
+      {
         "store_id": "york_benimaru",
         "store_name": "ヨークベニマル 小山雨ヶ谷店",
         "chain": "ヨークベニマル",
@@ -1258,20 +1299,6 @@
         "valid_to": "2026-10-16",
         "note": "生さば1パック398円",
         "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "日清食品 チキンラーメン",
-        "category": "麺類・インスタント",
-        "ingredient_name": "即席ラーメン",
-        "price": 399,
-        "unit": "5食パック",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "本体価格",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
         "store_id": "maruetsu",
@@ -2136,6 +2163,21 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
+      "ingredient": "生ラーメン",
+      "raw_name": "シマダヤ わが家の一杯 生ラーメン 3食（醤油・味噌・塩 各110g×3）",
+      "category": "麺類・インスタント",
+      "best_price": 159,
+      "unit": "1袋(3食)",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "best_day_label": "本日〜10/16まで",
+      "is_best_today": true,
+      "advice": "現在底値！今日買ってもOKです",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
       "ingredient": "ネギ",
       "raw_name": "秋田県産 長ねぎ 1束",
       "category": "野菜",
@@ -2346,6 +2388,21 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "即席ラーメン",
+      "raw_name": "サンヨー食品 サッポロ一番（みそ・塩・しょうゆ 5食パック）",
+      "category": "麺類・インスタント",
+      "best_price": 328,
+      "unit": "1袋(5食)",
+      "store": "オータニ",
+      "store_id": "otani",
+      "store_name": "フードオアシス オータニ 小山店",
+      "best_day_label": "本日 10/15 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
+    },
+    {
       "ingredient": "Umios 五目あんかけ焼そば (1人前)",
       "raw_name": "Umios 五目あんかけ焼そば (1人前)",
       "category": "その他",
@@ -2374,21 +2431,6 @@
       "advice": "現在底値！今日買ってもOKです",
       "sort_date": "2026-10-15",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-    },
-    {
-      "ingredient": "即席ラーメン",
-      "raw_name": "日清食品 チキンラーメン",
-      "category": "麺類・インスタント",
-      "best_price": 399,
-      "unit": "5食パック",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
       "ingredient": "日清食品 焼そば",
