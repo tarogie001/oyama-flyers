@@ -79,7 +79,7 @@ def run_ai_analysis():
             print(f"[-] {store_name}: 今回はAI抽出結果がありませんでした")
 
         # レート制限（連続リクエスト制限）回避のためのクールダウン
-        time.sleep(3)
+        time.sleep(6)
 
     print(f"\n🎉 AI画像解析が完了しました（合計 {total_added} 件の特売品を新規登録/更新）")
 
