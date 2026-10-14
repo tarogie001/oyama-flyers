@@ -3,10 +3,10 @@ name: Daily Flyer Crawler & Deals Update
 on:
   schedule:
     # UTC時刻で指定（JST = UTC + 9時間）
-    # 22:00 UTC = JST 07:00 (朝の速報)
-    # 00:00 UTC = JST 09:00 (朝の更新本番)
-    # 06:00 UTC = JST 15:00 (夕方のチラシ・特売追加)
-    - cron: '0 22,0,6 * * *'
+    # 22:14 UTC = JST 07:14 (朝の速報)
+    # 00:14 UTC = JST 09:14 (朝の更新本番)
+    # 06:14 UTC = JST 15:14 (夕方のチラシ・特売追加)
+    - cron: '14 22,0,6 * * *'
   workflow_dispatch: # 手動実行も可能
 
 jobs:
