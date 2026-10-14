@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 11:06",
+  "updated_at": "2026-10-14 11:46",
   "target_date": "2026-10-14",
   "target_date_label": "2026年10月14日",
   "buy_today": [
@@ -811,6 +811,20 @@
         "store_id": "beisia",
         "store_name": "ベイシア Foods Park 結城店",
         "chain": "ベイシア",
+        "product_raw_name": "ニュージーランド産 ゼスプリ サンゴールドキウイ",
+        "category": "その他",
+        "ingredient_name": "ニュージーランド産 ゼスプリ サンゴールドキウイ",
+        "price": 159,
+        "unit": "1コ",
+        "valid_from": "2026-10-17",
+        "valid_to": "2026-10-17",
+        "note": "10/17(土)限り",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+      },
+      {
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
         "product_raw_name": "プリマハム 香薫あらびきポーク大袋 550g",
         "category": "お菓子",
         "ingredient_name": "お得なお菓子",
@@ -1032,6 +1046,20 @@
         "valid_to": "2026-10-15",
         "note": "10/15限り・きのこの日",
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
+        "product_raw_name": "中国産 うなぎ長蒲焼",
+        "category": "その他",
+        "ingredient_name": "中国産 うなぎ長蒲焼",
+        "price": 799,
+        "unit": "1尾",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "10/15(木)限り",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       },
       {
         "store_id": "beisia",
@@ -1425,6 +1453,21 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
+      "ingredient": "ニンジン",
+      "raw_name": "国内産 にんじん",
+      "category": "野菜",
+      "best_price": 199,
+      "unit": "1袋",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "本日〜10/15まで",
+      "is_best_today": true,
+      "advice": "現在底値！今日買ってもOKです",
+      "sort_date": "2026-10-14",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
       "ingredient": "ごぼう",
       "raw_name": "青森県産などの国内産 ごぼう (2本入・1袋)",
       "category": "野菜",
@@ -1800,6 +1843,21 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "中国産 うなぎ長蒲焼",
+      "raw_name": "中国産 うなぎ長蒲焼",
+      "category": "その他",
+      "best_price": 799,
+      "unit": "1尾",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "10/15(木)から",
+      "is_best_today": false,
+      "advice": "10/15の特売開始まで待機推奨",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
       "ingredient": "原料原産地 鹿児島などの国内産 うなぎ長蒲焼 1尾",
       "raw_name": "原料原産地 鹿児島などの国内産 うなぎ長蒲焼 1尾",
       "category": "その他",
@@ -1879,6 +1937,21 @@
       "raw_name": "ゴールドキウイ",
       "category": "その他",
       "best_price": 99,
+      "unit": "1コ",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "10/17(土)から",
+      "is_best_today": false,
+      "advice": "10/17の特売開始まで待機推奨",
+      "sort_date": "2026-10-17",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
+      "ingredient": "ニュージーランド産 ゼスプリ サンゴールドキウイ",
+      "raw_name": "ニュージーランド産 ゼスプリ サンゴールドキウイ",
+      "category": "その他",
+      "best_price": 159,
       "unit": "1コ",
       "store": "ベイシア",
       "store_id": "beisia",
