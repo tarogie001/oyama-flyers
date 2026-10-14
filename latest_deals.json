@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 07:31",
+  "updated_at": "2026-10-15 07:54",
   "target_date": "2026-10-15",
   "target_date_label": "2026年10月15日",
   "buy_today": [
@@ -238,19 +238,6 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
-      "ingredient": "レタス",
-      "raw_name": "国内産 レタス",
-      "category": "野菜",
-      "price": 129,
-      "unit": "1コ",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ベイシア Foods Park 結城店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
       "ingredient": "きのこ各種",
       "raw_name": "きのこ各種",
       "category": "その他",
@@ -288,19 +275,6 @@
       "note": "本日限り！",
       "store_name": "たいらや 粟宮店",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-    },
-    {
-      "ingredient": "牛乳",
-      "raw_name": "雪印メグミルク ナチュレ恵 (プレーン・脂肪0、各400g)",
-      "category": "日配品・大豆製品",
-      "price": 148,
-      "unit": "1コ",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "チーズ",
@@ -405,19 +379,6 @@
       "note": "本日限り！",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
-      "ingredient": "プリマハム 香薫あらびきポークウインナー",
-      "raw_name": "プリマハム 香薫あらびきポークウインナー",
-      "category": "その他",
-      "price": 219,
-      "unit": "1束",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ベイシア Foods Park 結城店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "国産 豚肉バラスライス 100g当り",
@@ -759,12 +720,23 @@
       "future_store": "ベイシア",
       "future_day": "10/18(日)",
       "diff": 9
+    },
+    {
+      "ingredient": "牛乳",
+      "category": "日配品・大豆製品",
+      "today_price": 268,
+      "future_price": 199,
+      "unit": "1000ml",
+      "future_store": "ベイシア",
+      "future_day": "10/16(金)",
+      "diff": 69
     }
   ],
   "no_deal_staples": [
     "キャベツ",
     "大根",
-    "ブロッコリー"
+    "ブロッコリー",
+    "レタス"
   ],
   "weekly_schedule": {
     "10/15(木)": [
@@ -1007,20 +979,6 @@
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
-        "store_id": "beisia",
-        "store_name": "ベイシア Foods Park 結城店",
-        "chain": "ベイシア",
-        "product_raw_name": "国内産 レタス",
-        "category": "野菜",
-        "ingredient_name": "レタス",
-        "price": 129,
-        "unit": "1コ",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "お1人様2コまで",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-      },
-      {
         "store_id": "maruetsu",
         "store_name": "マルエツ 小山店",
         "chain": "マルエツ",
@@ -1047,20 +1005,6 @@
         "valid_to": "2026-10-16",
         "note": "",
         "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-      },
-      {
-        "store_id": "york_benimaru",
-        "store_name": "ヨークベニマル 小山雨ヶ谷店",
-        "chain": "ヨークベニマル",
-        "product_raw_name": "雪印メグミルク ナチュレ恵 (プレーン・脂肪0、各400g)",
-        "category": "日配品・大豆製品",
-        "ingredient_name": "牛乳",
-        "price": 148,
-        "unit": "1コ",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "",
-        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
       },
       {
         "store_id": "japanmeat",
@@ -1173,20 +1117,6 @@
         "valid_to": "2026-10-15",
         "note": "",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-      },
-      {
-        "store_id": "beisia",
-        "store_name": "ベイシア Foods Park 結城店",
-        "chain": "ベイシア",
-        "product_raw_name": "プリマハム 香薫あらびきポークウインナー",
-        "category": "その他",
-        "ingredient_name": "プリマハム 香薫あらびきポークウインナー",
-        "price": 219,
-        "unit": "1束",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "木曜限り！",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       },
       {
         "store_id": "otani",
@@ -2073,21 +2003,6 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
-      "ingredient": "レタス",
-      "raw_name": "国内産 レタス",
-      "category": "野菜",
-      "best_price": 129,
-      "unit": "1コ",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "store_name": "ベイシア Foods Park 結城店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
       "ingredient": "きのこ各種",
       "raw_name": "きのこ各種",
       "category": "その他",
@@ -2131,21 +2046,6 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-15",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-    },
-    {
-      "ingredient": "牛乳",
-      "raw_name": "雪印メグミルク ナチュレ恵 (プレーン・脂肪0、各400g)",
-      "category": "日配品・大豆製品",
-      "best_price": 148,
-      "unit": "1コ",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "チーズ",
@@ -2296,21 +2196,6 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-15",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
-      "ingredient": "プリマハム 香薫あらびきポークウインナー",
-      "raw_name": "プリマハム 香薫あらびきポークウインナー",
-      "category": "その他",
-      "best_price": 219,
-      "unit": "1束",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "store_name": "ベイシア Foods Park 結城店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "国産 豚肉バラスライス 100g当り",
@@ -2761,6 +2646,21 @@
       "advice": "10/16の特売開始まで待機推奨",
       "sort_date": "2026-10-16",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+    },
+    {
+      "ingredient": "牛乳",
+      "raw_name": "ベイシア おいしい牛乳",
+      "category": "日配品・大豆製品",
+      "best_price": 199,
+      "unit": "1000ml",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "10/16(金)から",
+      "is_best_today": false,
+      "advice": "10/16の特売開始まで待機推奨",
+      "sort_date": "2026-10-16",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "アメリカ産 牛肉切落し",
