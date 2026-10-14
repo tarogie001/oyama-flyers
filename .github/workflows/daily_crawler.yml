@@ -12,6 +12,8 @@ on:
 jobs:
   crawl-and-update:
     runs-on: ubuntu-latest
+    env:
+      TZ: 'Asia/Tokyo'
     permissions:
       contents: write
       pages: write
