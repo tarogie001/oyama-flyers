@@ -28,8 +28,46 @@ if ENV_FILE.exists():
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 
+_CACHED_ACTIVE_MODEL = None
+
+def get_active_gemini_model(api_key: str) -> str:
+    """Google APIに問い合わせて、現在利用可能な最新のGeminiモデルを自動検知"""
+    global _CACHED_ACTIVE_MODEL
+    if _CACHED_ACTIVE_MODEL:
+        return _CACHED_ACTIVE_MODEL
+
+    try:
+        list_url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
+        res = requests.get(list_url, timeout=10)
+        if res.status_code == 200:
+            models = res.json().get("models", [])
+            # generateContent に対応したモデルを抽出
+            supported = [
+                m["name"].replace("models/", "")
+                for m in models
+                if "generateContent" in m.get("supportedGenerationMethods", [])
+            ]
+            # flash 系（高速・高精度な画像解析モデル）を優先
+            flash_models = [m for m in supported if "flash" in m.lower()]
+            candidate_list = flash_models if flash_models else supported
+            if candidate_list:
+                # Googleから返ってきた公式名称を最新順に自動ソートして最上位をダイレクト採用
+                # (例: gemini-2.0-flash > gemini-1.5-flash-latest > gemini-1.5-flash-002 等)
+                sorted_models = sorted(candidate_list, reverse=True)
+                # 'latest' が含まれるモデルがあれば最優先
+                latest_models = [m for m in sorted_models if "latest" in m.lower()]
+                chosen = latest_models[0] if latest_models else sorted_models[0]
+                _CACHED_ACTIVE_MODEL = chosen
+                print(f"[INFO] 🤖 Google公式APIから利用可能な最新現行モデルを動的検知・採用しました: {_CACHED_ACTIVE_MODEL}")
+                return _CACHED_ACTIVE_MODEL
+    except Exception as e:
+        print(f"[WARN] モデル一覧の自動取得に失敗したため既定値を使用: {e}")
+
+    _CACHED_ACTIVE_MODEL = "gemini-1.5-flash-latest"
+    return _CACHED_ACTIVE_MODEL
+
 def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Optional[str] = None) -> List[Dict[str, Any]]:
-    """チラシ画像をGemini 1.5 Flashに送信し、特売品リストをJSON配列として取得"""
+    """チラシ画像をGemini最新モデルに送信し、特売品リストをJSON配列として取得"""
     if not GEMINI_API_KEY:
         print("[WARN] GEMINI_API_KEY が設定されていません。スキップします。")
         return []
@@ -78,7 +116,8 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
 ]
 """
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+    active_model = get_active_gemini_model(GEMINI_API_KEY)
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{active_model}:generateContent?key={GEMINI_API_KEY}"
     payload = {
         "contents": [
             {
