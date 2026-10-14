@@ -81,6 +81,10 @@ class DealAnalyzer:
         """不自然な合成文字列やOCR誤読ノイズを弾くバリデーション"""
         if not raw_name or len(raw_name) < 2:
             return False
+        # 不完全・曖昧すぎる単語のみの商品名はツギハギ誤読として除外
+        vague_names = ["いも", "こがね", "こま", "にく", "さかな"]
+        if raw_name.strip() in vague_names:
+            return False
         # 不自然な肉の部位混同（例: 豚肉とスティックなど）
         if "豚" in raw_name and "スティック" in raw_name:
             return False

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 07:54",
+  "updated_at": "2026-10-15 08:15",
   "target_date": "2026-10-15",
   "target_date_label": "2026年10月15日",
   "buy_today": [
@@ -78,19 +78,6 @@
       "store_id": "japanmeat",
       "is_today_only": false,
       "note": "今週最安値",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
-      "ingredient": "こがね",
-      "raw_name": "こがね",
-      "category": "その他",
-      "price": 79,
-      "unit": "1コ",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "is_today_only": true,
-      "note": "本日限り！",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
@@ -392,19 +379,6 @@
       "note": "本日限り！",
       "store_name": "フードオアシス オータニ 小山店",
       "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
-    },
-    {
-      "ingredient": "いも",
-      "raw_name": "いも",
-      "category": "その他",
-      "price": 250,
-      "unit": "5kg",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "アメリカ産など 銀だら切身 (解凍) 100g当り",
@@ -814,20 +788,6 @@
         "store_id": "japanmeat",
         "store_name": "ジャパンミート生鮮館 小山店",
         "chain": "ジャパンミート",
-        "product_raw_name": "こがね",
-        "category": "その他",
-        "ingredient_name": "こがね",
-        "price": 79,
-        "unit": "1コ",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-      },
-      {
-        "store_id": "japanmeat",
-        "store_name": "ジャパンミート生鮮館 小山店",
-        "chain": "ジャパンミート",
         "product_raw_name": "ブラジル産 豚バラブロック 100g当り",
         "category": "精肉（豚肉）",
         "ingredient_name": "豚バラブロック",
@@ -1131,20 +1091,6 @@
         "valid_to": "2026-10-15",
         "note": "木曜限り！",
         "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
-      },
-      {
-        "store_id": "japanmeat",
-        "store_name": "ジャパンミート生鮮館 小山店",
-        "chain": "ジャパンミート",
-        "product_raw_name": "いも",
-        "category": "その他",
-        "ingredient_name": "いも",
-        "price": 250,
-        "unit": "5kg",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
         "store_id": "maruetsu",
@@ -1808,21 +1754,6 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
-      "ingredient": "こがね",
-      "raw_name": "こがね",
-      "category": "その他",
-      "best_price": 79,
-      "unit": "1コ",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
       "ingredient": "豚バラブロック",
       "raw_name": "ブラジル産 豚バラブロック 100g当り",
       "category": "精肉（豚肉）",
@@ -2211,21 +2142,6 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-15",
       "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
-    },
-    {
-      "ingredient": "いも",
-      "raw_name": "いも",
-      "category": "その他",
-      "best_price": 250,
-      "unit": "5kg",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "アメリカ産など 銀だら切身 (解凍) 100g当り",
