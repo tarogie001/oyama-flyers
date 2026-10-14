@@ -20,18 +20,24 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
-# 1. オータニのLINEチラシ原本ダウンロード（軽量＆超高画質）
-def fetch_otani_image():
+# 1. オータニのLINEチラシ原本ダウンロード（Playwright活用）
+async def fetch_otani_image(context):
     print("\n▶ [1/4] オータニの最新チラシ原本画像を取得中...")
     try:
+        page = await context.new_page()
         url = "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
-        res = requests.get(url, headers=HEADERS, timeout=15)
-        m = re.search(r'src=["\'](https://chirashi\.line\.me/asp/[^"\']+)["\']', res.text)
+        await page.goto(url, timeout=30000)
+        await page.wait_for_timeout(3000)
+
+        # iframe内のURLを探す
+        content = await page.content()
+        m = re.search(r'src=["\'](https://chirashi\.line\.me/asp/[^"\']+)["\']', content)
         if m:
             widget_url = m.group(1)
-            w_res = requests.get(widget_url, headers=HEADERS, timeout=15)
-            # LINE OBS CDN の原本画像を探す
-            obs_matches = re.findall(r'https://chirashi-obs\.line-scdn\.net/[a-zA-Z0-9_\-]+', w_res.text)
+            await page.goto(widget_url, timeout=30000)
+            await page.wait_for_timeout(3000)
+            w_content = await page.content()
+            obs_matches = re.findall(r'https://chirashi-obs\.line-scdn\.net/[a-zA-Z0-9_\-]+', w_content)
             if obs_matches:
                 img_url = obs_matches[0]
                 img_r = requests.get(img_url, headers=HEADERS, timeout=20)
@@ -40,8 +46,14 @@ def fetch_otani_image():
                     with open(save_path, "wb") as f:
                         f.write(img_r.content)
                     print(f"  [OK] オータニ原本画像を保存: {save_path.name} ({len(img_r.content)} bytes)")
+                    await page.close()
                     return
-        print("  [-] オータニ原本URLが取得できませんでした")
+
+        # 原本URLが見つからない場合は画面キャプチャで確実に保存
+        save_path = FLYERS_DIR / "otani_flyer_orig.jpg"
+        await page.screenshot(path=str(save_path), full_page=False)
+        print(f"  [OK] オータニ画面キャプチャを保存: {save_path.name}")
+        await page.close()
     except Exception as e:
         print(f"  [ERROR] オータニ取得エラー: {e}")
 
@@ -127,6 +139,7 @@ async def main_async():
             viewport={"width": 1600, "height": 1400},
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
+        await fetch_otani_image(context)
         await fetch_tokubai_leaflets(context)
         await fetch_shufoo_stores(context)
         await browser.close()
@@ -135,7 +148,6 @@ def main():
     print("======================================================")
     print(" 主力スーパー チラシ原本・大判画像 自動収集")
     print("======================================================")
-    fetch_otani_image()
     asyncio.run(main_async())
     print("\n[OK] チラシ画像の自動収集がすべて完了しました！")
 

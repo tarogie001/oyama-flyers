@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 10:17",
+  "updated_at": "2026-10-14 11:06",
   "target_date": "2026-10-14",
   "target_date_label": "2026年10月14日",
   "buy_today": [
@@ -173,19 +173,6 @@
       "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
     },
     {
-      "ingredient": "しいたけ",
-      "raw_name": "生しいたけ 1袋",
-      "category": "きのこ類",
-      "price": 99,
-      "unit": "1袋",
-      "store": "とりせん",
-      "store_id": "torisen",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "とりせん 小山土塔店",
-      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
-    },
-    {
       "ingredient": "豚モモ（切り落とし・こま切れ）",
       "raw_name": "国産豚肉 モモ切り落とし",
       "category": "精肉（豚肉）",
@@ -355,17 +342,17 @@
       "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
     },
     {
-      "ingredient": "豚挽肉",
-      "raw_name": "国産 豚挽肉 (500g 1パック 100g当り108円)",
-      "category": "精肉（豚肉）",
-      "price": 500,
-      "unit": "1パック(500g)",
-      "store": "たいらや",
-      "store_id": "tairaya",
+      "ingredient": "切身（刺身・解凍）",
+      "raw_name": "切身（刺身・解凍）",
+      "category": "その他",
+      "price": 499,
+      "unit": "1パック",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
       "is_today_only": true,
       "note": "本日限り！",
-      "store_name": "たいらや 粟宮店",
-      "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+      "store_name": "マルエツ 小山店",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
       "ingredient": "えび",
@@ -391,6 +378,16 @@
       "future_store": "ベイシア",
       "future_day": "10/18(日)",
       "diff": 10
+    },
+    {
+      "ingredient": "まぐろ",
+      "category": "魚介類",
+      "today_price": 980,
+      "future_price": 198,
+      "unit": "100g",
+      "future_store": "たいらや",
+      "future_day": "10/15(木)",
+      "diff": 782
     }
   ],
   "no_deal_staples": [
@@ -569,20 +566,6 @@
         "valid_to": "2026-10-16",
         "note": "10/12-16くらし応援",
         "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
-      },
-      {
-        "store_id": "torisen",
-        "store_name": "とりせん 小山土塔店",
-        "chain": "とりせん",
-        "product_raw_name": "生しいたけ 1袋",
-        "category": "きのこ類",
-        "ingredient_name": "しいたけ",
-        "price": 99,
-        "unit": "1袋",
-        "valid_from": "2026-10-13",
-        "valid_to": "2026-10-14",
-        "note": "10/13-14均一大得市",
-        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       },
       {
         "store_id": "torisen",
@@ -767,18 +750,18 @@
         "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
       },
       {
-        "store_id": "tairaya",
-        "store_name": "たいらや 粟宮店",
-        "chain": "たいらや",
-        "product_raw_name": "国産 豚挽肉 (500g 1パック 100g当り108円)",
-        "category": "精肉（豚肉）",
-        "ingredient_name": "豚挽肉",
-        "price": 500,
-        "unit": "1パック(500g)",
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "切身（刺身・解凍）",
+        "category": "その他",
+        "ingredient_name": "切身（刺身・解凍）",
+        "price": 499,
+        "unit": "1パック",
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-14",
-        "note": "水曜限り！豚挽肉500円",
-        "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+        "note": "10/14限り・水・おすすめ品",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
         "store_id": "maruetsu",
@@ -808,6 +791,20 @@
         "valid_from": "2026-10-17",
         "valid_to": "2026-10-18",
         "note": "土日2日間限り！手羽元69円",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+      },
+      {
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
+        "product_raw_name": "ゴールドキウイ",
+        "category": "その他",
+        "ingredient_name": "ゴールドキウイ",
+        "price": 99,
+        "unit": "1コ",
+        "valid_from": "2026-10-17",
+        "valid_to": "2026-10-17",
+        "note": "10/17限り",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       },
       {
@@ -855,6 +852,20 @@
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "国産 若どりささみ",
+        "category": "その他",
+        "ingredient_name": "国産 若どりささみ",
+        "price": 98,
+        "unit": "100g当たり",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "10/15限り・木",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
         "store_id": "tairaya",
         "store_name": "たいらや 粟宮店",
         "chain": "たいらや",
@@ -867,6 +878,20 @@
         "valid_to": "2026-10-15",
         "note": "木曜限り！豚ロース128円",
         "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+      },
+      {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "エリンギ",
+        "category": "きのこ類",
+        "ingredient_name": "エリンギ",
+        "price": 129,
+        "unit": "1パック",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "10/15限り・きのこの日・よりどり3点380円",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
         "store_id": "belc",
@@ -981,6 +1006,34 @@
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "アメリカ産 豚たらし切身（解凍）",
+        "category": "その他",
+        "ingredient_name": "アメリカ産 豚たらし切身（解凍）",
+        "price": 269,
+        "unit": "100g当たり",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "10/15限り・きのこの日",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "銀だら西京漬",
+        "category": "その他",
+        "ingredient_name": "銀だら西京漬",
+        "price": 680,
+        "unit": "2切入",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "10/15限り・きのこの日",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
         "store_id": "beisia",
         "store_name": "ベイシア Foods Park 結城店",
         "chain": "ベイシア",
@@ -1008,6 +1061,20 @@
         "valid_from": "2026-10-16",
         "valid_to": "2026-10-16",
         "note": "金曜限り！豚こま79円",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+      },
+      {
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
+        "product_raw_name": "豚肉",
+        "category": "その他",
+        "ingredient_name": "豚肉",
+        "price": 158,
+        "unit": "100g当り",
+        "valid_from": "2026-10-16",
+        "valid_to": "2026-10-16",
+        "note": "10/16限り",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       },
       {
@@ -1223,21 +1290,6 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
-      "ingredient": "まいたけ",
-      "raw_name": "まいたけ 1パック",
-      "category": "きのこ類",
-      "best_price": 99,
-      "unit": "1パック",
-      "store": "ベルク",
-      "store_id": "belc",
-      "store_name": "ベルク フォルテ間々田店",
-      "best_day_label": "本日〜10/16まで",
-      "is_best_today": true,
-      "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-10-14",
-      "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
-    },
-    {
       "ingredient": "しいたけ",
       "raw_name": "生しいたけ 1袋",
       "category": "きのこ類",
@@ -1251,6 +1303,21 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-14",
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+    },
+    {
+      "ingredient": "まいたけ",
+      "raw_name": "まいたけ 1パック",
+      "category": "きのこ類",
+      "best_price": 99,
+      "unit": "1パック",
+      "store": "ベルク",
+      "store_id": "belc",
+      "store_name": "ベルク フォルテ間々田店",
+      "best_day_label": "本日〜10/16まで",
+      "is_best_today": true,
+      "advice": "現在底値！今日買ってもOKです",
+      "sort_date": "2026-10-14",
+      "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
     },
     {
       "ingredient": "豚モモ（切り落とし・こま切れ）",
@@ -1448,6 +1515,21 @@
       "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
     },
     {
+      "ingredient": "切身（刺身・解凍）",
+      "raw_name": "切身（刺身・解凍）",
+      "category": "その他",
+      "best_price": 499,
+      "unit": "1パック",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "store_name": "マルエツ 小山店",
+      "best_day_label": "本日 10/14 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-14",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
       "ingredient": "豚挽肉",
       "raw_name": "国産 豚挽肉 (500g 1パック 100g当り108円)",
       "category": "精肉（豚肉）",
@@ -1493,11 +1575,41 @@
       "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
     },
     {
+      "ingredient": "しめじ",
+      "raw_name": "ぶなしめじ",
+      "category": "きのこ類",
+      "best_price": 79,
+      "unit": "1パック",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "10/15(木)から",
+      "is_best_today": false,
+      "advice": "10/15の特売開始まで待機推奨",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
       "ingredient": "国産 若どりささみ 100g当り",
       "raw_name": "国産 若どりささみ 100g当り",
       "category": "その他",
       "best_price": 98,
       "unit": "100g",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "store_name": "マルエツ 小山店",
+      "best_day_label": "10/15(木)から",
+      "is_best_today": false,
+      "advice": "10/15の特売開始まで待機推奨",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "国産 若どりささみ",
+      "raw_name": "国産 若どりささみ",
+      "category": "その他",
+      "best_price": 98,
+      "unit": "100g当たり",
       "store": "マルエツ",
       "store_id": "maruetsu",
       "store_name": "マルエツ 小山店",
@@ -1523,8 +1635,8 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "しめじ",
-      "raw_name": "長野県産 えのき茸・ぶなしめじ・エリンギ 各1点",
+      "ingredient": "エリンギ",
+      "raw_name": "エリンギ",
       "category": "きのこ類",
       "best_price": 129,
       "unit": "1パック",
@@ -1658,6 +1770,36 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "アメリカ産 豚たらし切身（解凍）",
+      "raw_name": "アメリカ産 豚たらし切身（解凍）",
+      "category": "その他",
+      "best_price": 269,
+      "unit": "100g当たり",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "store_name": "マルエツ 小山店",
+      "best_day_label": "10/15(木)から",
+      "is_best_today": false,
+      "advice": "10/15の特売開始まで待機推奨",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "銀だら西京漬",
+      "raw_name": "銀だら西京漬",
+      "category": "その他",
+      "best_price": 680,
+      "unit": "2切入",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "store_name": "マルエツ 小山店",
+      "best_day_label": "10/15(木)から",
+      "is_best_today": false,
+      "advice": "10/15の特売開始まで待機推奨",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
       "ingredient": "原料原産地 鹿児島などの国内産 うなぎ長蒲焼 1尾",
       "raw_name": "原料原産地 鹿児島などの国内産 うなぎ長蒲焼 1尾",
       "category": "その他",
@@ -1688,6 +1830,21 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
+      "ingredient": "豚肉",
+      "raw_name": "豚肉",
+      "category": "その他",
+      "best_price": 158,
+      "unit": "100g当り",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "10/16(金)から",
+      "is_best_today": false,
+      "advice": "10/16の特売開始まで待機推奨",
+      "sort_date": "2026-10-16",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
       "ingredient": "カナダ産 豚バラ肉うす切り 100gあたり",
       "raw_name": "カナダ産 豚バラ肉うす切り 100gあたり",
       "category": "その他",
@@ -1708,6 +1865,21 @@
       "category": "その他",
       "best_price": 69,
       "unit": "100g",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "10/17(土)から",
+      "is_best_today": false,
+      "advice": "10/17の特売開始まで待機推奨",
+      "sort_date": "2026-10-17",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
+      "ingredient": "ゴールドキウイ",
+      "raw_name": "ゴールドキウイ",
+      "category": "その他",
+      "best_price": 99,
+      "unit": "1コ",
       "store": "ベイシア",
       "store_id": "beisia",
       "store_name": "ベイシア Foods Park 結城店",
