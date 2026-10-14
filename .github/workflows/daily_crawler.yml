@@ -44,9 +44,10 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git reset --soft origin/main
           git add latest_deals.json deals.db today_report.txt
           git commit -m "chore(auto): update deals data [skip ci]" || echo "No changes to commit"
-          git pull --rebase origin main
           git push origin main
 
       - name: Deploy to GitHub Pages
