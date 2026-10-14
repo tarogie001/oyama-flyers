@@ -9,6 +9,8 @@ import json
 import base64
 import datetime
 import time
+import io
+from PIL import Image
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import requests
@@ -29,42 +31,50 @@ if ENV_FILE.exists():
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 
-_CACHED_ACTIVE_MODEL = None
+_CACHED_MODELS = None
 
-def get_active_gemini_model(api_key: str) -> str:
-    """Google APIに問い合わせて、現在利用可能な最新のGeminiモデルを自動検知"""
-    global _CACHED_ACTIVE_MODEL
-    if _CACHED_ACTIVE_MODEL:
-        return _CACHED_ACTIVE_MODEL
+def get_active_gemini_models(api_key: str) -> List[str]:
+    """Google APIに問い合わせて、利用可能なGeminiモデルの優先リストを動的生成"""
+    global _CACHED_MODELS
+    if _CACHED_MODELS:
+        return _CACHED_MODELS
 
     try:
         list_url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
         res = requests.get(list_url, timeout=10)
         if res.status_code == 200:
             models = res.json().get("models", [])
-            # generateContent に対応したモデルを抽出
             supported = [
                 m["name"].replace("models/", "")
                 for m in models
                 if "generateContent" in m.get("supportedGenerationMethods", [])
             ]
-            # 画像解析に強く混雑制限を受けにくい本格Flashモデルを優先（liteは除外）
-            flash_models = [m for m in supported if "flash" in m.lower() and "lite" not in m.lower()]
-            candidate_list = flash_models if flash_models else supported
-            if candidate_list:
-                # 'latest' が含まれる本格Flashモデルを最優先（例: gemini-1.5-flash-latest）
-                latest_models = [m for m in candidate_list if "latest" in m.lower()]
-                # バージョン順にソート
-                sorted_models = sorted(candidate_list, reverse=True)
-                chosen = latest_models[0] if latest_models else sorted_models[0]
-                _CACHED_ACTIVE_MODEL = chosen
-                print(f"[INFO] 🤖 Google公式APIから利用可能な最新本格モデルを動的検知・採用しました: {_CACHED_ACTIVE_MODEL}")
-                return _CACHED_ACTIVE_MODEL
-    except Exception as e:
-        print(f"[WARN] モデル一覧の自動取得に失敗したため既定値を使用: {e}")
+            print(f"[INFO] 🤖 Google公式APIから利用可能モデル一覧を取得しました ({len(supported)}件)")
 
-    _CACHED_ACTIVE_MODEL = "gemini-1.5-flash-latest"
-    return _CACHED_ACTIVE_MODEL
+            # 画像解析に対応したモデルの中で安定版を優先ソート
+            # 1. 安定版指定 (1.5-flash-002, 1.5-flash-001)
+            # 2. 最新エイリアス (1.5-flash-latest, 2.0-flash)
+            # 3. その他の flash / pro
+            def sort_key(name: str) -> int:
+                n = name.lower()
+                if "1.5-flash-002" in n: return 0
+                if "1.5-flash-001" in n: return 1
+                if "1.5-flash-latest" in n: return 2
+                if "2.0-flash" in n: return 3
+                if "flash" in n and "lite" not in n: return 4
+                if "1.5-pro" in n: return 5
+                return 10
+
+            sorted_models = sorted(supported, key=sort_key)
+            # 使える上位候補をキャッシュ
+            _CACHED_MODELS = sorted_models[:5]
+            print(f"[INFO] 🤖 採用モデル優先順位: {_CACHED_MODELS}")
+            return _CACHED_MODELS
+    except Exception as e:
+        print(f"[WARN] モデル一覧の自動取得に失敗したため既定リストを使用: {e}")
+
+    _CACHED_MODELS = ["gemini-1.5-flash-002", "gemini-1.5-flash-latest", "gemini-1.5-flash"]
+    return _CACHED_MODELS
 
 def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Optional[str] = None) -> List[Dict[str, Any]]:
     """チラシ画像をGemini最新モデルに送信し、特売品リストをJSON配列として取得"""
@@ -79,27 +89,38 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
     if not base_date:
         base_date = datetime.date.today().isoformat()
 
-    # 画像をbase64エンコード
-    with open(image_path, "rb") as f:
-        img_bytes = f.read()
-    b64_img = base64.b64encode(img_bytes).decode("utf-8")
+    # 画像を文字鮮明度を保ったまま最適サイズ・JPEGに自動軽量化（3MB -> 300~500KB）
+    try:
+        with Image.open(image_path) as img:
+            img = img.convert("RGB")
+            max_dimension = 1600
+            if max(img.width, img.height) > max_dimension:
+                scale = max_dimension / max(img.width, img.height)
+                new_size = (int(img.width * scale), int(img.height * scale))
+                img = img.resize(new_size, Image.Resampling.LANCZOS)
+            buf = io.BytesIO()
+            img.save(buf, format="JPEG", quality=85, optimize=True)
+            img_bytes = buf.getvalue()
+    except Exception as e:
+        print(f"[WARN] 画像の最適化に失敗したため生データを読み込みます: {e}")
+        with open(image_path, "rb") as f:
+            img_bytes = f.read()
 
-    # 拡張子判定
-    ext = image_path.suffix.lower()
-    mime_type = "image/png" if ext == ".png" else "image/jpeg"
+    b64_img = base64.b64encode(img_bytes).decode("utf-8")
+    mime_type = "image/jpeg"
 
     prompt = f"""
 あなたはスーパーのチラシ解析の最高峰エキスパートです。
 画像は「{store_name}」のチラシ（またはその一部）です。
 本日の基準日付は「{base_date}」です。
 
-このチラシ画像に実際に掲載されている【野菜】【きのこ】【果物】【精肉（豚・鶏・牛）】【鮮魚・水産】の日替わり特売品を正確に読み取り、JSON配列形式で抽出してください。
+このチラシ画像に実際に掲載されている【野菜】【きのこ】【果物】【精肉（豚・鶏・牛）】【鮮魚・水産】、および【卵・牛乳・チーズ・ヨーグルト・納豆】【即席ラーメン・カップラーメン】の日替わり特売品を正確に読み取り、JSON配列形式で抽出してください。
 
 【厳格な遵守ルール】
 1. 推測や架空の価格は絶対に含めず、画像に印刷されている数字のみを正確に読み取ること。
 2. 価格（price）は「税抜（本体）価格」を整数値で出力してください。税込しか書かれていない場合は税込価格を整数で出力してください。
 3. 日替わり枠（例: 10/14限り、10/15限り、10/16〜10/18など）の日付を正確に YYYY-MM-DD 形式に変換してください。
-4. 惣菜、冷凍加工品、ピザ、お菓子などは除外し、新鮮な生鮮食品（野菜・肉・魚・きのこ・果物）を中心に抽出してください。
+4. 惣菜、お弁当、お酒、ペット用品などは除外し、日常の食卓食材（生鮮食品、卵、牛乳、乳製品・チーズ、納豆、豆腐、即席麺類）を中心に抽出してください。
 
 【出力フォーマット（JSON形式）】
 [
@@ -116,8 +137,7 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
 ]
 """
 
-    active_model = get_active_gemini_model(GEMINI_API_KEY)
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{active_model}:generateContent?key={GEMINI_API_KEY}"
+    candidate_models = get_active_gemini_models(GEMINI_API_KEY)
     payload = {
         "contents": [
             {
@@ -140,37 +160,42 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
 
     headers = {"Content-Type": "application/json"}
 
-    max_retries = 3
+    max_retries = len(candidate_models)
     for attempt in range(max_retries):
+        current_model = candidate_models[attempt]
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent?key={GEMINI_API_KEY}"
+        print(f"  👉 [{attempt + 1}/{max_retries}] モデル '{current_model}' で解析を試行中...")
+
         try:
-            res = requests.post(url, json=payload, headers=headers, timeout=60)
+            res = requests.post(url, json=payload, headers=headers, timeout=50)
             if res.status_code == 200:
                 data = res.json()
                 text_content = data["candidates"][0]["content"]["parts"][0]["text"]
                 deals = json.loads(text_content)
                 if isinstance(deals, list):
-                    print(f"[OK] Gemini AI が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！")
+                    print(f"[OK] Gemini AI ({current_model}) が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！")
                     return deals
                 return []
             elif res.status_code == 503:
-                # 混雑エラーの場合は待機して再試行
-                wait_sec = (attempt + 1) * 3
-                print(f"[WARN] Gemini API が混雑中 (HTTP 503)。{wait_sec}秒後に再試行します... (試行 {attempt + 1}/{max_retries})")
+                wait_sec = 5
+                print(f"[WARN] モデル '{current_model}' が混雑中 (HTTP 503)。{wait_sec}秒待機後、代替モデルへ切り替えます...")
                 time.sleep(wait_sec)
                 continue
             else:
-                print(f"[ERROR] Gemini API エラー (HTTP {res.status_code}): {res.text}")
-                return []
+                print(f"[WARN] モデル '{current_model}' でエラー (HTTP {res.status_code}): {res.text[:200]}。代替モデルを試します...")
+                time.sleep(3)
+                continue
         except requests.exceptions.Timeout:
-            wait_sec = (attempt + 1) * 3
-            print(f"[WARN] Gemini API タイムアウト。{wait_sec}秒後に再試行します... (試行 {attempt + 1}/{max_retries})")
+            wait_sec = 5
+            print(f"[WARN] モデル '{current_model}' がタイムアウト。{wait_sec}秒待機後、代替モデルへ切り替えます...")
             time.sleep(wait_sec)
             continue
         except Exception as e:
-            print(f"[ERROR] Gemini解析処理エラー: {e}")
-            return []
+            print(f"[ERROR] モデル '{current_model}' で例外エラー: {e}。代替モデルを試します...")
+            time.sleep(3)
+            continue
 
-    print(f"[-] {store_name}: 最大試行回数 ({max_retries}回) を超えたためスキップします")
+    print(f"[-] {store_name}: 全モデル候補 ({max_retries}種) を試行しましたが抽出できませんでした")
     return []
 
 if __name__ == "__main__":
