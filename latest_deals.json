@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 00:32",
+  "updated_at": "2026-10-14 02:49",
   "target_date": "2026-10-14",
   "target_date_label": "2026年10月14日",
   "buy_today": [
@@ -17,9 +17,9 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
-      "ingredient": "北海道産などの国内産 かぼちゃ 100gあたり",
+      "ingredient": "かぼちゃ",
       "raw_name": "北海道産などの国内産 かぼちゃ 100gあたり",
-      "category": "その他",
+      "category": "野菜",
       "price": 38,
       "unit": "100g",
       "store": "たいらや",
@@ -28,19 +28,6 @@
       "note": "本日限り！",
       "store_name": "たいらや 粟宮店",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-    },
-    {
-      "ingredient": "北海道産などの国内産 国産かぼちゃ 100g当り",
-      "raw_name": "北海道産などの国内産 国産かぼちゃ 100g当り",
-      "category": "その他",
-      "price": 39,
-      "unit": "100g",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "is_today_only": false,
-      "note": "今週最安値",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "鶏もも肉",
@@ -69,9 +56,9 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
-      "ingredient": "茨城県産などの国内産 れんこん 100g当り",
+      "ingredient": "れんこん",
       "raw_name": "茨城県産などの国内産 れんこん 100g当り",
-      "category": "その他",
+      "category": "野菜",
       "price": 79,
       "unit": "100g",
       "store": "ジャパンミート",
@@ -82,9 +69,9 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
-      "ingredient": "おかめ 絹美人・もめんミニ3 各1パック",
+      "ingredient": "とうふ",
       "raw_name": "おかめ 絹美人・もめんミニ3 各1パック",
-      "category": "その他",
+      "category": "日配品・大豆製品",
       "price": 88,
       "unit": "1パック",
       "store": "ヨークベニマル",
@@ -95,9 +82,9 @@
       "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
-      "ingredient": "ブラジル産 豚バラブロック 100g当り",
+      "ingredient": "豚バラブロック",
       "raw_name": "ブラジル産 豚バラブロック 100g当り",
-      "category": "その他",
+      "category": "精肉（豚肉）",
       "price": 89,
       "unit": "100g",
       "store": "ジャパンミート",
@@ -251,9 +238,9 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
-      "ingredient": "かつおたたきサク 100gあたり",
+      "ingredient": "かつお",
       "raw_name": "かつおたたきサク 100gあたり",
-      "category": "その他",
+      "category": "魚介類",
       "price": 158,
       "unit": "100g",
       "store": "たいらや",
@@ -264,9 +251,9 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "国内産 生真あじ 1尾",
+      "ingredient": "あじ",
       "raw_name": "国内産 生真あじ 1尾",
-      "category": "その他",
+      "category": "魚介類",
       "price": 168,
       "unit": "1尾",
       "store": "ヨークベニマル",
@@ -290,9 +277,9 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "青森県産などの国内産 ごぼう (2本入・1袋)",
+      "ingredient": "ごぼう",
       "raw_name": "青森県産などの国内産 ごぼう (2本入・1袋)",
-      "category": "その他",
+      "category": "野菜",
       "price": 199,
       "unit": "1袋(2本入)",
       "store": "ジャパンミート",
@@ -329,9 +316,9 @@
       "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
-      "ingredient": "国内産 生食用しらす干し 100g当り",
+      "ingredient": "しらす",
       "raw_name": "国内産 生食用しらす干し 100g当り",
-      "category": "その他",
+      "category": "魚介類",
       "price": 299,
       "unit": "100g",
       "store": "ベイシア",
@@ -368,9 +355,9 @@
       "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
     },
     {
-      "ingredient": "国産 豚挽肉 (500g 1パック 100g当り108円)",
+      "ingredient": "豚挽肉",
       "raw_name": "国産 豚挽肉 (500g 1パック 100g当り108円)",
-      "category": "その他",
+      "category": "精肉（豚肉）",
       "price": 500,
       "unit": "1パック(500g)",
       "store": "たいらや",
@@ -381,9 +368,9 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "むきえび・アルゼンチン赤えび (解凍) 各1パック",
+      "ingredient": "えび",
       "raw_name": "むきえび・アルゼンチン赤えび (解凍) 各1パック",
-      "category": "その他",
+      "category": "魚介類",
       "price": 500,
       "unit": "1パック",
       "store": "マルエツ",
@@ -392,19 +379,6 @@
       "note": "本日限り！",
       "store_name": "マルエツ 小山店",
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-    },
-    {
-      "ingredient": "国内産 国産豚大鬮スライスL 1kg (100g当り99.9円)",
-      "raw_name": "国内産 国産豚大鬮スライスL 1kg (100g当り99.9円)",
-      "category": "その他",
-      "price": 999,
-      "unit": "1パック(1kg)",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "is_today_only": false,
-      "note": "今週最安値",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     }
   ],
   "wait_for_later": [
@@ -447,28 +421,14 @@
         "store_name": "たいらや 粟宮店",
         "chain": "たいらや",
         "product_raw_name": "北海道産などの国内産 かぼちゃ 100gあたり",
-        "category": "その他",
-        "ingredient_name": "北海道産などの国内産 かぼちゃ 100gあたり",
+        "category": "野菜",
+        "ingredient_name": "かぼちゃ",
         "price": 38,
         "unit": "100g",
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-14",
         "note": "水曜限り！かぼちゃ38円",
         "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-      },
-      {
-        "store_id": "japanmeat",
-        "store_name": "ジャパンミート生鮮館 小山店",
-        "chain": "ジャパンミート",
-        "product_raw_name": "北海道産などの国内産 国産かぼちゃ 100g当り",
-        "category": "その他",
-        "ingredient_name": "北海道産などの国内産 国産かぼちゃ 100g当り",
-        "price": 39,
-        "unit": "100g",
-        "valid_from": "2026-10-14",
-        "valid_to": "2026-10-16",
-        "note": "大感謝祭！かぼちゃ39円",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
         "store_id": "japanmeat",
@@ -489,8 +449,8 @@
         "store_name": "ジャパンミート生鮮館 小山店",
         "chain": "ジャパンミート",
         "product_raw_name": "茨城県産などの国内産 れんこん 100g当り",
-        "category": "その他",
-        "ingredient_name": "茨城県産などの国内産 れんこん 100g当り",
+        "category": "野菜",
+        "ingredient_name": "れんこん",
         "price": 79,
         "unit": "100g",
         "valid_from": "2026-10-14",
@@ -503,8 +463,8 @@
         "store_name": "ヨークベニマル 小山雨ヶ谷店",
         "chain": "ヨークベニマル",
         "product_raw_name": "おかめ 絹美人・もめんミニ3 各1パック",
-        "category": "その他",
-        "ingredient_name": "おかめ 絹美人・もめんミニ3 各1パック",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "とうふ",
         "price": 88,
         "unit": "1パック",
         "valid_from": "2026-10-14",
@@ -517,8 +477,8 @@
         "store_name": "ジャパンミート生鮮館 小山店",
         "chain": "ジャパンミート",
         "product_raw_name": "ブラジル産 豚バラブロック 100g当り",
-        "category": "その他",
-        "ingredient_name": "ブラジル産 豚バラブロック 100g当り",
+        "category": "精肉（豚肉）",
+        "ingredient_name": "豚バラブロック",
         "price": 89,
         "unit": "100g",
         "valid_from": "2026-10-14",
@@ -685,8 +645,8 @@
         "store_name": "たいらや 粟宮店",
         "chain": "たいらや",
         "product_raw_name": "かつおたたきサク 100gあたり",
-        "category": "その他",
-        "ingredient_name": "かつおたたきサク 100gあたり",
+        "category": "魚介類",
+        "ingredient_name": "かつお",
         "price": 158,
         "unit": "100g",
         "valid_from": "2026-10-14",
@@ -699,8 +659,8 @@
         "store_name": "ヨークベニマル 小山雨ヶ谷店",
         "chain": "ヨークベニマル",
         "product_raw_name": "国内産 生真あじ 1尾",
-        "category": "その他",
-        "ingredient_name": "国内産 生真あじ 1尾",
+        "category": "魚介類",
+        "ingredient_name": "あじ",
         "price": 168,
         "unit": "1尾",
         "valid_from": "2026-10-14",
@@ -727,8 +687,8 @@
         "store_name": "ジャパンミート生鮮館 小山店",
         "chain": "ジャパンミート",
         "product_raw_name": "青森県産などの国内産 ごぼう (2本入・1袋)",
-        "category": "その他",
-        "ingredient_name": "青森県産などの国内産 ごぼう (2本入・1袋)",
+        "category": "野菜",
+        "ingredient_name": "ごぼう",
         "price": 199,
         "unit": "1袋(2本入)",
         "valid_from": "2026-10-14",
@@ -769,8 +729,8 @@
         "store_name": "ベイシア Foods Park 結城店",
         "chain": "ベイシア",
         "product_raw_name": "国内産 生食用しらす干し 100g当り",
-        "category": "その他",
-        "ingredient_name": "国内産 生食用しらす干し 100g当り",
+        "category": "魚介類",
+        "ingredient_name": "しらす",
         "price": 299,
         "unit": "100g",
         "valid_from": "2026-10-14",
@@ -811,8 +771,8 @@
         "store_name": "たいらや 粟宮店",
         "chain": "たいらや",
         "product_raw_name": "国産 豚挽肉 (500g 1パック 100g当り108円)",
-        "category": "その他",
-        "ingredient_name": "国産 豚挽肉 (500g 1パック 100g当り108円)",
+        "category": "精肉（豚肉）",
+        "ingredient_name": "豚挽肉",
         "price": 500,
         "unit": "1パック(500g)",
         "valid_from": "2026-10-14",
@@ -825,28 +785,14 @@
         "store_name": "マルエツ 小山店",
         "chain": "マルエツ",
         "product_raw_name": "むきえび・アルゼンチン赤えび (解凍) 各1パック",
-        "category": "その他",
-        "ingredient_name": "むきえび・アルゼンチン赤えび (解凍) 各1パック",
+        "category": "魚介類",
+        "ingredient_name": "えび",
         "price": 500,
         "unit": "1パック",
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-14",
         "note": "水曜限り！えび500円",
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "japanmeat",
-        "store_name": "ジャパンミート生鮮館 小山店",
-        "chain": "ジャパンミート",
-        "product_raw_name": "国内産 国産豚大鬮スライスL 1kg (100g当り99.9円)",
-        "category": "その他",
-        "ingredient_name": "国内産 国産豚大鬮スライスL 1kg (100g当り99.9円)",
-        "price": 999,
-        "unit": "1パック(1kg)",
-        "valid_from": "2026-10-14",
-        "valid_to": "2026-10-16",
-        "note": "大感謝祭！国産豚大鬮100g99円",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       }
     ],
     "10/17(土)": [
@@ -983,8 +929,8 @@
         "store_name": "たいらや 粟宮店",
         "chain": "たいらや",
         "product_raw_name": "台湾・中国産 びん長まぐろサク 100gあたり",
-        "category": "その他",
-        "ingredient_name": "台湾・中国産 びん長まぐろサク 100gあたり",
+        "category": "魚介類",
+        "ingredient_name": "まぐろ",
         "price": 198,
         "unit": "100g",
         "valid_from": "2026-10-15",
@@ -1097,9 +1043,9 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
-      "ingredient": "北海道産などの国内産 かぼちゃ 100gあたり",
+      "ingredient": "かぼちゃ",
       "raw_name": "北海道産などの国内産 かぼちゃ 100gあたり",
-      "category": "その他",
+      "category": "野菜",
       "best_price": 38,
       "unit": "100g",
       "store": "たいらや",
@@ -1127,21 +1073,6 @@
       "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
     },
     {
-      "ingredient": "北海道産などの国内産 国産かぼちゃ 100g当り",
-      "raw_name": "北海道産などの国内産 国産かぼちゃ 100g当り",
-      "category": "その他",
-      "best_price": 39,
-      "unit": "100g",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "best_day_label": "本日〜10/16まで",
-      "is_best_today": true,
-      "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-10-14",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
       "ingredient": "鶏もも肉",
       "raw_name": "ブラジル産または国産 若鶏モモ肉 (4枚入) 100g当り",
       "category": "精肉（鶏肉）",
@@ -1157,9 +1088,9 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
-      "ingredient": "茨城県産などの国内産 れんこん 100g当り",
+      "ingredient": "れんこん",
       "raw_name": "茨城県産などの国内産 れんこん 100g当り",
-      "category": "その他",
+      "category": "野菜",
       "best_price": 79,
       "unit": "100g",
       "store": "ジャパンミート",
@@ -1172,9 +1103,9 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
-      "ingredient": "おかめ 絹美人・もめんミニ3 各1パック",
+      "ingredient": "とうふ",
       "raw_name": "おかめ 絹美人・もめんミニ3 各1パック",
-      "category": "その他",
+      "category": "日配品・大豆製品",
       "best_price": 88,
       "unit": "1パック",
       "store": "ヨークベニマル",
@@ -1202,9 +1133,9 @@
       "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
     },
     {
-      "ingredient": "ブラジル産 豚バラブロック 100g当り",
+      "ingredient": "豚バラブロック",
       "raw_name": "ブラジル産 豚バラブロック 100g当り",
-      "category": "その他",
+      "category": "精肉（豚肉）",
       "best_price": 89,
       "unit": "100g",
       "store": "ジャパンミート",
@@ -1382,9 +1313,9 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
-      "ingredient": "かつおたたきサク 100gあたり",
+      "ingredient": "かつお",
       "raw_name": "かつおたたきサク 100gあたり",
-      "category": "その他",
+      "category": "魚介類",
       "best_price": 158,
       "unit": "100g",
       "store": "たいらや",
@@ -1397,9 +1328,9 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "国内産 生真あじ 1尾",
+      "ingredient": "あじ",
       "raw_name": "国内産 生真あじ 1尾",
-      "category": "その他",
+      "category": "魚介類",
       "best_price": 168,
       "unit": "1尾",
       "store": "ヨークベニマル",
@@ -1427,9 +1358,9 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "青森県産などの国内産 ごぼう (2本入・1袋)",
+      "ingredient": "ごぼう",
       "raw_name": "青森県産などの国内産 ごぼう (2本入・1袋)",
-      "category": "その他",
+      "category": "野菜",
       "best_price": 199,
       "unit": "1袋(2本入)",
       "store": "ジャパンミート",
@@ -1472,9 +1403,9 @@
       "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
-      "ingredient": "国内産 生食用しらす干し 100g当り",
+      "ingredient": "しらす",
       "raw_name": "国内産 生食用しらす干し 100g当り",
-      "category": "その他",
+      "category": "魚介類",
       "best_price": 299,
       "unit": "100g",
       "store": "ベイシア",
@@ -1517,9 +1448,9 @@
       "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
     },
     {
-      "ingredient": "国産 豚挽肉 (500g 1パック 100g当り108円)",
+      "ingredient": "豚挽肉",
       "raw_name": "国産 豚挽肉 (500g 1パック 100g当り108円)",
-      "category": "その他",
+      "category": "精肉（豚肉）",
       "best_price": 500,
       "unit": "1パック(500g)",
       "store": "たいらや",
@@ -1532,9 +1463,9 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "むきえび・アルゼンチン赤えび (解凍) 各1パック",
+      "ingredient": "えび",
       "raw_name": "むきえび・アルゼンチン赤えび (解凍) 各1パック",
-      "category": "その他",
+      "category": "魚介類",
       "best_price": 500,
       "unit": "1パック",
       "store": "マルエツ",
@@ -1545,21 +1476,6 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-14",
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-    },
-    {
-      "ingredient": "国内産 国産豚大鬮スライスL 1kg (100g当り99.9円)",
-      "raw_name": "国内産 国産豚大鬮スライスL 1kg (100g当り99.9円)",
-      "category": "その他",
-      "best_price": 999,
-      "unit": "1パック(1kg)",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "best_day_label": "本日〜10/16まで",
-      "is_best_today": true,
-      "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-10-14",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "ブラジル産 鶏肉モモ (解凍) 100g当り",
@@ -1682,9 +1598,9 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "台湾・中国産 びん長まぐろサク 100gあたり",
+      "ingredient": "まぐろ",
       "raw_name": "台湾・中国産 びん長まぐろサク 100gあたり",
-      "category": "その他",
+      "category": "魚介類",
       "best_price": 198,
       "unit": "100g",
       "store": "たいらや",
