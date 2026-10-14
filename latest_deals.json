@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 11:46",
+  "updated_at": "2026-10-14 18:41",
   "target_date": "2026-10-14",
   "target_date_label": "2026年10月14日",
   "buy_today": [
@@ -28,6 +28,19 @@
       "note": "本日限り！",
       "store_name": "たいらや 粟宮店",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+    },
+    {
+      "ingredient": "納豆",
+      "raw_name": "極小粒納豆 3パック",
+      "category": "日配品・大豆製品",
+      "price": 58,
+      "unit": "1パック(3個)",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "is_today_only": false,
+      "note": "今週最安値",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "鶏もも肉",
@@ -160,6 +173,19 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "カップラーメン",
+      "raw_name": "日清 ごつ盛り カップラーメン 各種",
+      "category": "麺類・インスタント",
+      "price": 98,
+      "unit": "1個",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "is_today_only": false,
+      "note": "今週最安値",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
       "ingredient": "まいたけ",
       "raw_name": "まいたけ 1パック",
       "category": "きのこ類",
@@ -197,6 +223,19 @@
       "note": "本日限り！",
       "store_name": "とりせん 小山土塔店",
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+    },
+    {
+      "ingredient": "ヨーグルト",
+      "raw_name": "チチヤス ヨーグルト 4個パック",
+      "category": "日配品・大豆製品",
+      "price": 99,
+      "unit": "1パック(4個)",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "is_today_only": false,
+      "note": "今週最安値",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "朝飯めかぶ・子持めかぶ 各1パック",
@@ -380,6 +419,26 @@
       "diff": 10
     },
     {
+      "ingredient": "卵",
+      "category": "日配品・大豆製品",
+      "today_price": 198,
+      "future_price": 188,
+      "unit": "1パック(10個)",
+      "future_store": "ヨークベニマル",
+      "future_day": "10/15(木)",
+      "diff": 10
+    },
+    {
+      "ingredient": "牛乳",
+      "category": "日配品・大豆製品",
+      "today_price": 189,
+      "future_price": 188,
+      "unit": "1本(1000ml)",
+      "future_store": "ベイシア",
+      "future_day": "10/15(木)",
+      "diff": 1
+    },
+    {
       "ingredient": "まぐろ",
       "category": "魚介類",
       "today_price": 980,
@@ -388,6 +447,16 @@
       "future_store": "たいらや",
       "future_day": "10/15(木)",
       "diff": 782
+    },
+    {
+      "ingredient": "即席ラーメン",
+      "category": "麺類・インスタント",
+      "today_price": 348,
+      "future_price": 328,
+      "unit": "1パック(5食)",
+      "future_store": "ヨークベニマル",
+      "future_day": "10/17(土)",
+      "diff": 20
     }
   ],
   "no_deal_staples": [
@@ -426,6 +495,20 @@
         "valid_to": "2026-10-14",
         "note": "水曜限り！かぼちゃ38円",
         "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+      },
+      {
+        "store_id": "japanmeat",
+        "store_name": "ジャパンミート生鮮館 小山店",
+        "chain": "ジャパンミート",
+        "product_raw_name": "極小粒納豆 3パック",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "納豆",
+        "price": 58,
+        "unit": "1パック(3個)",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-20",
+        "note": "今週最安値！",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
         "store_id": "japanmeat",
@@ -554,6 +637,20 @@
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
+        "store_id": "japanmeat",
+        "store_name": "ジャパンミート生鮮館 小山店",
+        "chain": "ジャパンミート",
+        "product_raw_name": "日清 ごつ盛り カップラーメン 各種",
+        "category": "麺類・インスタント",
+        "ingredient_name": "カップラーメン",
+        "price": 98,
+        "unit": "1個",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-20",
+        "note": "今週最安値！",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+      },
+      {
         "store_id": "belc",
         "store_name": "ベルク フォルテ間々田店",
         "chain": "ベルク",
@@ -594,6 +691,20 @@
         "valid_to": "2026-10-14",
         "note": "本日限り！",
         "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+      },
+      {
+        "store_id": "japanmeat",
+        "store_name": "ジャパンミート生鮮館 小山店",
+        "chain": "ジャパンミート",
+        "product_raw_name": "チチヤス ヨーグルト 4個パック",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "ヨーグルト",
+        "price": 99,
+        "unit": "1パック(4個)",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-20",
+        "note": "今週最安値！",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
         "store_id": "york_benimaru",
@@ -811,6 +922,20 @@
         "store_id": "beisia",
         "store_name": "ベイシア Foods Park 結城店",
         "chain": "ベイシア",
+        "product_raw_name": "QBB スライスチーズ 7枚入",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "チーズ",
+        "price": 158,
+        "unit": "1パック(7枚)",
+        "valid_from": "2026-10-17",
+        "valid_to": "2026-10-17",
+        "note": "17日限り最安！",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+      },
+      {
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
         "product_raw_name": "ニュージーランド産 ゼスプリ サンゴールドキウイ",
         "category": "その他",
         "ingredient_name": "ニュージーランド産 ゼスプリ サンゴールドキウイ",
@@ -820,6 +945,20 @@
         "valid_to": "2026-10-17",
         "note": "10/17(土)限り",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+      },
+      {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "明星食品 チャルメラ（各種 5食パック）",
+        "category": "麺類・インスタント",
+        "ingredient_name": "即席ラーメン",
+        "price": 328,
+        "unit": "1パック(5食)",
+        "valid_from": "2026-10-17",
+        "valid_to": "2026-10-17",
+        "note": "17日限り最安！",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
       },
       {
         "store_id": "beisia",
@@ -920,6 +1059,34 @@
         "valid_to": "2026-10-15",
         "note": "10/15木曜限り",
         "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
+      },
+      {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "ミックスたまご 10個入 (1000円以上お買上げ)",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "卵",
+        "price": 188,
+        "unit": "1パック(10個)",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "15日特売！",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+      },
+      {
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
+        "product_raw_name": "毎日の食卓 牛乳 1000ml",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "牛乳",
+        "price": 188,
+        "unit": "1本(1000ml)",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "15日限り",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       },
       {
         "store_id": "otani",
@@ -1168,6 +1335,21 @@
       "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
     },
     {
+      "ingredient": "納豆",
+      "raw_name": "極小粒納豆 3パック",
+      "category": "日配品・大豆製品",
+      "best_price": 58,
+      "unit": "1パック(3個)",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "best_day_label": "本日〜10/20まで",
+      "is_best_today": true,
+      "advice": "現在底値！今日買ってもOKです",
+      "sort_date": "2026-10-14",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
       "ingredient": "鶏もも肉",
       "raw_name": "ブラジル産または国産 若鶏モモ肉 (4枚入) 100g当り",
       "category": "精肉（鶏肉）",
@@ -1318,6 +1500,21 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "カップラーメン",
+      "raw_name": "日清 ごつ盛り カップラーメン 各種",
+      "category": "麺類・インスタント",
+      "best_price": 98,
+      "unit": "1個",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "best_day_label": "本日〜10/20まで",
+      "is_best_today": true,
+      "advice": "現在底値！今日買ってもOKです",
+      "sort_date": "2026-10-14",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
       "ingredient": "しいたけ",
       "raw_name": "生しいたけ 1袋",
       "category": "きのこ類",
@@ -1376,6 +1573,21 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-14",
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+    },
+    {
+      "ingredient": "ヨーグルト",
+      "raw_name": "チチヤス ヨーグルト 4個パック",
+      "category": "日配品・大豆製品",
+      "best_price": 99,
+      "unit": "1パック(4個)",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "best_day_label": "本日〜10/20まで",
+      "is_best_today": true,
+      "advice": "現在底値！今日買ってもOKです",
+      "sort_date": "2026-10-14",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "朝飯めかぶ・子持めかぶ 各1パック",
@@ -1708,6 +1920,36 @@
       "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
     },
     {
+      "ingredient": "卵",
+      "raw_name": "ミックスたまご 10個入 (1000円以上お買上げ)",
+      "category": "日配品・大豆製品",
+      "best_price": 188,
+      "unit": "1パック(10個)",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "10/15(木)から",
+      "is_best_today": false,
+      "advice": "10/15の特売開始まで待機推奨",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "牛乳",
+      "raw_name": "毎日の食卓 牛乳 1000ml",
+      "category": "日配品・大豆製品",
+      "best_price": 188,
+      "unit": "1本(1000ml)",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "10/15(木)から",
+      "is_best_today": false,
+      "advice": "10/15の特売開始まで待機推奨",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
       "ingredient": "白菜",
       "raw_name": "長野県産 はくさい 1/4カット",
       "category": "野菜",
@@ -1948,6 +2190,21 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
+      "ingredient": "チーズ",
+      "raw_name": "QBB スライスチーズ 7枚入",
+      "category": "日配品・大豆製品",
+      "best_price": 158,
+      "unit": "1パック(7枚)",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "10/17(土)から",
+      "is_best_today": false,
+      "advice": "10/17の特売開始まで待機推奨",
+      "sort_date": "2026-10-17",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
       "ingredient": "ニュージーランド産 ゼスプリ サンゴールドキウイ",
       "raw_name": "ニュージーランド産 ゼスプリ サンゴールドキウイ",
       "category": "その他",
@@ -1961,6 +2218,21 @@
       "advice": "10/17の特売開始まで待機推奨",
       "sort_date": "2026-10-17",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
+      "ingredient": "即席ラーメン",
+      "raw_name": "明星食品 チャルメラ（各種 5食パック）",
+      "category": "麺類・インスタント",
+      "best_price": 328,
+      "unit": "1パック(5食)",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "10/17(土)から",
+      "is_best_today": false,
+      "advice": "10/17の特売開始まで待機推奨",
+      "sort_date": "2026-10-17",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "お得なお菓子",
