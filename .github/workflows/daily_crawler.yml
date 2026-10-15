@@ -37,8 +37,9 @@ jobs:
       - name: Run Crawler & Update Deals
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PYTHONUNBUFFERED: "1"
         run: |
-          python run_daily.py
+          python -u run_daily.py
 
       - name: Commit & Push Updated Data
         run: |
