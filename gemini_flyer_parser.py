@@ -58,11 +58,11 @@ def get_active_gemini_models(api_key: str) -> List[str]:
             # 3. その他の flash / pro
             def sort_key(name: str) -> int:
                 n = name.lower()
-                if "1.5-flash-002" in n: return 0
-                if "1.5-flash-001" in n: return 1
-                if "1.5-flash-latest" in n: return 2
+                # 最も実績があり安定・軽量な gemini-1.5-flash を絶対優先
+                if "1.5-flash" in n and "8b" not in n: return 0
+                if "1.5-flash-latest" in n: return 1
+                if "1.5-flash-8b" in n: return 2
                 if "2.0-flash" in n: return 3
-                if "flash" in n and "lite" not in n: return 4
                 if "1.5-pro" in n: return 5
                 return 10
 
@@ -74,7 +74,7 @@ def get_active_gemini_models(api_key: str) -> List[str]:
     except Exception as e:
         print(f"[WARN] モデル一覧の自動取得に失敗したため既定リストを使用: {e}")
 
-    _CACHED_MODELS = ["gemini-1.5-flash-002", "gemini-1.5-flash-latest", "gemini-1.5-flash"]
+    _CACHED_MODELS = ["gemini-1.5-flash", "gemini-1.5-flash-latest"]
     return _CACHED_MODELS
 
 def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Optional[str] = None) -> List[Dict[str, Any]]:
