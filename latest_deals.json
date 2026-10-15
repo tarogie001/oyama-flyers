@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 10:52",
+  "updated_at": "2026-10-15 12:51",
   "target_date": "2026-10-15",
   "target_date_label": "2026年10月15日",
   "buy_today": [
@@ -249,19 +249,6 @@
       "note": "本日限り！",
       "store_name": "マルエツ 小山店",
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-    },
-    {
-      "ingredient": "レタス",
-      "raw_name": "国内産 レタス",
-      "category": "野菜",
-      "price": 129,
-      "unit": "1コ",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ベイシア Foods Park 結城店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "ごぼう",
@@ -576,6 +563,19 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "たら",
+      "raw_name": "アメリカ産など 銀だら切身（解凍）",
+      "category": "魚介類",
+      "price": 269,
+      "unit": "100g当り",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "マルエツ 小山店",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
       "ingredient": "国産 牛切落し",
       "raw_name": "国産 牛切落し",
       "category": "その他",
@@ -706,32 +706,6 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
-      "ingredient": "国内産真だら鍋用",
-      "raw_name": "国内産真だら鍋用",
-      "category": "その他",
-      "price": 680,
-      "unit": "1パック",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "マルエツ 小山店",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-    },
-    {
-      "ingredient": "メキシコ産 (養殖) 殻付帆立",
-      "raw_name": "メキシコ産 (養殖) 殻付帆立",
-      "category": "その他",
-      "price": 698,
-      "unit": "4個",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
       "ingredient": "若鶏手羽元",
       "raw_name": "若鶏手羽元",
       "category": "その他",
@@ -838,7 +812,8 @@
   "no_deal_staples": [
     "キャベツ",
     "大根",
-    "ブロッコリー"
+    "ブロッコリー",
+    "レタス"
   ],
   "weekly_schedule": {
     "10/15(木)": [
@@ -1079,20 +1054,6 @@
         "valid_to": "2026-10-15",
         "note": "よりどり3点380円",
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "beisia",
-        "store_name": "ベイシア Foods Park 結城店",
-        "chain": "ベイシア",
-        "product_raw_name": "国内産 レタス",
-        "category": "野菜",
-        "ingredient_name": "レタス",
-        "price": 129,
-        "unit": "1コ",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       },
       {
         "store_id": "tairaya",
@@ -1403,6 +1364,20 @@
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "アメリカ産など 銀だら切身（解凍）",
+        "category": "魚介類",
+        "ingredient_name": "たら",
+        "price": 269,
+        "unit": "100g当り",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "木曜限り",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
         "store_id": "japanmeat",
         "store_name": "ジャパンミート生鮮館 小山店",
         "chain": "ジャパンミート",
@@ -1541,34 +1516,6 @@
         "valid_to": "2026-10-15",
         "note": "10/15限り・きのこの日",
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "国内産真だら鍋用",
-        "category": "その他",
-        "ingredient_name": "国内産真だら鍋用",
-        "price": 680,
-        "unit": "1パック",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "本体価格",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "japanmeat",
-        "store_name": "ジャパンミート生鮮館 小山店",
-        "chain": "ジャパンミート",
-        "product_raw_name": "メキシコ産 (養殖) 殻付帆立",
-        "category": "その他",
-        "ingredient_name": "メキシコ産 (養殖) 殻付帆立",
-        "price": 698,
-        "unit": "4個",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
         "store_id": "tairaya",
@@ -2277,21 +2224,6 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
-      "ingredient": "レタス",
-      "raw_name": "国内産 レタス",
-      "category": "野菜",
-      "best_price": 129,
-      "unit": "1コ",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "store_name": "ベイシア Foods Park 結城店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
       "ingredient": "ごぼう",
       "raw_name": "青森県(その他国内)産 切りごぼう・ささがきごぼう",
       "category": "野菜",
@@ -2365,6 +2297,21 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-15",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+    },
+    {
+      "ingredient": "レタス",
+      "raw_name": "国内産 レタス",
+      "category": "野菜",
+      "best_price": 159,
+      "unit": "1コ",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "本日 10/15 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "生ラーメン",
@@ -2667,6 +2614,21 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "たら",
+      "raw_name": "アメリカ産など 銀だら切身（解凍）",
+      "category": "魚介類",
+      "best_price": 269,
+      "unit": "100g当り",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "store_name": "マルエツ 小山店",
+      "best_day_label": "本日 10/15 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
       "ingredient": "国産 牛切落し",
       "raw_name": "国産 牛切落し",
       "category": "その他",
@@ -2830,36 +2792,6 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-15",
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-    },
-    {
-      "ingredient": "国内産真だら鍋用",
-      "raw_name": "国内産真だら鍋用",
-      "category": "その他",
-      "best_price": 680,
-      "unit": "1パック",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-    },
-    {
-      "ingredient": "メキシコ産 (養殖) 殻付帆立",
-      "raw_name": "メキシコ産 (養殖) 殻付帆立",
-      "category": "その他",
-      "best_price": 698,
-      "unit": "4個",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "若鶏手羽元",

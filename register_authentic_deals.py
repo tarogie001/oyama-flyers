@@ -3,7 +3,15 @@
 Register verified flyer deals into flyer_deals table in deals.db.
 Only deals with 100% verified visual proof from downloaded flyer images are added.
 """
+import sys
 import sqlite3
+
+# Windows環境で文字化け・絵文字エラーを防ぐ設定
+if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
 VERIFIED_DEALS = [
     {
@@ -60,16 +68,127 @@ VERIFIED_DEALS = [
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-16",
         "note": ""
+    },
+    # --- マルエツ チラシ原本確認済み (10/15限り) ---
+    {
+        "store_id": "maruetsu",
+        "product_raw_name": "アメリカ産など 銀だら切身（解凍）",
+        "category": "魚介類",
+        "ingredient_name": "たら",
+        "price": 269,
+        "unit": "100g当り",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "木曜限り"
+    },
+    {
+        "store_id": "maruetsu",
+        "product_raw_name": "銀だら西京漬",
+        "category": "魚介類",
+        "ingredient_name": "たら",
+        "price": 680,
+        "unit": "1パック(2切入)",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "木曜限り"
+    },
+    {
+        "store_id": "maruetsu",
+        "product_raw_name": "国産 若どりささみ",
+        "category": "精肉（鶏肉）",
+        "ingredient_name": "鶏ささみ",
+        "price": 98,
+        "unit": "100g当り",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "木曜限り"
+    },
+    {
+        "store_id": "maruetsu",
+        "product_raw_name": "長野県産 えのき茸",
+        "category": "きのこ類",
+        "ingredient_name": "えのき",
+        "price": 129,
+        "unit": "1袋",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "木曜限り"
+    },
+    # --- ジャパンミート チラシ原本確認済み (10/14〜10/16) ---
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "アメリカ産（解凍） 銀鱈切身",
+        "category": "魚介類",
+        "ingredient_name": "たら",
+        "price": 698,
+        "unit": "4切",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "三陸産他（養殖） 国産 甘塩銀鮭",
+        "category": "魚介類",
+        "ingredient_name": "鮭",
+        "price": 698,
+        "unit": "4切",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "ノルウェー産他（解凍） 生アトランティックサーモン（刺身用）",
+        "category": "魚介類",
+        "ingredient_name": "鮭",
+        "price": 430,
+        "unit": "100g当り",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    # --- ベイシア チラシ原本確認済み ---
+    {
+        "store_id": "beisia",
+        "product_raw_name": "青森などの国内産 りんご",
+        "category": "季節の果物",
+        "ingredient_name": "りんご",
+        "price": 129,
+        "unit": "1コ",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-14",
+        "note": "10/14限り"
+    },
+    {
+        "store_id": "beisia",
+        "product_raw_name": "生寿司一品各種（まぐろづくし・サーモンづくしなど）",
+        "category": "魚介類",
+        "ingredient_name": "まぐろ",
+        "price": 500,
+        "unit": "1パック",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "10/15限り"
     }
 ]
 
 def main():
     conn = sqlite3.connect("deals.db")
     c = conn.cursor()
+
+    # 1. 架空・すり替えデータ（ハルシネーション）の完全パージ
+    purge_queries = [
+        "DELETE FROM flyer_deals WHERE product_raw_name LIKE '%真だら鍋用%' OR product_raw_name LIKE '%殻付帆立%' OR product_raw_name LIKE '%帆立%' OR (store_id='beisia' AND product_raw_name LIKE '%レタス%' AND price=129)"
+    ]
+    for q in purge_queries:
+        c.execute(q)
+    print("[OK] 架空データ（真だら鍋用、殻付帆立、ベイシアのレタス129円等）をデータベースから完全削除しました。")
     
+    # 2. 原本確認済み特売品の登録
     inserted_count = 0
     for d in VERIFIED_DEALS:
-        # Check duplicate
+        # Check duplicate in flyer_deals
         c.execute("""
             SELECT id FROM flyer_deals 
             WHERE store_id = ? AND product_raw_name = ? AND valid_from = ?
