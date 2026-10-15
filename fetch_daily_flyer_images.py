@@ -92,9 +92,10 @@ async def fetch_tokubai_leaflets(context):
 # 3. Shufoo店舗（ベイシア、ジャパンミート）のキャプチャ
 async def fetch_shufoo_stores(context):
     print("\n▶ [3/4] Shufoo加盟店（ベイシア、ジャパンミート）のチラシを取得中...")
-    # ベイシア
+    # ベイシア（高解像度モード: 2400x3000）
     try:
         page = await context.new_page()
+        await page.set_viewport_size({"width": 2400, "height": 3000})
         await page.goto("https://www.shufoo.net/pntweb/shopDetail/239309/", timeout=30000)
         await page.wait_for_timeout(3000)
         link = await page.query_selector("li.shop_chirashi_list_item a, div.chirashi_list_box a")
@@ -102,17 +103,27 @@ async def fetch_shufoo_stores(context):
             href = await link.get_attribute("href")
             detail_url = f"https://www.shufoo.net{href}" if href.startswith("/") else href
             await page.goto(detail_url, timeout=30000)
-            await page.wait_for_timeout(3000)
+            await page.wait_for_timeout(4000)
+            # 操作バー・ヘッダー非表示
+            await page.evaluate("""
+                document.querySelectorAll('#chirashiViewerControl, .chirashi_controller, .chirashi_ctrl, #chirashiBar, .controller, header, footer').forEach(el => el.style.display = 'none');
+            """)
             save_path = FLYERS_DIR / "beisia_pure_flyer.png"
-            await page.screenshot(path=str(save_path), full_page=False)
-            print(f"  [OK] ベイシア チラシ保存: {save_path.name}")
+            # チラシビューア要素があればその高解像度キャプチャ、なければ全画面キャプチャ
+            viewer = await page.query_selector("#chirashiViewer, #chirashi_img, .chirashi_view, div.viewer")
+            if viewer:
+                await viewer.screenshot(path=str(save_path))
+            else:
+                await page.screenshot(path=str(save_path), full_page=False)
+            print(f"  [OK] ベイシア 高解像度チラシ保存: {save_path.name}")
         await page.close()
     except Exception as e:
         print(f"  [ERROR] ベイシア取得エラー: {e}")
 
-    # ジャパンミート
+    # ジャパンミート（高解像度モード: 2400x3000）
     try:
         page = await context.new_page()
+        await page.set_viewport_size({"width": 2400, "height": 3000})
         await page.goto("https://www.shufoo.net/pntweb/shopDetail/898425/", timeout=30000)
         await page.wait_for_timeout(3000)
         link = await page.query_selector("li.shop_chirashi_list_item a, div.chirashi_list_box a")
@@ -120,14 +131,18 @@ async def fetch_shufoo_stores(context):
             href = await link.get_attribute("href")
             detail_url = f"https://www.shufoo.net{href}" if href.startswith("/") else href
             await page.goto(detail_url, timeout=30000)
-            await page.wait_for_timeout(3000)
-            # 操作バー非表示
+            await page.wait_for_timeout(4000)
+            # 操作バー・ヘッダー非表示
             await page.evaluate("""
-                document.querySelectorAll('#chirashiViewerControl, .chirashi_controller, .chirashi_ctrl, #chirashiBar, .controller').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('#chirashiViewerControl, .chirashi_controller, .chirashi_ctrl, #chirashiBar, .controller, header, footer').forEach(el => el.style.display = 'none');
             """)
             save_path = FLYERS_DIR / "japanmeat_clean.png"
-            await page.screenshot(path=str(save_path), full_page=False)
-            print(f"  [OK] ジャパンミート チラシ保存: {save_path.name}")
+            viewer = await page.query_selector("#chirashiViewer, #chirashi_img, .chirashi_view, div.viewer")
+            if viewer:
+                await viewer.screenshot(path=str(save_path))
+            else:
+                await page.screenshot(path=str(save_path), full_page=False)
+            print(f"  [OK] ジャパンミート 高解像度チラシ保存: {save_path.name}")
         await page.close()
     except Exception as e:
         print(f"  [ERROR] ジャパンミート取得エラー: {e}")

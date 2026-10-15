@@ -90,6 +90,16 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
     if not base_date:
         base_date = datetime.date.today().isoformat()
 
+    # 安全ガード：解像度が低すぎる画像（短辺600px未満または横1000px未満）は文字潰れによる捏造（ハルシネーション）の原因となるため解析を拒絶・スキップ
+    try:
+        with Image.open(image_path) as check_img:
+            w, h = check_img.size
+            if w < 1000 or h < 600:
+                print(f"[REJECT] 🛡️ 安全ガード作動: {store_name} の画像解像度が低すぎます ({w}x{h})。文字潰れによる架空データ捏造（ハルシネーション）を防止するため解析をスキップします。")
+                return []
+    except Exception as e:
+        print(f"[WARN] 画像サイズ確認失敗: {e}")
+
     # 画像を文字鮮明度を保ったまま最適サイズ・JPEGに自動軽量化（3MB -> 300~500KB）
     try:
         with Image.open(image_path) as img:

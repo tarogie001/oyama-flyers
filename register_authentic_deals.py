@@ -13,8 +13,8 @@ VERIFIED_DEALS = [
         "ingredient_name": "即席ラーメン",
         "price": 328,
         "unit": "1袋(5食)",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-14",
         "note": "お一人様いずれか1袋限り"
     },
     {
