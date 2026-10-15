@@ -67,8 +67,8 @@ def get_active_gemini_models(api_key: str) -> List[str]:
                 return 10
 
             sorted_models = sorted(supported, key=sort_key)
-            # 使える上位候補をキャッシュ
-            _CACHED_MODELS = sorted_models[:5]
+            # 高速化のため安定上位2モデルに厳選
+            _CACHED_MODELS = sorted_models[:2]
             print(f"[INFO] 🤖 採用モデル優先順位: {_CACHED_MODELS}")
             return _CACHED_MODELS
     except Exception as e:
@@ -180,25 +180,29 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
 
     for model_idx, current_model in enumerate(candidate_models):
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent?key={GEMINI_API_KEY}"
-        print(f"  👉 [{model_idx + 1}/{len(candidate_models)}] モデル '{current_model}' で解析を試行中...")
+        print(f"  👉 [{model_idx + 1}/{len(candidate_models)}] モデル '{current_model}' で解析を試行中...", flush=True)
 
-        # 同一モデルで最大3回まで再試行（429レート制限時は待機して枠回復を待つ）
-        for retry_count in range(3):
+        # 最大2回まで試行（429時は15秒だけ待機、回復しなければ即スキップして全体を止めない）
+        for retry_count in range(2):
             try:
-                res = requests.post(url, json=payload, headers=headers, timeout=60)
+                res = requests.post(url, json=payload, headers=headers, timeout=40)
                 if res.status_code == 200:
                     data = res.json()
                     text_content = data["candidates"][0]["content"]["parts"][0]["text"]
                     deals = json.loads(text_content)
                     if isinstance(deals, list):
-                        print(f"[OK] Gemini AI ({current_model}) が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！")
+                        print(f"[OK] Gemini AI ({current_model}) が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！", flush=True)
                         return deals
                     return []
                 elif res.status_code == 429:
-                    wait_sec = 35
-                    print(f"[WARN] APIレート制限に達しました (HTTP 429)。制限枠回復のため {wait_sec}秒 待機して再試行します (試行 {retry_count + 1}/3)...")
-                    time.sleep(wait_sec)
-                    continue
+                    if retry_count == 0:
+                        wait_sec = 15
+                        print(f"[WARN] APIレート制限 (HTTP 429)。{wait_sec}秒 待機して1度だけ再試行します...", flush=True)
+                        time.sleep(wait_sec)
+                        continue
+                    else:
+                        print(f"[WARN] API利用枠が一時的に満杯のため、この画像はスキップして次へ進みます", flush=True)
+                        return []
                 elif res.status_code == 503:
                     wait_sec = 8
                     print(f"[WARN] モデル '{current_model}' が混雑中 (HTTP 503)。{wait_sec}秒 待機して再試行します...")

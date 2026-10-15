@@ -11,11 +11,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 
 def run_step(step_name: str, script_name: str):
-    print(f"\n=======================================================")
-    print(f"▶ {step_name} ({script_name}) を開始します...")
-    print(f"=======================================================")
+    print(f"\n=======================================================", flush=True)
+    print(f"▶ {step_name} ({script_name}) を開始します...", flush=True)
+    print(f"=======================================================", flush=True)
     script_path = BASE_DIR / script_name
-    result = subprocess.run([sys.executable, str(script_path)], cwd=str(BASE_DIR))
+    result = subprocess.run([sys.executable, "-u", str(script_path)], cwd=str(BASE_DIR))
     if result.returncode != 0:
         print(f"⚠️ {script_name} でエラーが発生しました (終了コード: {result.returncode})")
     else:

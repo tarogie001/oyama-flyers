@@ -71,32 +71,31 @@ async def fetch_tokubai_leaflets(context):
         try:
             await page.goto(url, timeout=30000)
             await page.wait_for_timeout(2500)
-            # チラシ詳細リンク（本日日付を含む最新チラシを優先選択）
+            # チラシ詳細リンク（日替わりチラシ＋週間チラシを複数取得）
             chirashi_links = await page.query_selector_all("a[href*='/leaflets/']")
-            if chirashi_links:
-                target_href = None
-                today = datetime.date.today()
-                today_patterns = [
-                    today.strftime("%m/%d").lstrip("0").replace("/0", "/"), # "10/15"
-                    f"{today.month}月{today.day}日",
-                    "最新", "今日"
-                ]
-                for link_el in chirashi_links:
-                    text = await link_el.inner_text()
-                    href = await link_el.get_attribute("href")
-                    if any(p in text for p in today_patterns):
-                        target_href = href
-                        print(f"  [SELECT] {store_id}: 本日有効チラシ '{text.strip()}' を選択")
-                        break
-                if not target_href:
-                    target_href = await chirashi_links[0].get_attribute("href")
+            unique_hrefs = []
+            for link_el in chirashi_links:
+                href = await link_el.get_attribute("href")
+                if href:
+                    clean_href = href.split("?")[0]
+                    # チラシ番号(/leaflets/12345等)を含む個別チラシを抽出
+                    if re.search(r'/leaflets/\d+', clean_href):
+                        if clean_href not in [u.split("?")[0] for u in unique_hrefs]:
+                            unique_hrefs.append(href)
 
-                detail_url = f"https://tokubai.co.jp{target_href}" if target_href.startswith("/") else target_href
-                await page.goto(detail_url, timeout=30000)
-                await page.wait_for_timeout(3000)
-                save_path = FLYERS_DIR / f"{store_id}_leaflet_large.png"
-                await page.screenshot(path=str(save_path), full_page=False)
-                print(f"  [OK] {store_id} 大判チラシ保存: {save_path.name}")
+            if unique_hrefs:
+                # 最大2枚（日替わりチラシ＋週間チラシ）を取得
+                for idx, target_href in enumerate(unique_hrefs[:2]):
+                    detail_url = f"https://tokubai.co.jp{target_href}" if target_href.startswith("/") else target_href
+                    try:
+                        await page.goto(detail_url, timeout=30000)
+                        await page.wait_for_timeout(3000)
+                        suffix = "_large" if idx == 0 else f"_sub{idx}"
+                        save_path = FLYERS_DIR / f"{store_id}_leaflet{suffix}.png"
+                        await page.screenshot(path=str(save_path), full_page=False)
+                        print(f"  [OK] {store_id} チラシ画像保存 ({idx+1}枚目): {save_path.name}")
+                    except Exception as ex:
+                        print(f"  [WARN] {store_id} チラシ({idx+1}枚目)取得失敗: {ex}")
             else:
                 save_path = FLYERS_DIR / f"{store_id}_page.png"
                 await page.screenshot(path=str(save_path), full_page=False)
