@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 07:25",
+  "updated_at": "2026-10-15 09:38",
   "target_date": "2026-10-15",
   "target_date_label": "2026年10月15日",
   "buy_today": [
@@ -78,19 +78,6 @@
       "store_id": "japanmeat",
       "is_today_only": false,
       "note": "今週最安値",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
-      "ingredient": "こがね",
-      "raw_name": "こがね",
-      "category": "その他",
-      "price": 79,
-      "unit": "1コ",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "is_today_only": true,
-      "note": "本日限り！",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
@@ -238,19 +225,6 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
-      "ingredient": "レタス",
-      "raw_name": "国内産 レタス",
-      "category": "野菜",
-      "price": 129,
-      "unit": "1コ",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ベイシア Foods Park 結城店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
       "ingredient": "きのこ各種",
       "raw_name": "きのこ各種",
       "category": "その他",
@@ -290,19 +264,6 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "牛乳",
-      "raw_name": "雪印メグミルク ナチュレ恵 (プレーン・脂肪0、各400g)",
-      "category": "日配品・大豆製品",
-      "price": 148,
-      "unit": "1コ",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
       "ingredient": "チーズ",
       "raw_name": "とろ〜りチーズ",
       "category": "日配品・大豆製品",
@@ -312,6 +273,19 @@
       "store_id": "japanmeat",
       "is_today_only": true,
       "note": "本日限り！",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "生ラーメン",
+      "raw_name": "シマダヤ わが家の一杯 生ラーメン 3食（醤油・味噌・塩 各110g×3）",
+      "category": "麺類・インスタント",
+      "price": 159,
+      "unit": "1袋(3食)",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "is_today_only": false,
+      "note": "今週最安値",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
@@ -394,19 +368,6 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
-      "ingredient": "プリマハム 香薫あらびきポークウインナー",
-      "raw_name": "プリマハム 香薫あらびきポークウインナー",
-      "category": "その他",
-      "price": 219,
-      "unit": "1束",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ベイシア Foods Park 結城店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
       "ingredient": "国産 豚肉バラスライス 100g当り",
       "raw_name": "国産 豚肉バラスライス 100g当り",
       "category": "その他",
@@ -418,19 +379,6 @@
       "note": "本日限り！",
       "store_name": "フードオアシス オータニ 小山店",
       "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
-    },
-    {
-      "ingredient": "いも",
-      "raw_name": "いも",
-      "category": "その他",
-      "price": 250,
-      "unit": "5kg",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "アメリカ産など 銀だら切身 (解凍) 100g当り",
@@ -496,19 +444,6 @@
       "note": "今週最安値",
       "store_name": "たいらや 粟宮店",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-    },
-    {
-      "ingredient": "即席ラーメン",
-      "raw_name": "日清食品 チキンラーメン",
-      "category": "麺類・インスタント",
-      "price": 399,
-      "unit": "5食パック",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "マルエツ 小山店",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
       "ingredient": "日清食品 焼そば",
@@ -751,7 +686,8 @@
   "no_deal_staples": [
     "キャベツ",
     "大根",
-    "ブロッコリー"
+    "ブロッコリー",
+    "レタス"
   ],
   "weekly_schedule": {
     "10/15(木)": [
@@ -824,20 +760,6 @@
         "valid_to": "2026-10-16",
         "note": "",
         "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-      },
-      {
-        "store_id": "japanmeat",
-        "store_name": "ジャパンミート生鮮館 小山店",
-        "chain": "ジャパンミート",
-        "product_raw_name": "こがね",
-        "category": "その他",
-        "ingredient_name": "こがね",
-        "price": 79,
-        "unit": "1コ",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
         "store_id": "japanmeat",
@@ -994,20 +916,6 @@
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
-        "store_id": "beisia",
-        "store_name": "ベイシア Foods Park 結城店",
-        "chain": "ベイシア",
-        "product_raw_name": "国内産 レタス",
-        "category": "野菜",
-        "ingredient_name": "レタス",
-        "price": 129,
-        "unit": "1コ",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "お1人様2コまで",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-      },
-      {
         "store_id": "maruetsu",
         "store_name": "マルエツ 小山店",
         "chain": "マルエツ",
@@ -1036,20 +944,6 @@
         "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
       },
       {
-        "store_id": "york_benimaru",
-        "store_name": "ヨークベニマル 小山雨ヶ谷店",
-        "chain": "ヨークベニマル",
-        "product_raw_name": "雪印メグミルク ナチュレ恵 (プレーン・脂肪0、各400g)",
-        "category": "日配品・大豆製品",
-        "ingredient_name": "牛乳",
-        "price": 148,
-        "unit": "1コ",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "",
-        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-      },
-      {
         "store_id": "japanmeat",
         "store_name": "ジャパンミート生鮮館 小山店",
         "chain": "ジャパンミート",
@@ -1060,6 +954,20 @@
         "unit": "1袋",
         "valid_from": "2026-10-15",
         "valid_to": "2026-10-15",
+        "note": "",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+      },
+      {
+        "store_id": "japanmeat",
+        "store_name": "ジャパンミート生鮮館 小山店",
+        "chain": "ジャパンミート",
+        "product_raw_name": "シマダヤ わが家の一杯 生ラーメン 3食（醤油・味噌・塩 各110g×3）",
+        "category": "麺類・インスタント",
+        "ingredient_name": "生ラーメン",
+        "price": 159,
+        "unit": "1袋(3食)",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
         "note": "",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
@@ -1148,20 +1056,6 @@
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
-        "store_id": "beisia",
-        "store_name": "ベイシア Foods Park 結城店",
-        "chain": "ベイシア",
-        "product_raw_name": "プリマハム 香薫あらびきポークウインナー",
-        "category": "その他",
-        "ingredient_name": "プリマハム 香薫あらびきポークウインナー",
-        "price": 219,
-        "unit": "1束",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "木曜限り！",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-      },
-      {
         "store_id": "otani",
         "store_name": "フードオアシス オータニ 小山店",
         "chain": "オータニ",
@@ -1174,20 +1068,6 @@
         "valid_to": "2026-10-15",
         "note": "木曜限り！",
         "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
-      },
-      {
-        "store_id": "japanmeat",
-        "store_name": "ジャパンミート生鮮館 小山店",
-        "chain": "ジャパンミート",
-        "product_raw_name": "いも",
-        "category": "その他",
-        "ingredient_name": "いも",
-        "price": 250,
-        "unit": "5kg",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
         "store_id": "maruetsu",
@@ -1258,20 +1138,6 @@
         "valid_to": "2026-10-16",
         "note": "生さば1パック398円",
         "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "日清食品 チキンラーメン",
-        "category": "麺類・インスタント",
-        "ingredient_name": "即席ラーメン",
-        "price": 399,
-        "unit": "5食パック",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "本体価格",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
         "store_id": "maruetsu",
@@ -1851,21 +1717,6 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
-      "ingredient": "こがね",
-      "raw_name": "こがね",
-      "category": "その他",
-      "best_price": 79,
-      "unit": "1コ",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
       "ingredient": "豚バラブロック",
       "raw_name": "ブラジル産 豚バラブロック 100g当り",
       "category": "精肉（豚肉）",
@@ -2046,21 +1897,6 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
-      "ingredient": "レタス",
-      "raw_name": "国内産 レタス",
-      "category": "野菜",
-      "best_price": 129,
-      "unit": "1コ",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "store_name": "ベイシア Foods Park 結城店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
       "ingredient": "きのこ各種",
       "raw_name": "きのこ各種",
       "category": "その他",
@@ -2106,21 +1942,6 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "牛乳",
-      "raw_name": "雪印メグミルク ナチュレ恵 (プレーン・脂肪0、各400g)",
-      "category": "日配品・大豆製品",
-      "best_price": 148,
-      "unit": "1コ",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
       "ingredient": "チーズ",
       "raw_name": "とろ〜りチーズ",
       "category": "日配品・大豆製品",
@@ -2132,6 +1953,21 @@
       "best_day_label": "本日 10/15 限り！",
       "is_best_today": true,
       "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "生ラーメン",
+      "raw_name": "シマダヤ わが家の一杯 生ラーメン 3食（醤油・味噌・塩 各110g×3）",
+      "category": "麺類・インスタント",
+      "best_price": 159,
+      "unit": "1袋(3食)",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "best_day_label": "本日〜10/16まで",
+      "is_best_today": true,
+      "advice": "現在底値！今日買ってもOKです",
       "sort_date": "2026-10-15",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
@@ -2256,21 +2092,6 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
-      "ingredient": "プリマハム 香薫あらびきポークウインナー",
-      "raw_name": "プリマハム 香薫あらびきポークウインナー",
-      "category": "その他",
-      "best_price": 219,
-      "unit": "1束",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "store_name": "ベイシア Foods Park 結城店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
       "ingredient": "国産 豚肉バラスライス 100g当り",
       "raw_name": "国産 豚肉バラスライス 100g当り",
       "category": "その他",
@@ -2286,19 +2107,19 @@
       "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
     },
     {
-      "ingredient": "いも",
-      "raw_name": "いも",
-      "category": "その他",
-      "best_price": 250,
-      "unit": "5kg",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
+      "ingredient": "牛乳",
+      "raw_name": "明治 おいしい牛乳 (900ml)",
+      "category": "日配品・大豆製品",
+      "best_price": 268,
+      "unit": "1本",
+      "store": "オータニ",
+      "store_id": "otani",
+      "store_name": "フードオアシス オータニ 小山店",
       "best_day_label": "本日 10/15 限り！",
       "is_best_today": true,
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+      "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376"
     },
     {
       "ingredient": "アメリカ産など 銀だら切身 (解凍) 100g当り",

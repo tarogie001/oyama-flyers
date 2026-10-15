@@ -48,6 +48,7 @@ def get_active_gemini_models(api_key: str) -> List[str]:
                 m["name"].replace("models/", "")
                 for m in models
                 if "generateContent" in m.get("supportedGenerationMethods", [])
+                and not any(x in m["name"].lower() for x in ["tts", "embedding", "aqa", "imagen"])
             ]
             print(f"[INFO] 🤖 Google公式APIから利用可能モデル一覧を取得しました ({len(supported)}件)")
 
@@ -89,6 +90,16 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
     if not base_date:
         base_date = datetime.date.today().isoformat()
 
+    # 安全ガード：解像度が低すぎる画像（短辺600px未満または横1000px未満）は文字潰れによる捏造（ハルシネーション）の原因となるため解析を拒絶・スキップ
+    try:
+        with Image.open(image_path) as check_img:
+            w, h = check_img.size
+            if w < 1000 or h < 600:
+                print(f"[REJECT] 🛡️ 安全ガード作動: {store_name} の画像解像度が低すぎます ({w}x{h})。文字潰れによる架空データ捏造（ハルシネーション）を防止するため解析をスキップします。")
+                return []
+    except Exception as e:
+        print(f"[WARN] 画像サイズ確認失敗: {e}")
+
     # 画像を文字鮮明度を保ったまま最適サイズ・JPEGに自動軽量化（3MB -> 300~500KB）
     try:
         with Image.open(image_path) as img:
@@ -117,10 +128,14 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
 このチラシ画像に実際に掲載されている【野菜】【きのこ】【果物】【精肉（豚・鶏・牛）】【鮮魚・水産】、および【卵・牛乳・チーズ・ヨーグルト・納豆】【即席ラーメン・カップラーメン】の日替わり特売品を正確に読み取り、JSON配列形式で抽出してください。
 
 【厳格な遵守ルール】
-1. 推測や架空の価格は絶対に含めず、画像に印刷されている数字のみを正確に読み取ること。
-2. 価格（price）は「税抜（本体）価格」を整数値で出力してください。税込しか書かれていない場合は税込価格を整数で出力してください。
-3. 日替わり枠（例: 10/14限り、10/15限り、10/16〜10/18など）の日付を正確に YYYY-MM-DD 形式に変換してください。
-4. 惣菜、お弁当、お酒、ペット用品などは除外し、日常の食卓食材（生鮮食品、卵、牛乳、乳製品・チーズ、納豆、豆腐、即席麺類）を中心に抽出してください。
+1. 【文字不鮮明時のスキップ義務（推測・捏造厳禁）】:
+   文字が小さく潰れていて商品名が確実に読めないものは、絶対に推測で一般的な食材名（レタス、キャベツ等）を補完・捏造せず、スキップ（除外）してください。100%確実に文字が読める商品のみを抽出してください。
+2. 【枠線・罫線の厳守（ツギハギ合成の完全禁止）】:
+   異なる枠線（罫線）をまたいで離れた位置にある商品名・規格・価格（例: お米の「5kg」と別枠の調味料の数字や野菜の文字）を勝手にツギハギ合成することは絶対に禁止します。1つの商品枠内に確実にまとまっている情報のみを抽出してください。「いも」「こがね」「こま」等の不完全な短縮単語は抽出せず、正式な品名を抽出してください。
+3. 【日付ヘッダーの照合義務】:
+   各商品は、その商品が掲載されている枠の真上または周囲にある「◯月◯日限り」「◯日〜◯日」などの日付見出しヘッダーを必ず目視確認し、その日付を valid_from / valid_to に設定してください。隣の列や別の日の枠と混同してはいけません。
+4. 価格（price）は「税抜（本体）価格」を整数値で出力してください。税込しか書かれていない場合は税込価格を整数で出力してください。
+5. 惣菜、お弁当、お酒、ペット用品などは除外し、日常の食卓食材（生鮮食品、卵、牛乳、乳製品・チーズ、納豆、豆腐、即席麺類）を中心に抽出してください。
 
 【出力フォーマット（JSON形式）】
 [
@@ -131,6 +146,7 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
     "unit": "単位や規格（例: 1個、100g、1パック、1本 など）",
     "valid_from": "YYYY-MM-DD",
     "valid_to": "YYYY-MM-DD",
+    "date_evidence": "チラシに印刷されている実際の日付表記（例: 10/14限り、10/15限り、10/16〜10/18 など）",
     "is_today_only": trueまたはfalse,
     "note": "特売条件やチラシ記載の備考（例: 水曜限り！お一人様4点限り、よりどり3点99円 など）"
   }}
