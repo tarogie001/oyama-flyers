@@ -104,13 +104,13 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
     try:
         with Image.open(image_path) as img:
             img = img.convert("RGB")
-            max_dimension = 1600
+            max_dimension = 1400
             if max(img.width, img.height) > max_dimension:
                 scale = max_dimension / max(img.width, img.height)
                 new_size = (int(img.width * scale), int(img.height * scale))
                 img = img.resize(new_size, Image.Resampling.LANCZOS)
             buf = io.BytesIO()
-            img.save(buf, format="JPEG", quality=85, optimize=True)
+            img.save(buf, format="JPEG", quality=80, optimize=True)
             img_bytes = buf.getvalue()
     except Exception as e:
         print(f"[WARN] 画像の最適化に失敗したため生データを読み込みます: {e}")
@@ -176,47 +176,45 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
 
     headers = {"Content-Type": "application/json"}
 
-    max_retries = len(candidate_models)
-    for attempt in range(max_retries):
-        current_model = candidate_models[attempt]
+    for model_idx, current_model in enumerate(candidate_models):
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent?key={GEMINI_API_KEY}"
-        print(f"  👉 [{attempt + 1}/{max_retries}] モデル '{current_model}' で解析を試行中...")
+        print(f"  👉 [{model_idx + 1}/{len(candidate_models)}] モデル '{current_model}' で解析を試行中...")
 
-        try:
-            res = requests.post(url, json=payload, headers=headers, timeout=50)
-            if res.status_code == 200:
-                data = res.json()
-                text_content = data["candidates"][0]["content"]["parts"][0]["text"]
-                deals = json.loads(text_content)
-                if isinstance(deals, list):
-                    print(f"[OK] Gemini AI ({current_model}) が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！")
-                    return deals
-                return []
-            elif res.status_code == 429:
-                wait_sec = 25
-                print(f"[WARN] APIレート制限に達しました (HTTP 429)。制限枠回復のため {wait_sec}秒 待機して再試行します...")
+        # 同一モデルで最大3回まで再試行（429レート制限時は待機して枠回復を待つ）
+        for retry_count in range(3):
+            try:
+                res = requests.post(url, json=payload, headers=headers, timeout=60)
+                if res.status_code == 200:
+                    data = res.json()
+                    text_content = data["candidates"][0]["content"]["parts"][0]["text"]
+                    deals = json.loads(text_content)
+                    if isinstance(deals, list):
+                        print(f"[OK] Gemini AI ({current_model}) が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！")
+                        return deals
+                    return []
+                elif res.status_code == 429:
+                    wait_sec = 35
+                    print(f"[WARN] APIレート制限に達しました (HTTP 429)。制限枠回復のため {wait_sec}秒 待機して再試行します (試行 {retry_count + 1}/3)...")
+                    time.sleep(wait_sec)
+                    continue
+                elif res.status_code == 503:
+                    wait_sec = 8
+                    print(f"[WARN] モデル '{current_model}' が混雑中 (HTTP 503)。{wait_sec}秒 待機して再試行します...")
+                    time.sleep(wait_sec)
+                    continue
+                else:
+                    print(f"[WARN] モデル '{current_model}' でエラー (HTTP {res.status_code}): {res.text[:150]}。代替モデルへ移行します...")
+                    break
+            except requests.exceptions.Timeout:
+                wait_sec = 8
+                print(f"[WARN] モデル '{current_model}' がタイムアウト。{wait_sec}秒 待機して再試行します...")
                 time.sleep(wait_sec)
                 continue
-            elif res.status_code == 503:
-                wait_sec = 5
-                print(f"[WARN] モデル '{current_model}' が混雑中 (HTTP 503)。{wait_sec}秒待機後、代替モデルへ切り替えます...")
-                time.sleep(wait_sec)
-                continue
-            else:
-                print(f"[WARN] モデル '{current_model}' でエラー (HTTP {res.status_code}): {res.text[:200]}。代替モデルを試します...")
-                time.sleep(3)
-                continue
-        except requests.exceptions.Timeout:
-            wait_sec = 5
-            print(f"[WARN] モデル '{current_model}' がタイムアウト。{wait_sec}秒待機後、代替モデルへ切り替えます...")
-            time.sleep(wait_sec)
-            continue
-        except Exception as e:
-            print(f"[ERROR] モデル '{current_model}' で例外エラー: {e}。代替モデルを試します...")
-            time.sleep(3)
-            continue
+            except Exception as e:
+                print(f"[ERROR] モデル '{current_model}' で例外エラー: {e}。代替モデルへ移行します...")
+                break
 
-    print(f"[-] {store_name}: 全モデル候補 ({max_retries}種) を試行しましたが抽出できませんでした")
+    print(f"[-] {store_name}: 全モデル候補 ({len(candidate_models)}種) を試行しましたが抽出できませんでした")
     return []
 
 if __name__ == "__main__":
