@@ -104,13 +104,13 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
     try:
         with Image.open(image_path) as img:
             img = img.convert("RGB")
-            max_dimension = 1600
+            max_dimension = 1400
             if max(img.width, img.height) > max_dimension:
                 scale = max_dimension / max(img.width, img.height)
                 new_size = (int(img.width * scale), int(img.height * scale))
                 img = img.resize(new_size, Image.Resampling.LANCZOS)
             buf = io.BytesIO()
-            img.save(buf, format="JPEG", quality=85, optimize=True)
+            img.save(buf, format="JPEG", quality=80, optimize=True)
             img_bytes = buf.getvalue()
     except Exception as e:
         print(f"[WARN] 画像の最適化に失敗したため生データを読み込みます: {e}")
@@ -128,8 +128,10 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
 このチラシ画像に実際に掲載されている【野菜】【きのこ】【果物】【精肉（豚・鶏・牛）】【鮮魚・水産】、および【卵・牛乳・チーズ・ヨーグルト・納豆】【即席ラーメン・カップラーメン】の日替わり特売品を正確に読み取り、JSON配列形式で抽出してください。
 
 【厳格な遵守ルール】
-1. 【文字不鮮明時のスキップ義務（推測・捏造厳禁）】:
-   文字が小さく潰れていて商品名が確実に読めないものは、絶対に推測で一般的な食材名（レタス、キャベツ等）を補完・捏造せず、スキップ（除外）してください。100%確実に文字が読める商品のみを抽出してください。
+1. 【文字の完全一致厳守（一文字たりとも創作・すり替えの禁止）】:
+   raw_name には、チラシ画像に実際に印字されている日本語（漢字・カタカナ・ひらがな）を一文字ずつそのまま書き写してください。
+   画像にない漢字や単語（例: 画像に「銀だら」とあるのに「真だら鍋用」と書く、画像に「銀鱈」とあるのに「殻付帆立」と書く、画像に「りんご」とあるのに「レタス」と書く等）を創作・すり替えることは絶対に禁止します。
+   文字が100%確実に読めない商品は、一切出力せず完全にスキップ（除外）してください。
 2. 【枠線・罫線の厳守（ツギハギ合成の完全禁止）】:
    異なる枠線（罫線）をまたいで離れた位置にある商品名・規格・価格（例: お米の「5kg」と別枠の調味料の数字や野菜の文字）を勝手にツギハギ合成することは絶対に禁止します。1つの商品枠内に確実にまとまっている情報のみを抽出してください。「いも」「こがね」「こま」等の不完全な短縮単語は抽出せず、正式な品名を抽出してください。
 3. 【日付ヘッダーの照合義務】:
@@ -170,53 +172,51 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
         ],
         "generationConfig": {
             "response_mime_type": "application/json",
-            "temperature": 0.1
+            "temperature": 0.0
         }
     }
 
     headers = {"Content-Type": "application/json"}
 
-    max_retries = len(candidate_models)
-    for attempt in range(max_retries):
-        current_model = candidate_models[attempt]
+    for model_idx, current_model in enumerate(candidate_models):
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent?key={GEMINI_API_KEY}"
-        print(f"  👉 [{attempt + 1}/{max_retries}] モデル '{current_model}' で解析を試行中...")
+        print(f"  👉 [{model_idx + 1}/{len(candidate_models)}] モデル '{current_model}' で解析を試行中...")
 
-        try:
-            res = requests.post(url, json=payload, headers=headers, timeout=50)
-            if res.status_code == 200:
-                data = res.json()
-                text_content = data["candidates"][0]["content"]["parts"][0]["text"]
-                deals = json.loads(text_content)
-                if isinstance(deals, list):
-                    print(f"[OK] Gemini AI ({current_model}) が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！")
-                    return deals
-                return []
-            elif res.status_code == 429:
-                wait_sec = 25
-                print(f"[WARN] APIレート制限に達しました (HTTP 429)。制限枠回復のため {wait_sec}秒 待機して再試行します...")
+        # 同一モデルで最大3回まで再試行（429レート制限時は待機して枠回復を待つ）
+        for retry_count in range(3):
+            try:
+                res = requests.post(url, json=payload, headers=headers, timeout=60)
+                if res.status_code == 200:
+                    data = res.json()
+                    text_content = data["candidates"][0]["content"]["parts"][0]["text"]
+                    deals = json.loads(text_content)
+                    if isinstance(deals, list):
+                        print(f"[OK] Gemini AI ({current_model}) が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！")
+                        return deals
+                    return []
+                elif res.status_code == 429:
+                    wait_sec = 35
+                    print(f"[WARN] APIレート制限に達しました (HTTP 429)。制限枠回復のため {wait_sec}秒 待機して再試行します (試行 {retry_count + 1}/3)...")
+                    time.sleep(wait_sec)
+                    continue
+                elif res.status_code == 503:
+                    wait_sec = 8
+                    print(f"[WARN] モデル '{current_model}' が混雑中 (HTTP 503)。{wait_sec}秒 待機して再試行します...")
+                    time.sleep(wait_sec)
+                    continue
+                else:
+                    print(f"[WARN] モデル '{current_model}' でエラー (HTTP {res.status_code}): {res.text[:150]}。代替モデルへ移行します...")
+                    break
+            except requests.exceptions.Timeout:
+                wait_sec = 8
+                print(f"[WARN] モデル '{current_model}' がタイムアウト。{wait_sec}秒 待機して再試行します...")
                 time.sleep(wait_sec)
                 continue
-            elif res.status_code == 503:
-                wait_sec = 5
-                print(f"[WARN] モデル '{current_model}' が混雑中 (HTTP 503)。{wait_sec}秒待機後、代替モデルへ切り替えます...")
-                time.sleep(wait_sec)
-                continue
-            else:
-                print(f"[WARN] モデル '{current_model}' でエラー (HTTP {res.status_code}): {res.text[:200]}。代替モデルを試します...")
-                time.sleep(3)
-                continue
-        except requests.exceptions.Timeout:
-            wait_sec = 5
-            print(f"[WARN] モデル '{current_model}' がタイムアウト。{wait_sec}秒待機後、代替モデルへ切り替えます...")
-            time.sleep(wait_sec)
-            continue
-        except Exception as e:
-            print(f"[ERROR] モデル '{current_model}' で例外エラー: {e}。代替モデルを試します...")
-            time.sleep(3)
-            continue
+            except Exception as e:
+                print(f"[ERROR] モデル '{current_model}' で例外エラー: {e}。代替モデルへ移行します...")
+                break
 
-    print(f"[-] {store_name}: 全モデル候補 ({max_retries}種) を試行しましたが抽出できませんでした")
+    print(f"[-] {store_name}: 全モデル候補 ({len(candidate_models)}種) を試行しましたが抽出できませんでした")
     return []
 
 if __name__ == "__main__":

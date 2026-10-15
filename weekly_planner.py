@@ -40,10 +40,9 @@ class WeeklyPlanner:
         """基準日を含む週（月曜日〜日曜日）の開始日と終了日を取得"""
         if base_date is None:
             base_date = datetime.date.today()
-        # 月曜日
+        # 今週の月曜日から、今日＋6日後（先1週間）までを広くカバー
         start_of_week = base_date - datetime.timedelta(days=base_date.weekday())
-        # 日曜日
-        end_of_week = start_of_week + datetime.timedelta(days=6)
+        end_of_week = max(start_of_week + datetime.timedelta(days=6), base_date + datetime.timedelta(days=6))
         return start_of_week, end_of_week
 
     def analyze_weekly_plan(self, target_date: Optional[str] = None) -> Dict[str, Any]:
@@ -256,7 +255,7 @@ class WeeklyPlanner:
         lines.append("ℹ️【本日のチラシ目玉特売なし（店頭通常価格の日常食材）】")
         lines.append("--------------------------------------------------")
         featured_ings = {it['ingredient'] for it in plan['buy_today']} | {it['ingredient'] for it in plan['wait_for_later']}
-        staple_candidates = ["キャベツ", "白菜", "大根", "ほうれんそう", "ブロッコリー", "レタス", "豚バラ（うすぎり）", "鶏もも肉"]
+        staple_candidates = ["卵", "キャベツ", "白菜", "大根", "ニンジン", "玉ねぎ", "ネギ", "ほうれんそう", "ブロッコリー", "レタス", "豚バラ（うすぎり）", "鶏もも肉", "納豆", "即席ラーメン", "カップラーメン"]
         no_deal_staples = [ing for ing in staple_candidates if ing not in featured_ings]
         if no_deal_staples:
             lines.append(f"・{', '.join(no_deal_staples)} など（※本日はチラシ目玉特売がないため、平常価格での購入または特売日をお待ちください）")
@@ -286,7 +285,7 @@ class WeeklyPlanner:
 
         # チラシ特売なし日常食材
         featured_ings = {it['ingredient'] for it in plan['buy_today']} | {it['ingredient'] for it in plan['wait_for_later']}
-        staple_candidates = ["キャベツ", "白菜", "大根", "ほうれんそう", "ブロッコリー", "レタス"]
+        staple_candidates = ["卵", "キャベツ", "白菜", "大根", "ニンジン", "玉ねぎ", "ネギ", "ほうれんそう", "ブロッコリー", "レタス", "豚バラ（うすぎり）", "鶏もも肉", "納豆", "即席ラーメン", "カップラーメン"]
         no_deal_staples = [ing for ing in staple_candidates if ing not in featured_ings]
 
         # 店舗ごとにチラシリンクをマッピング
@@ -345,6 +344,49 @@ class WeeklyPlanner:
                 "flyer_url": s_info["url"] if s_info else ""
             })
 
+        # 全特売品一覧（検索機能用：今日以降有効なもののみ）
+        today_iso = plan["today"].isoformat()
+        conn = sqlite3.connect(DB_FILE)
+        c = conn.cursor()
+        c.execute("""
+            SELECT store_id, product_raw_name, category, ingredient_name, price, unit, valid_from, valid_to, note
+            FROM flyer_deals
+            WHERE valid_to >= ?
+            ORDER BY price ASC
+        """, (today_iso,))
+        all_rows = c.fetchall()
+        conn.close()
+
+        weekdays = ["月", "火", "水", "木", "金", "土", "日"]
+        all_deals = []
+        for r in all_rows:
+            s_info = store_map.get(r[0], {})
+            try:
+                df = datetime.date.fromisoformat(r[6])
+                dt = datetime.date.fromisoformat(r[7])
+                if r[6] == r[7]:
+                    date_label = f"{df.strftime('%m/%d')}({weekdays[df.weekday()]})限り"
+                else:
+                    date_label = f"{df.strftime('%m/%d')}({weekdays[df.weekday()]})〜{dt.strftime('%m/%d')}({weekdays[dt.weekday()]})"
+            except Exception:
+                date_label = f"{r[6]}〜{r[7]}"
+
+            all_deals.append({
+                "store_id": r[0],
+                "store_name": s_info.get("name", r[0]),
+                "chain": s_info.get("chain", r[0]),
+                "flyer_url": s_info.get("url", ""),
+                "product_raw_name": r[1],
+                "category": r[2],
+                "ingredient_name": r[3],
+                "price": r[4],
+                "unit": r[5] or "",
+                "valid_from": r[6],
+                "valid_to": r[7],
+                "date_label": date_label,
+                "note": r[8] or ""
+            })
+
         try:
             from zoneinfo import ZoneInfo
             now_jst = datetime.datetime.now(ZoneInfo("Asia/Tokyo"))
@@ -360,6 +402,7 @@ class WeeklyPlanner:
             "no_deal_staples": no_deal_staples,
             "weekly_schedule": enriched_weekly,
             "best_buy_schedule": enriched_best_buy,
+            "all_deals": all_deals,
             "stores": self.stores
         }
 

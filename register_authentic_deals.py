@@ -3,9 +3,18 @@
 Register verified flyer deals into flyer_deals table in deals.db.
 Only deals with 100% verified visual proof from downloaded flyer images are added.
 """
+import sys
 import sqlite3
 
+# Windows環境で文字化け・絵文字エラーを防ぐ設定
+if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 VERIFIED_DEALS = [
+    # --- オータニ チラシ原本確認済み ---
     {
         "store_id": "otani",
         "product_raw_name": "サンヨー食品 サッポロ一番（みそ・塩・しょうゆ 5食パック）",
@@ -39,6 +48,85 @@ VERIFIED_DEALS = [
         "valid_to": "2026-10-15",
         "note": ""
     },
+    # --- マルエツ チラシ原本確認済み (10/15限り) ---
+    {
+        "store_id": "maruetsu",
+        "product_raw_name": "アメリカ産など 銀だら切身（解凍）",
+        "category": "魚介類",
+        "ingredient_name": "たら",
+        "price": 269,
+        "unit": "100g当り",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "木曜限り"
+    },
+    {
+        "store_id": "maruetsu",
+        "product_raw_name": "銀だら西京漬",
+        "category": "魚介類",
+        "ingredient_name": "たら",
+        "price": 680,
+        "unit": "1パック(2切入)",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "木曜限り"
+    },
+    {
+        "store_id": "maruetsu",
+        "product_raw_name": "国産 若どりささみ",
+        "category": "精肉（鶏肉）",
+        "ingredient_name": "鶏ささみ",
+        "price": 98,
+        "unit": "100g当り",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "木曜限り"
+    },
+    {
+        "store_id": "maruetsu",
+        "product_raw_name": "長野県産 えのき茸",
+        "category": "きのこ類",
+        "ingredient_name": "えのき",
+        "price": 129,
+        "unit": "1袋",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "木曜限り"
+    },
+    # --- ジャパンミート チラシ原本確認済み (10/14〜10/16 大感謝祭) ---
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "ブラジル産・解凍品 豚バラブロック",
+        "category": "精肉（豚肉）",
+        "ingredient_name": "豚バラブロック",
+        "price": 129,
+        "unit": "100g当り",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": "エブリデイ・ロープライス"
+    },
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "豪・ブラジル産・国産（解凍・解凍品） 豚鶏合挽LL",
+        "category": "精肉（豚肉）",
+        "ingredient_name": "豚挽肉",
+        "price": 79,
+        "unit": "100g当り",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": "エブリデイ・ロープライス"
+    },
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "国産豚 小間スライスL (1kgパック)",
+        "category": "精肉（豚肉）",
+        "ingredient_name": "豚こま切れ肉",
+        "price": 890,
+        "unit": "1パック(1kg)",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": "100g当り89円"
+    },
     {
         "store_id": "japanmeat",
         "product_raw_name": "シマダヤ わが家の一杯 生ラーメン 3食（醤油・味噌・塩 各110g×3）",
@@ -60,40 +148,183 @@ VERIFIED_DEALS = [
         "valid_from": "2026-10-14",
         "valid_to": "2026-10-16",
         "note": ""
+    },
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "アメリカ産（解凍） 銀鱈切身",
+        "category": "魚介類",
+        "ingredient_name": "たら",
+        "price": 698,
+        "unit": "4切",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "三陸産他（養殖） 国産 甘塩銀鮭",
+        "category": "魚介類",
+        "ingredient_name": "鮭",
+        "price": 698,
+        "unit": "4切",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "ノルウェー産他（解凍） 生アトランティックサーモン（刺身用）",
+        "category": "魚介類",
+        "ingredient_name": "鮭",
+        "price": 430,
+        "unit": "100g当り",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "中国産他 つぼぬきいか",
+        "category": "魚介類",
+        "ingredient_name": "いか",
+        "price": 555,
+        "unit": "4杯",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "北海道産などの国内産 れんこん",
+        "category": "野菜",
+        "ingredient_name": "れんこん",
+        "price": 79,
+        "unit": "100g当り",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    {
+        "store_id": "japanmeat",
+        "product_raw_name": "青森県産などの国内産 ごぼう",
+        "category": "野菜",
+        "ingredient_name": "ごぼう",
+        "price": 199,
+        "unit": "2本入・1袋",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    # --- ベイシア チラシ原本確認済み (10/14〜10/20) ---
+    {
+        "store_id": "beisia",
+        "product_raw_name": "青森などの国内産 りんご",
+        "category": "季節の果物",
+        "ingredient_name": "りんご",
+        "price": 129,
+        "unit": "1コ",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-14",
+        "note": "10/14限り"
+    },
+    {
+        "store_id": "beisia",
+        "product_raw_name": "北海道などの国内産 じゃがいも・玉ねぎ・人参 よりどり3点",
+        "category": "野菜",
+        "ingredient_name": "ジャガイモ",
+        "price": 99,
+        "unit": "3点",
+        "valid_from": "2026-10-14",
+        "valid_to": "2026-10-14",
+        "note": "10/14限り"
+    },
+    {
+        "store_id": "beisia",
+        "product_raw_name": "生寿司一品各種（まぐろづくし・サーモンづくしなど）",
+        "category": "魚介類",
+        "ingredient_name": "まぐろ",
+        "price": 500,
+        "unit": "1パック",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "10/15限り"
+    },
+    {
+        "store_id": "beisia",
+        "product_raw_name": "北海道産他 秋鮭切身（養殖）",
+        "category": "魚介類",
+        "ingredient_name": "鮭",
+        "price": 249,
+        "unit": "100g当り",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "10/15限り"
+    },
+    {
+        "store_id": "beisia",
+        "product_raw_name": "国内産 豚肉こま切れ",
+        "category": "精肉（豚肉）",
+        "ingredient_name": "豚こま切れ肉",
+        "price": 79,
+        "unit": "100g当り",
+        "valid_from": "2026-10-16",
+        "valid_to": "2026-10-16",
+        "note": "10/16限り"
+    },
+    {
+        "store_id": "beisia",
+        "product_raw_name": "中国など 骨取り塩さば",
+        "category": "魚介類",
+        "ingredient_name": "さば",
+        "price": 500,
+        "unit": "1パック(4枚)",
+        "valid_from": "2026-10-16",
+        "valid_to": "2026-10-16",
+        "note": "10/16限り"
+    },
+    {
+        "store_id": "beisia",
+        "product_raw_name": "ベイシア 太陽の恵み(白) 1パック(10コ入)",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "卵",
+        "price": 259,
+        "unit": "1パック(10コ入)",
+        "valid_from": "2026-10-20",
+        "valid_to": "2026-10-20",
+        "note": "10/20限り お一人様1パック限り"
     }
 ]
 
 def main():
     conn = sqlite3.connect("deals.db")
     c = conn.cursor()
-    
+
+    # 2. 原本確認済み【100%本物データ】のみを新規登録（既存重複はスキップ）
     inserted_count = 0
     for d in VERIFIED_DEALS:
-        # Check duplicate
         c.execute("""
             SELECT id FROM flyer_deals 
             WHERE store_id = ? AND product_raw_name = ? AND valid_from = ?
         """, (d["store_id"], d["product_raw_name"], d["valid_from"]))
-        row = c.fetchone()
-        if not row:
-            c.execute("""
-                INSERT INTO flyer_deals (store_id, product_raw_name, category, ingredient_name, price, unit, valid_from, valid_to, note)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                d["store_id"],
-                d["product_raw_name"],
-                d["category"],
-                d["ingredient_name"],
-                d["price"],
-                d["unit"],
-                d["valid_from"],
-                d["valid_to"],
-                d["note"]
-            ))
-            inserted_count += 1
-            print(f"追加: {d['store_id']} - {d['product_raw_name']} ({d['price']}円)")
-        else:
-            print(f"既存スキップ: {d['store_id']} - {d['product_raw_name']}")
+        if c.fetchone():
+            continue
+
+        c.execute("""
+            INSERT INTO flyer_deals (store_id, product_raw_name, category, ingredient_name, price, unit, valid_from, valid_to, note)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            d["store_id"],
+            d["product_raw_name"],
+            d["category"],
+            d["ingredient_name"],
+            d["price"],
+            d["unit"],
+            d["valid_from"],
+            d["valid_to"],
+            d["note"]
+        ))
+        inserted_count += 1
+        print(f"追加: {d['store_id']} - {d['product_raw_name']} ({d['price']}円)")
             
     conn.commit()
     conn.close()
