@@ -38,6 +38,9 @@ def main():
     # 4. Gemini AIによるチラシ画像解析＆特売品抽出
     run_step("4. Gemini AIによるチラシ画像解析＆特売品抽出", "auto_gemini_crawler.py")
     
+    # 4.5. 原本確認済み特売データの自動補完
+    run_step("4.5. 原本確認済み特売データの自動補完", "register_authentic_deals.py")
+    
     # 5. 買い出し提案レポート生成＆アプリ用JSON出力
     run_step("5. 提案レポート生成＆JSON出力", "notifier.py")
     
