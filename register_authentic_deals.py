@@ -292,6 +292,51 @@ VERIFIED_DEALS = [
         "valid_from": "2026-10-20",
         "valid_to": "2026-10-20",
         "note": "10/20限り お一人様1パック限り"
+    },
+    # --- ヨークベニマル チラシ原本確認済み (10/12〜10/21) ---
+    {
+        "store_id": "york_benimaru",
+        "product_raw_name": "セブンプレミアム 毎日の食卓牛乳 (1000ml)",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "牛乳",
+        "price": 208,
+        "unit": "1本",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-21",
+        "note": "ヨークベニマル定番特売"
+    },
+    {
+        "store_id": "york_benimaru",
+        "product_raw_name": "おかめ仕立て 旨味極小粒納豆 (3パック)",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "納豆",
+        "price": 98,
+        "unit": "1パック(3個入)",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "10/15限り"
+    },
+    {
+        "store_id": "york_benimaru",
+        "product_raw_name": "明治 ブルガリアヨーグルト (400g)",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "ヨーグルト",
+        "price": 148,
+        "unit": "1個",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "10/15限り"
+    },
+    {
+        "store_id": "york_benimaru",
+        "product_raw_name": "国産 豚肉こま切れ",
+        "category": "精肉（豚肉）",
+        "ingredient_name": "豚こま切れ肉",
+        "price": 108,
+        "unit": "100g当り",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-18",
+        "note": "厳選特価"
     }
 ]
 
