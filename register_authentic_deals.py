@@ -281,6 +281,17 @@ VERIFIED_DEALS = [
         "valid_from": "2026-10-16",
         "valid_to": "2026-10-16",
         "note": "10/16限り"
+    },
+    {
+        "store_id": "beisia",
+        "product_raw_name": "ベイシア 太陽の恵み(白) 1パック(10コ入)",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "卵",
+        "price": 259,
+        "unit": "1パック(10コ入)",
+        "valid_from": "2026-10-20",
+        "valid_to": "2026-10-20",
+        "note": "10/20限り お一人様1パック限り"
     }
 ]
 

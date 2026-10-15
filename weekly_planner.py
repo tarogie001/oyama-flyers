@@ -40,10 +40,9 @@ class WeeklyPlanner:
         """基準日を含む週（月曜日〜日曜日）の開始日と終了日を取得"""
         if base_date is None:
             base_date = datetime.date.today()
-        # 月曜日
+        # 今週の月曜日から、今日＋6日後（先1週間）までを広くカバー
         start_of_week = base_date - datetime.timedelta(days=base_date.weekday())
-        # 日曜日
-        end_of_week = start_of_week + datetime.timedelta(days=6)
+        end_of_week = max(start_of_week + datetime.timedelta(days=6), base_date + datetime.timedelta(days=6))
         return start_of_week, end_of_week
 
     def analyze_weekly_plan(self, target_date: Optional[str] = None) -> Dict[str, Any]:
@@ -256,7 +255,7 @@ class WeeklyPlanner:
         lines.append("ℹ️【本日のチラシ目玉特売なし（店頭通常価格の日常食材）】")
         lines.append("--------------------------------------------------")
         featured_ings = {it['ingredient'] for it in plan['buy_today']} | {it['ingredient'] for it in plan['wait_for_later']}
-        staple_candidates = ["キャベツ", "白菜", "大根", "ほうれんそう", "ブロッコリー", "レタス", "豚バラ（うすぎり）", "鶏もも肉"]
+        staple_candidates = ["卵", "キャベツ", "白菜", "大根", "ニンジン", "玉ねぎ", "ネギ", "ほうれんそう", "ブロッコリー", "レタス", "豚バラ（うすぎり）", "鶏もも肉", "納豆", "即席ラーメン", "カップラーメン"]
         no_deal_staples = [ing for ing in staple_candidates if ing not in featured_ings]
         if no_deal_staples:
             lines.append(f"・{', '.join(no_deal_staples)} など（※本日はチラシ目玉特売がないため、平常価格での購入または特売日をお待ちください）")
@@ -286,7 +285,7 @@ class WeeklyPlanner:
 
         # チラシ特売なし日常食材
         featured_ings = {it['ingredient'] for it in plan['buy_today']} | {it['ingredient'] for it in plan['wait_for_later']}
-        staple_candidates = ["キャベツ", "白菜", "大根", "ほうれんそう", "ブロッコリー", "レタス"]
+        staple_candidates = ["卵", "キャベツ", "白菜", "大根", "ニンジン", "玉ねぎ", "ネギ", "ほうれんそう", "ブロッコリー", "レタス", "豚バラ（うすぎり）", "鶏もも肉", "納豆", "即席ラーメン", "カップラーメン"]
         no_deal_staples = [ing for ing in staple_candidates if ing not in featured_ings]
 
         # 店舗ごとにチラシリンクをマッピング

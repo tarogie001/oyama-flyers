@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 13:08",
+  "updated_at": "2026-10-15 18:24",
   "target_date": "2026-10-15",
   "target_date_label": "2026年10月15日",
   "buy_today": [
@@ -199,12 +199,20 @@
     }
   ],
   "no_deal_staples": [
+    "卵",
     "キャベツ",
     "白菜",
     "大根",
+    "ニンジン",
+    "玉ねぎ",
+    "ネギ",
     "ほうれんそう",
     "ブロッコリー",
-    "レタス"
+    "レタス",
+    "豚バラ（うすぎり）",
+    "鶏もも肉",
+    "即席ラーメン",
+    "カップラーメン"
   ],
   "weekly_schedule": {
     "10/15(木)": [
@@ -432,6 +440,22 @@
         "valid_from": "2026-10-16",
         "valid_to": "2026-10-16",
         "note": "10/16限り",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+      }
+    ],
+    "10/20(火)": [
+      {
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
+        "product_raw_name": "ベイシア 太陽の恵み(白) 1パック(10コ入)",
+        "category": "日配品・大豆製品",
+        "ingredient_name": "卵",
+        "price": 259,
+        "unit": "1パック(10コ入)",
+        "valid_from": "2026-10-20",
+        "valid_to": "2026-10-20",
+        "note": "10/20限り お一人様1パック限り",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       }
     ]
@@ -675,6 +699,21 @@
       "is_best_today": false,
       "advice": "10/16の特売開始まで待機推奨",
       "sort_date": "2026-10-16",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
+      "ingredient": "卵",
+      "raw_name": "ベイシア 太陽の恵み(白) 1パック(10コ入)",
+      "category": "日配品・大豆製品",
+      "best_price": 259,
+      "unit": "1パック(10コ入)",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "10/20(火)から",
+      "is_best_today": false,
+      "advice": "10/20の特売開始まで待機推奨",
+      "sort_date": "2026-10-20",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     }
   ],
