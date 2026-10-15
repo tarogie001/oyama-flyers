@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 09:38",
+  "updated_at": "2026-10-15 10:31",
   "target_date": "2026-10-15",
   "target_date_label": "2026年10月15日",
   "buy_today": [
@@ -41,6 +41,19 @@
       "note": "今週最安値",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "鶏むね肉",
+      "raw_name": "国内産 鶏むね肉",
+      "category": "精肉（鶏肉）",
+      "price": 69,
+      "unit": "100gあたり",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ベイシア Foods Park 結城店",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "ブラジル産 鶏肉モモ (解凍) 100g当り",
@@ -173,19 +186,6 @@
       "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
     },
     {
-      "ingredient": "えび",
-      "raw_name": "海老",
-      "category": "魚介類",
-      "price": 99,
-      "unit": "1パック",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
       "ingredient": "カナダ産 豚ロース肉うす切り 100gあたり",
       "raw_name": "カナダ産 豚ロース肉うす切り 100gあたり",
       "category": "その他",
@@ -238,6 +238,19 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "レタス",
+      "raw_name": "国内産 レタス",
+      "category": "野菜",
+      "price": 129,
+      "unit": "1コ",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ベイシア Foods Park 結城店",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
       "ingredient": "ごぼう",
       "raw_name": "青森県(その他国内)産 切りごぼう・ささがきごぼう",
       "category": "野菜",
@@ -249,6 +262,19 @@
       "note": "今週最安値",
       "store_name": "たいらや 粟宮店",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+    },
+    {
+      "ingredient": "チーズ",
+      "raw_name": "ベイシア とろけるスライスチーズ",
+      "category": "日配品・大豆製品",
+      "price": 139,
+      "unit": "7枚入",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ベイシア Foods Park 結城店",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "鮭",
@@ -264,19 +290,6 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "チーズ",
-      "raw_name": "とろ〜りチーズ",
-      "category": "日配品・大豆製品",
-      "price": 159,
-      "unit": "1袋",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
       "ingredient": "生ラーメン",
       "raw_name": "シマダヤ わが家の一杯 生ラーメン 3食（醤油・味噌・塩 各110g×3）",
       "category": "麺類・インスタント",
@@ -288,6 +301,19 @@
       "note": "今週最安値",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "国内産 豚ロース切身",
+      "raw_name": "国内産 豚ロース切身",
+      "category": "その他",
+      "price": 169,
+      "unit": "100gあたり",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ベイシア Foods Park 結城店",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "ネギ",
@@ -460,16 +486,16 @@
     },
     {
       "ingredient": "みかん",
-      "raw_name": "和歌山県産 AQ 有田みかん",
+      "raw_name": "国内産 みかん",
       "category": "季節の果物",
-      "price": 498,
+      "price": 399,
       "unit": "1袋",
-      "store": "たいらや",
-      "store_id": "tairaya",
-      "is_today_only": false,
-      "note": "今週最安値",
-      "store_name": "たいらや 粟宮店",
-      "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ベイシア Foods Park 結城店",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "国産つぼぬきいか",
@@ -653,16 +679,6 @@
       "diff": 100
     },
     {
-      "ingredient": "鶏むね肉",
-      "category": "精肉（鶏肉）",
-      "today_price": 480,
-      "future_price": 69,
-      "unit": "100g",
-      "future_store": "ベイシア",
-      "future_day": "10/18(日)",
-      "diff": 411
-    },
-    {
       "ingredient": "納豆",
       "category": "日配品・大豆製品",
       "today_price": 98,
@@ -671,23 +687,12 @@
       "future_store": "ベイシア",
       "future_day": "10/18(日)",
       "diff": 29
-    },
-    {
-      "ingredient": "まぐろ",
-      "category": "魚介類",
-      "today_price": 198,
-      "future_price": 189,
-      "unit": "100gあたり",
-      "future_store": "ベイシア",
-      "future_day": "10/18(日)",
-      "diff": 9
     }
   ],
   "no_deal_staples": [
     "キャベツ",
     "大根",
-    "ブロッコリー",
-    "レタス"
+    "ブロッコリー"
   ],
   "weekly_schedule": {
     "10/15(木)": [
@@ -860,20 +865,6 @@
         "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
       },
       {
-        "store_id": "japanmeat",
-        "store_name": "ジャパンミート生鮮館 小山店",
-        "chain": "ジャパンミート",
-        "product_raw_name": "海老",
-        "category": "魚介類",
-        "ingredient_name": "えび",
-        "price": 99,
-        "unit": "1パック",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-15",
-        "note": "",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-      },
-      {
         "store_id": "tairaya",
         "store_name": "たいらや 粟宮店",
         "chain": "たいらや",
@@ -930,6 +921,20 @@
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
+        "product_raw_name": "国内産 レタス",
+        "category": "野菜",
+        "ingredient_name": "レタス",
+        "price": 129,
+        "unit": "1コ",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+      },
+      {
         "store_id": "tairaya",
         "store_name": "たいらや 粟宮店",
         "chain": "たいらや",
@@ -944,18 +949,18 @@
         "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
       },
       {
-        "store_id": "japanmeat",
-        "store_name": "ジャパンミート生鮮館 小山店",
-        "chain": "ジャパンミート",
-        "product_raw_name": "とろ〜りチーズ",
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
+        "product_raw_name": "ベイシア とろけるスライスチーズ",
         "category": "日配品・大豆製品",
         "ingredient_name": "チーズ",
-        "price": 159,
-        "unit": "1袋",
+        "price": 139,
+        "unit": "7枚入",
         "valid_from": "2026-10-15",
         "valid_to": "2026-10-15",
         "note": "",
-        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       },
       {
         "store_id": "japanmeat",
@@ -970,6 +975,20 @@
         "valid_to": "2026-10-16",
         "note": "",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+      },
+      {
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
+        "product_raw_name": "国内産 豚ロース切身",
+        "category": "その他",
+        "ingredient_name": "国内産 豚ロース切身",
+        "price": 169,
+        "unit": "100gあたり",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
+        "note": "",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       },
       {
         "store_id": "belc",
@@ -1154,18 +1173,18 @@
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
-        "store_id": "tairaya",
-        "store_name": "たいらや 粟宮店",
-        "chain": "たいらや",
-        "product_raw_name": "和歌山県産 AQ 有田みかん",
+        "store_id": "beisia",
+        "store_name": "ベイシア Foods Park 結城店",
+        "chain": "ベイシア",
+        "product_raw_name": "国内産 みかん",
         "category": "季節の果物",
         "ingredient_name": "みかん",
-        "price": 498,
+        "price": 399,
         "unit": "1袋",
-        "valid_from": "2026-10-12",
-        "valid_to": "2026-10-16",
+        "valid_from": "2026-10-15",
+        "valid_to": "2026-10-15",
         "note": "",
-        "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       },
       {
         "store_id": "japanmeat",
@@ -1822,21 +1841,6 @@
       "flyer_url": "https://chirashi.delishkitchen.tv/shops/76a4d836-2ec9-4307-b3cc-1ae97b6381e7"
     },
     {
-      "ingredient": "えび",
-      "raw_name": "海老",
-      "category": "魚介類",
-      "best_price": 99,
-      "unit": "1パック",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
       "ingredient": "カナダ産 豚ロース肉うす切り 100gあたり",
       "raw_name": "カナダ産 豚ロース肉うす切り 100gあたり",
       "category": "その他",
@@ -1912,6 +1916,21 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "レタス",
+      "raw_name": "国内産 レタス",
+      "category": "野菜",
+      "best_price": 129,
+      "unit": "1コ",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "本日 10/15 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
       "ingredient": "ごぼう",
       "raw_name": "青森県(その他国内)産 切りごぼう・ささがきごぼう",
       "category": "野菜",
@@ -1925,6 +1944,21 @@
       "advice": "現在底値！今日買ってもOKです",
       "sort_date": "2026-10-15",
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+    },
+    {
+      "ingredient": "チーズ",
+      "raw_name": "ベイシア とろけるスライスチーズ",
+      "category": "日配品・大豆製品",
+      "best_price": 139,
+      "unit": "7枚入",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "本日 10/15 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "鮭",
@@ -1942,21 +1976,6 @@
       "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
-      "ingredient": "チーズ",
-      "raw_name": "とろ〜りチーズ",
-      "category": "日配品・大豆製品",
-      "best_price": 159,
-      "unit": "1袋",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "best_day_label": "本日 10/15 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-15",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
       "ingredient": "生ラーメン",
       "raw_name": "シマダヤ わが家の一杯 生ラーメン 3食（醤油・味噌・塩 各110g×3）",
       "category": "麺類・インスタント",
@@ -1970,6 +1989,21 @@
       "advice": "現在底値！今日買ってもOKです",
       "sort_date": "2026-10-15",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "国内産 豚ロース切身",
+      "raw_name": "国内産 豚ロース切身",
+      "category": "その他",
+      "best_price": 169,
+      "unit": "100gあたり",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "本日 10/15 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "ネギ",
@@ -2000,6 +2034,21 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-15",
       "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "まぐろ",
+      "raw_name": "台湾・中国産 びん長まぐろサク 100gあたり",
+      "category": "魚介類",
+      "best_price": 198,
+      "unit": "100g",
+      "store": "たいらや",
+      "store_id": "tairaya",
+      "store_name": "たいらや 粟宮店",
+      "best_day_label": "本日 10/15 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-15",
+      "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
       "ingredient": "白菜",
@@ -2228,18 +2277,18 @@
     },
     {
       "ingredient": "みかん",
-      "raw_name": "和歌山県産 AQ 有田みかん",
+      "raw_name": "国内産 みかん",
       "category": "季節の果物",
-      "best_price": 498,
+      "best_price": 399,
       "unit": "1袋",
-      "store": "たいらや",
-      "store_id": "tairaya",
-      "store_name": "たいらや 粟宮店",
-      "best_day_label": "本日〜10/16まで",
+      "store": "ベイシア",
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "best_day_label": "本日 10/15 限り！",
       "is_best_today": true,
-      "advice": "現在底値！今日買ってもOKです",
+      "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-15",
-      "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
       "ingredient": "国産つぼぬきいか",
@@ -2772,21 +2821,6 @@
       "category": "野菜",
       "best_price": 99,
       "unit": "1袋",
-      "store": "ベイシア",
-      "store_id": "beisia",
-      "store_name": "ベイシア Foods Park 結城店",
-      "best_day_label": "10/18(日)から",
-      "is_best_today": false,
-      "advice": "10/18の特売開始まで待機推奨",
-      "sort_date": "2026-10-18",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
-      "ingredient": "まぐろ",
-      "raw_name": "刺身用まぐろ",
-      "category": "魚介類",
-      "best_price": 189,
-      "unit": "100gあたり",
       "store": "ベイシア",
       "store_id": "beisia",
       "store_name": "ベイシア Foods Park 結城店",
