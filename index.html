@@ -884,8 +884,10 @@
         return;
       }
 
-      // 食材名、商品名、カテゴリ、店舗名、備考から部分一致検索
+      // 今日以降に有効な特売のみを対象（過去終了分は完全除外）
+      const todayStr = globalDealsData.target_date || new Date().toISOString().split('T')[0];
       const hits = allDeals.filter(d => {
+        if (d.valid_to && d.valid_to < todayStr) return false;
         const text = `${d.ingredient_name || ''} ${d.product_raw_name || ''} ${d.category || ''} ${d.store_name || ''} ${d.chain || ''} ${d.note || ''}`.toLowerCase();
         return text.includes(q);
       });

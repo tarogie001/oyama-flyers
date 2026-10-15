@@ -344,14 +344,16 @@ class WeeklyPlanner:
                 "flyer_url": s_info["url"] if s_info else ""
             })
 
-        # 全特売品一覧（検索機能用）
+        # 全特売品一覧（検索機能用：今日以降有効なもののみ）
+        today_iso = plan["today"].isoformat()
         conn = sqlite3.connect(DB_FILE)
         c = conn.cursor()
         c.execute("""
             SELECT store_id, product_raw_name, category, ingredient_name, price, unit, valid_from, valid_to, note
             FROM flyer_deals
+            WHERE valid_to >= ?
             ORDER BY price ASC
-        """)
+        """, (today_iso,))
         all_rows = c.fetchall()
         conn.close()
 

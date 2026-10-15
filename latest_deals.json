@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 18:44",
+  "updated_at": "2026-10-15 18:52",
   "target_date": "2026-10-15",
   "target_date_label": "2026年10月15日",
   "buy_today": [
@@ -794,21 +794,6 @@
       "note": "木曜限り"
     },
     {
-      "store_id": "beisia",
-      "store_name": "ベイシア Foods Park 結城店",
-      "chain": "ベイシア",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/",
-      "product_raw_name": "北海道などの国内産 じゃがいも・玉ねぎ・人参 よりどり3点",
-      "category": "野菜",
-      "ingredient_name": "ジャガイモ",
-      "price": 99,
-      "unit": "3点",
-      "valid_from": "2026-10-14",
-      "valid_to": "2026-10-14",
-      "date_label": "10/14(水)限り",
-      "note": "10/14限り"
-    },
-    {
       "store_id": "maruetsu",
       "store_name": "マルエツ 小山店",
       "chain": "マルエツ",
@@ -837,21 +822,6 @@
       "valid_to": "2026-10-16",
       "date_label": "10/14(水)〜10/16(金)",
       "note": "エブリデイ・ロープライス"
-    },
-    {
-      "store_id": "beisia",
-      "store_name": "ベイシア Foods Park 結城店",
-      "chain": "ベイシア",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/",
-      "product_raw_name": "青森などの国内産 りんご",
-      "category": "季節の果物",
-      "ingredient_name": "りんご",
-      "price": 129,
-      "unit": "1コ",
-      "valid_from": "2026-10-14",
-      "valid_to": "2026-10-14",
-      "date_label": "10/14(水)限り",
-      "note": "10/14限り"
     },
     {
       "store_id": "japanmeat",
@@ -957,21 +927,6 @@
       "valid_to": "2026-10-15",
       "date_label": "10/15(木)限り",
       "note": "木曜限り"
-    },
-    {
-      "store_id": "otani",
-      "store_name": "フードオアシス オータニ 小山店",
-      "chain": "オータニ",
-      "flyer_url": "https://www.sp-otani.com/store/detail/110030031.html?recordno=376",
-      "product_raw_name": "サンヨー食品 サッポロ一番（みそ・塩・しょうゆ 5食パック）",
-      "category": "麺類・インスタント",
-      "ingredient_name": "即席ラーメン",
-      "price": 328,
-      "unit": "1袋(5食)",
-      "valid_from": "2026-10-14",
-      "valid_to": "2026-10-14",
-      "date_label": "10/14(水)限り",
-      "note": "お一人様いずれか1袋限り"
     },
     {
       "store_id": "japanmeat",
