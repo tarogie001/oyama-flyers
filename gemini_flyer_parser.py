@@ -192,6 +192,11 @@ def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Opti
                     print(f"[OK] Gemini AI ({current_model}) が {store_name} のチラシから {len(deals)} 品の特売品を自律抽出しました！")
                     return deals
                 return []
+            elif res.status_code == 429:
+                wait_sec = 25
+                print(f"[WARN] APIレート制限に達しました (HTTP 429)。制限枠回復のため {wait_sec}秒 待機して再試行します...")
+                time.sleep(wait_sec)
+                continue
             elif res.status_code == 503:
                 wait_sec = 5
                 print(f"[WARN] モデル '{current_model}' が混雑中 (HTTP 503)。{wait_sec}秒待機後、代替モデルへ切り替えます...")
