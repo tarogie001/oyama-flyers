@@ -106,7 +106,7 @@ async def fetch_shufoo_stores(context):
             await page.wait_for_timeout(4000)
             # 操作バー・ヘッダー非表示
             await page.evaluate("""
-                document.querySelectorAll('#chirashiViewerControl, .chirashi_controller, .chirashi_ctrl, #chirashiBar, .controller, header, footer').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('#chirashiViewerControl, .chirashi_controller, .chirashi_ctrl, #chirashiBar, .controller, header, footer, div[class*="page_change"], div[class*="toolbar"], div[class*="control"], div[class*="navi"]').forEach(el => el.style.setProperty('display', 'none', 'important'));
             """)
             save_path = FLYERS_DIR / "beisia_pure_flyer.png"
             # チラシビューア要素があればその高解像度キャプチャ、なければ全画面キャプチャ
@@ -134,7 +134,7 @@ async def fetch_shufoo_stores(context):
             await page.wait_for_timeout(4000)
             # 操作バー・ヘッダー非表示
             await page.evaluate("""
-                document.querySelectorAll('#chirashiViewerControl, .chirashi_controller, .chirashi_ctrl, #chirashiBar, .controller, header, footer').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('#chirashiViewerControl, .chirashi_controller, .chirashi_ctrl, #chirashiBar, .controller, header, footer, div[class*="page_change"], div[class*="toolbar"], div[class*="control"], div[class*="navi"]').forEach(el => el.style.setProperty('display', 'none', 'important'));
             """)
             save_path = FLYERS_DIR / "japanmeat_clean.png"
             viewer = await page.query_selector("#chirashiViewer, #chirashi_img, .chirashi_view, div.viewer")
