@@ -6,6 +6,7 @@ fetch_daily_flyer_images.py
 
 import sys
 import re
+import datetime
 import urllib.parse
 from pathlib import Path
 import asyncio
@@ -70,11 +71,27 @@ async def fetch_tokubai_leaflets(context):
         try:
             await page.goto(url, timeout=30000)
             await page.wait_for_timeout(2500)
-            # チラシ詳細リンク
+            # チラシ詳細リンク（本日日付を含む最新チラシを優先選択）
             chirashi_links = await page.query_selector_all("a[href*='/leaflets/']")
             if chirashi_links:
-                first_link = await chirashi_links[0].get_attribute("href")
-                detail_url = f"https://tokubai.co.jp{first_link}" if first_link.startswith("/") else first_link
+                target_href = None
+                today = datetime.date.today()
+                today_patterns = [
+                    today.strftime("%m/%d").lstrip("0").replace("/0", "/"), # "10/15"
+                    f"{today.month}月{today.day}日",
+                    "最新", "今日"
+                ]
+                for link_el in chirashi_links:
+                    text = await link_el.inner_text()
+                    href = await link_el.get_attribute("href")
+                    if any(p in text for p in today_patterns):
+                        target_href = href
+                        print(f"  [SELECT] {store_id}: 本日有効チラシ '{text.strip()}' を選択")
+                        break
+                if not target_href:
+                    target_href = await chirashi_links[0].get_attribute("href")
+
+                detail_url = f"https://tokubai.co.jp{target_href}" if target_href.startswith("/") else target_href
                 await page.goto(detail_url, timeout=30000)
                 await page.wait_for_timeout(3000)
                 save_path = FLYERS_DIR / f"{store_id}_leaflet_large.png"

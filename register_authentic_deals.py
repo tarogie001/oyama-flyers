@@ -299,13 +299,16 @@ def main():
     conn = sqlite3.connect("deals.db")
     c = conn.cursor()
 
-    # 1. 過去の全特売データを一括完全クリア（過去のAI妄想データを100%全滅させる）
-    c.execute("DELETE FROM flyer_deals")
-    print("[OK] 過去の蓄積特売データを完全クリア（リセット）しました。")
-    
-    # 2. 原本確認済み【100%本物データ】のみを新規登録
+    # 2. 原本確認済み【100%本物データ】のみを新規登録（既存重複はスキップ）
     inserted_count = 0
     for d in VERIFIED_DEALS:
+        c.execute("""
+            SELECT id FROM flyer_deals 
+            WHERE store_id = ? AND product_raw_name = ? AND valid_from = ?
+        """, (d["store_id"], d["product_raw_name"], d["valid_from"]))
+        if c.fetchone():
+            continue
+
         c.execute("""
             INSERT INTO flyer_deals (store_id, product_raw_name, category, ingredient_name, price, unit, valid_from, valid_to, note)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
