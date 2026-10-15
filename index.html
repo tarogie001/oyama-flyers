@@ -376,7 +376,21 @@
       color: white;
       font-size: 1.2rem;
       cursor: pointer;
-      padding: 4px;
+    /* 検索用クイックタグ */
+    .quick-tag {
+      background: #e8f5e9;
+      color: #1b5e20;
+      border: 1px solid #c8e6c9;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .quick-tag:active {
+      background: #2e7d32;
+      color: white;
     }
   </style>
 </head>
@@ -466,6 +480,46 @@
         <div class="card" style="text-align: center; color: #888; padding: 24px;">店舗情報を読み込み中...</div>
       </div>
     </div>
+
+    <!-- タブ 4: 特売検索 -->
+    <div id="tab-search" class="tab-content">
+      <div class="section-header">
+        <div class="section-title">
+          <span>🔍</span>
+          <span>食材・特売品 リアルタイム検索</span>
+        </div>
+        <span class="badge-count" id="badgeSearchResultCount">0件</span>
+      </div>
+
+      <!-- 検索入力ボックス -->
+      <div style="position: relative; margin-bottom: 12px;">
+        <input type="text" id="searchInput" placeholder="例: 牛乳、卵、豚肉、ラーメン、サーモン..." 
+               oninput="onSearchInput(this.value)"
+               style="width: 100%; padding: 12px 42px 12px 14px; border-radius: 10px; border: 2px solid var(--primary); font-size: 1rem; outline: none; background: white; box-shadow: var(--shadow);">
+        <button id="clearSearchBtn" onclick="clearSearch()" style="display: none; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); border: none; background: none; font-size: 1.1rem; color: #888; cursor: pointer; padding: 4px;">✕</button>
+      </div>
+
+      <!-- よく探す日常品のクイックタグ -->
+      <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;" id="quickTags">
+        <button class="quick-tag" onclick="setSearchQuery('牛乳')">🥛 牛乳</button>
+        <button class="quick-tag" onclick="setSearchQuery('卵')">🥚 卵</button>
+        <button class="quick-tag" onclick="setSearchQuery('豚肉')">🥩 豚肉</button>
+        <button class="quick-tag" onclick="setSearchQuery('鶏肉')">🍗 鶏肉</button>
+        <button class="quick-tag" onclick="setSearchQuery('たら')">🐟 たら</button>
+        <button class="quick-tag" onclick="setSearchQuery('鮭')">🐟 鮭</button>
+        <button class="quick-tag" onclick="setSearchQuery('ラーメン')">🍜 ラーメン</button>
+        <button class="quick-tag" onclick="setSearchQuery('納豆')">納豆</button>
+        <button class="quick-tag" onclick="setSearchQuery('ヨーグルト')">ヨーグルト</button>
+        <button class="quick-tag" onclick="setSearchQuery('りんご')">🍎 りんご</button>
+        <button class="quick-tag" onclick="setSearchQuery('キャベツ')">キャベツ</button>
+        <button class="quick-tag" onclick="setSearchQuery('玉ねぎ')">玉ねぎ</button>
+      </div>
+
+      <!-- 検索結果リスト -->
+      <div id="searchResultList">
+        <div class="card" style="text-align: center; color: #888; padding: 24px;">上の検索窓またはタグから探したい食材を選んでください</div>
+      </div>
+    </div>
   </main>
 
   <!-- 下部ナビゲーション -->
@@ -477,6 +531,10 @@
     <button class="nav-btn" onclick="switchTab('tab-weekly', this)">
       <span class="nav-icon">📅</span>
       <span>週間予定</span>
+    </button>
+    <button class="nav-btn" onclick="switchTab('tab-search', this)">
+      <span class="nav-icon">🔍</span>
+      <span>特売検索</span>
     </button>
     <button class="nav-btn" onclick="switchTab('tab-stores', this)">
       <span class="nav-icon">📰</span>
@@ -769,6 +827,122 @@
           </a>
         </div>
       `).join('');
+    }
+
+    // 検索機能のロジック
+    let searchDebounceTimer = null;
+    function onSearchInput(query) {
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = setTimeout(() => {
+        executeSearch(query);
+      }, 100);
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (clearBtn) {
+        clearBtn.style.display = query ? 'block' : 'none';
+      }
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      if (input) {
+        input.value = '';
+        executeSearch('');
+      }
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (clearBtn) clearBtn.style.display = 'none';
+    }
+
+    function setSearchQuery(keyword) {
+      const input = document.getElementById('searchInput');
+      if (input) {
+        input.value = keyword;
+        executeSearch(keyword);
+      }
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (clearBtn) clearBtn.style.display = 'block';
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function executeSearch(query) {
+      const q = (query || '').trim().toLowerCase();
+      const container = document.getElementById('searchResultList');
+      const badge = document.getElementById('badgeSearchResultCount');
+      if (!container || !globalDealsData) return;
+
+      const allDeals = globalDealsData.all_deals || [];
+      if (!q) {
+        badge.innerText = '0件';
+        container.innerHTML = '<div class="card" style="text-align: center; color: #888; padding: 24px;">上の検索窓またはタグから探したい食材を選んでください</div>';
+        return;
+      }
+
+      // 食材名、商品名、カテゴリ、店舗名、備考から部分一致検索
+      const hits = allDeals.filter(d => {
+        const text = `${d.ingredient_name || ''} ${d.product_raw_name || ''} ${d.category || ''} ${d.store_name || ''} ${d.chain || ''} ${d.note || ''}`.toLowerCase();
+        return text.includes(q);
+      });
+
+      // 価格が安い順にソート
+      hits.sort((a, b) => a.price - b.price);
+
+      badge.innerText = `${hits.length}件`;
+
+      if (hits.length === 0) {
+        container.innerHTML = `
+          <div class="card" style="text-align: center; color: #666; padding: 28px 16px;">
+            <div style="font-size: 2rem; margin-bottom: 8px;">🔍</div>
+            <div style="font-weight: 700; margin-bottom: 6px;">「${escapeHtml(q)}」の特売は見つかりませんでした</div>
+            <div style="font-size: 0.85rem; color: #888;">本日はチラシ目玉特売がないか、店頭通常価格の可能性があります</div>
+          </div>
+        `;
+        return;
+      }
+
+      let html = `<div style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 8px; font-weight: 700;">「${escapeHtml(q)}」の特売結果 （最安値順に表示中）</div>`;
+      hits.forEach((item, idx) => {
+        const isCheapest = idx === 0;
+        const rankBadge = isCheapest ? '<span style="background: #e65100; color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; font-weight: 700; margin-right: 4px;">🏆 最安値</span>' : '';
+        const unitStr = item.unit ? `<span class="deal-unit">/ ${escapeHtml(item.unit)}</span>` : '';
+        const noteStr = item.note ? `<div style="font-size: 0.75rem; color: #e65100; margin-top: 3px;">💡 ${escapeHtml(item.note)}</div>` : '';
+
+        html += `
+          <div class="card" style="margin-bottom: 10px; border-left: 4px solid ${isCheapest ? '#e65100' : 'var(--primary)'};">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin-bottom: 4px;">
+                  ${rankBadge}
+                  <span class="store-tag" style="background:#f0fdf4; color:#166534; font-weight:700; font-size:0.75rem; padding:2px 8px; border-radius:4px;">🏪 ${escapeHtml(item.chain || item.store_name)}</span>
+                  <span style="font-size: 0.75rem; color: #1e40af; background: #dbeafe; padding: 2px 6px; border-radius: 4px; font-weight: 700;">📅 ${escapeHtml(item.date_label || '')}</span>
+                </div>
+                <div class="deal-raw-name" style="font-size: 0.95rem; font-weight: 700; margin: 4px 0 2px 0;">${escapeHtml(item.product_raw_name)}</div>
+                ${noteStr}
+              </div>
+              <div style="text-align: right; min-width: 85px;">
+                <div class="deal-price" style="font-size: 1.35rem; color: ${isCheapest ? '#e65100' : 'var(--primary)'};">${item.price}<span style="font-size: 0.85rem;">円</span></div>
+                ${unitStr}
+              </div>
+            </div>
+            ${item.flyer_url ? `
+              <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed #eee; display: flex; justify-content: flex-end;">
+                <a href="${escapeHtml(item.flyer_url)}" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-size: 0.78rem; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 2px;">
+                  <span>チラシ原本を見る</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            ` : ''}
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
     }
 
     // 初回読み込み

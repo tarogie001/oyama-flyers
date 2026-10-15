@@ -344,6 +344,47 @@ class WeeklyPlanner:
                 "flyer_url": s_info["url"] if s_info else ""
             })
 
+        # 全特売品一覧（検索機能用）
+        conn = sqlite3.connect(DB_FILE)
+        c = conn.cursor()
+        c.execute("""
+            SELECT store_id, product_raw_name, category, ingredient_name, price, unit, valid_from, valid_to, note
+            FROM flyer_deals
+            ORDER BY price ASC
+        """)
+        all_rows = c.fetchall()
+        conn.close()
+
+        weekdays = ["月", "火", "水", "木", "金", "土", "日"]
+        all_deals = []
+        for r in all_rows:
+            s_info = store_map.get(r[0], {})
+            try:
+                df = datetime.date.fromisoformat(r[6])
+                dt = datetime.date.fromisoformat(r[7])
+                if r[6] == r[7]:
+                    date_label = f"{df.strftime('%m/%d')}({weekdays[df.weekday()]})限り"
+                else:
+                    date_label = f"{df.strftime('%m/%d')}({weekdays[df.weekday()]})〜{dt.strftime('%m/%d')}({weekdays[dt.weekday()]})"
+            except Exception:
+                date_label = f"{r[6]}〜{r[7]}"
+
+            all_deals.append({
+                "store_id": r[0],
+                "store_name": s_info.get("name", r[0]),
+                "chain": s_info.get("chain", r[0]),
+                "flyer_url": s_info.get("url", ""),
+                "product_raw_name": r[1],
+                "category": r[2],
+                "ingredient_name": r[3],
+                "price": r[4],
+                "unit": r[5] or "",
+                "valid_from": r[6],
+                "valid_to": r[7],
+                "date_label": date_label,
+                "note": r[8] or ""
+            })
+
         try:
             from zoneinfo import ZoneInfo
             now_jst = datetime.datetime.now(ZoneInfo("Asia/Tokyo"))
@@ -359,6 +400,7 @@ class WeeklyPlanner:
             "no_deal_staples": no_deal_staples,
             "weekly_schedule": enriched_weekly,
             "best_buy_schedule": enriched_best_buy,
+            "all_deals": all_deals,
             "stores": self.stores
         }
 
