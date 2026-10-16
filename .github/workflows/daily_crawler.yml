@@ -1,13 +1,7 @@
 name: Daily Flyer Crawler & Deals Update
 
 on:
-  schedule:
-    # UTC時刻で指定（JST = UTC + 9時間）
-    # 22:14 UTC = JST 07:14 (朝の速報)
-    # 00:14 UTC = JST 09:14 (朝の更新本番)
-    # 06:14 UTC = JST 15:14 (夕方のチラシ・特売追加)
-    - cron: '14 22,0,6 * * *'
-  workflow_dispatch: # 手動実行も可能
+  workflow_dispatch: # 手動実行のみに制限（ローカルでの厳格検証データ配信を優先）
 
 jobs:
   crawl-and-update:
