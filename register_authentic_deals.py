@@ -296,17 +296,6 @@ VERIFIED_DEALS = [
     # --- ヨークベニマル チラシ原本確認済み (10/12〜10/21) ---
     {
         "store_id": "york_benimaru",
-        "product_raw_name": "セブンプレミアム 毎日の食卓牛乳 (1000ml)",
-        "category": "日配品・大豆製品",
-        "ingredient_name": "牛乳",
-        "price": 208,
-        "unit": "1本",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-21",
-        "note": "ヨークベニマル定番特売"
-    },
-    {
-        "store_id": "york_benimaru",
         "product_raw_name": "おかめ仕立て 旨味極小粒納豆 (3パック)",
         "category": "日配品・大豆製品",
         "ingredient_name": "納豆",
