@@ -262,7 +262,7 @@ VERIFIED_DEALS = [
     },
     {
         "store_id": "beisia",
-        "product_raw_name": "国内産 豚肉こま切れ",
+        "product_raw_name": "アメリカ・カナダまたはメキシコ産 豚肉こま切れ",
         "category": "精肉（豚肉）",
         "ingredient_name": "豚こま切れ肉",
         "price": 79,
@@ -337,6 +337,73 @@ VERIFIED_DEALS = [
         "valid_from": "2026-10-15",
         "valid_to": "2026-10-18",
         "note": "厳選特価"
+    },
+    # --- たいらや チラシ原本確認済み (10/12〜10/16) ---
+    {
+        "store_id": "tairaya",
+        "product_raw_name": "国産 若鶏もも肉",
+        "category": "精肉（鶏肉）",
+        "ingredient_name": "鶏もも肉",
+        "price": 98,
+        "unit": "100gあたり",
+        "valid_from": "2026-10-12",
+        "valid_to": "2026-10-16",
+        "note": "ザ・鶏の市"
+    },
+    {
+        "store_id": "tairaya",
+        "product_raw_name": "北海道（その他国内）産 にんじん <M> 3本入",
+        "category": "野菜",
+        "ingredient_name": "ニンジン",
+        "price": 138,
+        "unit": "1袋",
+        "valid_from": "2026-10-12",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    {
+        "store_id": "tairaya",
+        "product_raw_name": "青森・宮城県産他 生さば",
+        "category": "魚介類",
+        "ingredient_name": "さば",
+        "price": 398,
+        "unit": "1パック",
+        "valid_from": "2026-10-12",
+        "valid_to": "2026-10-16",
+        "note": ""
+    },
+    {
+        "store_id": "tairaya",
+        "product_raw_name": "福島県（その他国内）産 生しいたけ <量り売り>",
+        "category": "きのこ類",
+        "ingredient_name": "しいたけ",
+        "price": 128,
+        "unit": "100gあたり",
+        "valid_from": "2026-10-16",
+        "valid_to": "2026-10-16",
+        "note": "10/16限り"
+    },
+    {
+        "store_id": "tairaya",
+        "product_raw_name": "カナダ産 豚バラ肉超うす切り",
+        "category": "精肉（豚肉）",
+        "ingredient_name": "豚バラ（うすぎり）",
+        "price": 198,
+        "unit": "100gあたり",
+        "valid_from": "2026-10-16",
+        "valid_to": "2026-10-16",
+        "note": "10/16限り"
+    },
+    {
+        "store_id": "tairaya",
+        "product_raw_name": "チリ産 サーモントラウト ブロック <養殖・生食用または加熱用>",
+        "category": "魚介類",
+        "ingredient_name": "鮭",
+        "price": 298,
+        "unit": "100gあたり",
+        "valid_from": "2026-10-16",
+        "valid_to": "2026-10-16",
+        "note": "10/16限り"
     }
 ]
 
