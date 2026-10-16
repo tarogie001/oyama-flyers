@@ -58,23 +58,23 @@ def get_active_gemini_models(api_key: str) -> List[str]:
             # 3. その他の flash / pro
             def sort_key(name: str) -> int:
                 n = name.lower()
-                # 最も高速で制限枠が広く画像認識に成功した flash-lite 系を最優先
-                if "3.1-flash-lite" in n: return 0
-                if "flash-lite-latest" in n: return 1
-                if "flash-lite" in n: return 2
-                if "flash-latest" in n: return 3
-                if "flash" in n and "preview" not in n: return 4
+                # 誤読を防ぐため LITE は完全排除し、高精度な通常 Flash モデルを優先
+                if "lite" in n or "tts" in n or "clip" in n: return 99
+                if "flash-latest" in n: return 0
+                if "3.5-flash" in n: return 1
+                if "3.8-flash" in n: return 2
+                if "flash" in n and "preview" not in n: return 3
                 return 10
 
             sorted_models = sorted(supported, key=sort_key)
-            # 上位2候補（flash-lite系）を動的採用
+            # 上位2候補を動的採用
             _CACHED_MODELS = sorted_models[:2]
             print(f"[INFO] 🤖 採用モデル優先順位: {_CACHED_MODELS}")
             return _CACHED_MODELS
     except Exception as e:
         print(f"[WARN] モデル一覧の自動取得に失敗したため既定リストを使用: {e}")
 
-    _CACHED_MODELS = ["gemini-3.1-flash-lite", "gemini-flash-lite-latest"]
+    _CACHED_MODELS = ["gemini-flash-latest", "gemini-3.5-flash"]
     return _CACHED_MODELS
 
 def analyze_flyer_with_gemini(image_path: Path, store_name: str, base_date: Optional[str] = None) -> List[Dict[str, Any]]:
