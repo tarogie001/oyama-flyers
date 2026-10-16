@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 17:16",
+  "updated_at": "2026-10-16 19:04",
   "target_date": "2026-10-16",
   "target_date_label": "2026年10月16日",
   "buy_today": [
@@ -134,19 +134,6 @@
       "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
-      "ingredient": "鶏もも肉",
-      "raw_name": "国産若鶏もも肉 (唐揚げ用・焼肉用)",
-      "category": "精肉（鶏肉）",
-      "price": 88,
-      "unit": "100g",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
       "ingredient": "ヤマザキ ランチパック (ピーナッツ・苺ジャム&マーガリン・小倉&マーガリン)",
       "raw_name": "ヤマザキ ランチパック (ピーナッツ・苺ジャム&マーガリン・小倉&マーガリン)",
       "category": "その他",
@@ -158,6 +145,19 @@
       "note": "本日限り！",
       "store_name": "ヨークベニマル 小山雨ヶ谷店",
       "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "鶏もも肉",
+      "raw_name": "国産 若鶏もも肉",
+      "category": "精肉（鶏肉）",
+      "price": 98,
+      "unit": "100g",
+      "store": "たいらや",
+      "store_id": "tairaya",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "たいらや 粟宮店",
+      "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
       "ingredient": "国産豚ロース肉・豚ヒレ肉 (ブロック・切身)",
@@ -949,20 +949,6 @@
         "store_id": "york_benimaru",
         "store_name": "ヨークベニマル 小山雨ヶ谷店",
         "chain": "ヨークベニマル",
-        "product_raw_name": "国産若鶏もも肉 (唐揚げ用・焼肉用)",
-        "category": "精肉（鶏肉）",
-        "ingredient_name": "鶏もも肉",
-        "price": 88,
-        "unit": "100g",
-        "valid_from": "2026-10-16",
-        "valid_to": "2026-10-16",
-        "note": "10/16限り",
-        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-      },
-      {
-        "store_id": "york_benimaru",
-        "store_name": "ヨークベニマル 小山雨ヶ谷店",
-        "chain": "ヨークベニマル",
         "product_raw_name": "ヤマザキ ランチパック (ピーナッツ・苺ジャム&マーガリン・小倉&マーガリン)",
         "category": "その他",
         "ingredient_name": "ヤマザキ ランチパック (ピーナッツ・苺ジャム&マーガリン・小倉&マーガリン)",
@@ -972,6 +958,20 @@
         "valid_to": "2026-10-16",
         "note": "10/16限り",
         "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+      },
+      {
+        "store_id": "tairaya",
+        "store_name": "たいらや 粟宮店",
+        "chain": "たいらや",
+        "product_raw_name": "国産 若鶏もも肉",
+        "category": "精肉（鶏肉）",
+        "ingredient_name": "鶏もも肉",
+        "price": 98,
+        "unit": "100g",
+        "valid_from": "2026-10-12",
+        "valid_to": "2026-10-16",
+        "note": "10/12▶16",
+        "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
       },
       {
         "store_id": "york_benimaru",
@@ -1873,21 +1873,6 @@
       "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
-      "ingredient": "鶏もも肉",
-      "raw_name": "国産若鶏もも肉 (唐揚げ用・焼肉用)",
-      "category": "精肉（鶏肉）",
-      "best_price": 88,
-      "unit": "100g",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 10/16 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-16",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
       "ingredient": "ヤマザキ ランチパック (ピーナッツ・苺ジャム&マーガリン・小倉&マーガリン)",
       "raw_name": "ヤマザキ ランチパック (ピーナッツ・苺ジャム&マーガリン・小倉&マーガリン)",
       "category": "その他",
@@ -1901,6 +1886,21 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-16",
       "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "鶏もも肉",
+      "raw_name": "国産 若鶏もも肉",
+      "category": "精肉（鶏肉）",
+      "best_price": 98,
+      "unit": "100g",
+      "store": "たいらや",
+      "store_id": "tairaya",
+      "store_name": "たいらや 粟宮店",
+      "best_day_label": "本日 10/16 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-16",
+      "flyer_url": "https://www.eco-s.co.jp/store/%e3%81%9f%e3%81%84%e3%82%89%e3%82%84%e7%b2%9f%e5%ae%ae%e5%ba%97/"
     },
     {
       "ingredient": "国産豚ロース肉・豚ヒレ肉 (ブロック・切身)",
@@ -2934,21 +2934,6 @@
       "ingredient_name": "青木食品 極旨焼うどん (醤油味・ソース味、各2食入)",
       "price": 88,
       "unit": "1コ",
-      "valid_from": "2026-10-16",
-      "valid_to": "2026-10-16",
-      "date_label": "10/16(金)限り",
-      "note": "10/16限り"
-    },
-    {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "国産若鶏もも肉 (唐揚げ用・焼肉用)",
-      "category": "精肉（鶏肉）",
-      "ingredient_name": "鶏もも肉",
-      "price": 88,
-      "unit": "100g",
       "valid_from": "2026-10-16",
       "valid_to": "2026-10-16",
       "date_label": "10/16(金)限り",
