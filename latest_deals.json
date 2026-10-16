@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 14:33",
+  "updated_at": "2026-10-16 15:56",
   "target_date": "2026-10-16",
   "target_date_label": "2026年10月16日",
   "buy_today": [
@@ -145,19 +145,6 @@
       "note": "本日限り！",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
-      "ingredient": "牛乳",
-      "raw_name": "セブンプレミアム 毎日の食卓牛乳 (1000ml)",
-      "category": "日配品・大豆製品",
-      "price": 208,
-      "unit": "1本",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "is_today_only": false,
-      "note": "今週最安値",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "さば",
@@ -356,20 +343,6 @@
         "valid_to": "2026-10-16",
         "note": "",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-      },
-      {
-        "store_id": "york_benimaru",
-        "store_name": "ヨークベニマル 小山雨ヶ谷店",
-        "chain": "ヨークベニマル",
-        "product_raw_name": "セブンプレミアム 毎日の食卓牛乳 (1000ml)",
-        "category": "日配品・大豆製品",
-        "ingredient_name": "牛乳",
-        "price": 208,
-        "unit": "1本",
-        "valid_from": "2026-10-15",
-        "valid_to": "2026-10-21",
-        "note": "ヨークベニマル定番特売",
-        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
       },
       {
         "store_id": "tairaya",
@@ -582,21 +555,6 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-16",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
-      "ingredient": "牛乳",
-      "raw_name": "セブンプレミアム 毎日の食卓牛乳 (1000ml)",
-      "category": "日配品・大豆製品",
-      "best_price": 208,
-      "unit": "1本",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日〜10/21まで",
-      "is_best_today": true,
-      "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-10-16",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "鮭",
@@ -854,21 +812,6 @@
       "valid_to": "2026-10-16",
       "date_label": "10/14(水)〜10/16(金)",
       "note": ""
-    },
-    {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "セブンプレミアム 毎日の食卓牛乳 (1000ml)",
-      "category": "日配品・大豆製品",
-      "ingredient_name": "牛乳",
-      "price": 208,
-      "unit": "1本",
-      "valid_from": "2026-10-15",
-      "valid_to": "2026-10-21",
-      "date_label": "10/15(木)〜10/21(水)",
-      "note": "ヨークベニマル定番特売"
     },
     {
       "store_id": "beisia",
