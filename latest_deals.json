@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 13:58",
+  "updated_at": "2026-10-17 17:28",
   "target_date": "2026-10-17",
   "target_date_label": "2026年10月17日",
   "buy_today": [
@@ -250,6 +250,16 @@
       "diff": 28
     },
     {
+      "ingredient": "鶏もも肉",
+      "category": "精肉（鶏肉）",
+      "today_price": 118,
+      "future_price": 98,
+      "unit": "100g当り",
+      "future_store": "とりせん",
+      "future_day": "10/18(日)",
+      "diff": 20
+    },
+    {
       "ingredient": "牛乳",
       "category": "日配品・大豆製品",
       "today_price": 268,
@@ -289,7 +299,6 @@
     "ブロッコリー",
     "レタス",
     "豚バラ（うすぎり）",
-    "鶏もも肉",
     "納豆",
     "即席ラーメン",
     "カップラーメン"
@@ -562,20 +571,6 @@
         "valid_from": "2026-10-18",
         "valid_to": "2026-10-18",
         "note": "飲料",
-        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
-      },
-      {
-        "store_id": "torisen",
-        "store_name": "とりせん 小山土塔店",
-        "chain": "とりせん",
-        "product_raw_name": "国産豚バラうす切り",
-        "category": "その他",
-        "ingredient_name": "国産豚バラうす切り",
-        "price": 98,
-        "unit": "100g当り",
-        "valid_from": "2026-10-18",
-        "valid_to": "2026-10-18",
-        "note": "国内産 豚肉",
         "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       },
       {
@@ -1174,21 +1169,6 @@
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
-      "ingredient": "鶏もも肉",
-      "raw_name": "国産若鶏もも肉 (チルドまたは解凍100g)",
-      "category": "精肉（鶏肉）",
-      "best_price": 118,
-      "unit": "100g",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日〜10/19まで",
-      "is_best_today": true,
-      "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-10-17",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
       "ingredient": "豚バラブロック",
       "raw_name": "豚バラブロックL",
       "category": "精肉（豚肉）",
@@ -1414,9 +1394,9 @@
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
-      "ingredient": "国産豚バラうす切り",
-      "raw_name": "国産豚バラうす切り",
-      "category": "その他",
+      "ingredient": "鶏もも肉",
+      "raw_name": "とりせんの国産味彩鶏 モモ肉",
+      "category": "精肉（鶏肉）",
       "best_price": 98,
       "unit": "100g当り",
       "store": "とりせん",
@@ -2215,15 +2195,15 @@
       "store_name": "とりせん 小山土塔店",
       "chain": "とりせん",
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
-      "product_raw_name": "国産豚バラうす切り",
-      "category": "その他",
-      "ingredient_name": "国産豚バラうす切り",
+      "product_raw_name": "とりせんの国産味彩鶏 モモ肉",
+      "category": "精肉（鶏肉）",
+      "ingredient_name": "鶏もも肉",
       "price": 98,
       "unit": "100g当り",
       "valid_from": "2026-10-18",
       "valid_to": "2026-10-18",
       "date_label": "10/18(日)限り",
-      "note": "国内産 豚肉"
+      "note": "チルドまたは解凍 (ハーブ飼料使用)"
     },
     {
       "store_id": "japanmeat",
