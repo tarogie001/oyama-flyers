@@ -871,6 +871,79 @@
         .replace(/"/g, '&quot;');
     }
 
+    // カタカナ・ひらがな相互変換
+    function katakanaToHiragana(str) {
+      if (!str) return '';
+      return str.replace(/[\u30a1-\u30f6]/g, m => String.fromCharCode(m.charCodeAt(0) - 0x60));
+    }
+
+    function hiraganaToKatakana(str) {
+      if (!str) return '';
+      return str.replace(/[\u3041-\u3096]/g, m => String.fromCharCode(m.charCodeAt(0) + 0x60));
+    }
+
+    // 漢字・ひらがな・カタカナ 同義語エイリアスマップ
+    const SYNONYM_GROUPS = [
+      ["白菜", "はくさい", "ハクサイ"],
+      ["大根", "だいこん", "ダイコン"],
+      ["人参", "にんじん", "ニンジン"],
+      ["玉ねぎ", "たまねぎ", "タマネギ", "玉葱"],
+      ["ネギ", "長ネギ", "長ねぎ", "白ネギ", "ねぎ", "しろねぎ"],
+      ["キャベツ", "きゃべつ"],
+      ["きゅうり", "キュウリ", "胡瓜"],
+      ["トマト", "とまと"],
+      ["ほうれん草", "ほうれんそう", "ホウレン草", "ホウレンソウ"],
+      ["小松菜", "こまつな", "コマツナ"],
+      ["ブロッコリー", "ぶろっこりー"],
+      ["レタス", "れたす"],
+      ["ピーマン", "ぴーまん"],
+      ["じゃがいも", "ジャガイモ", "馬鈴薯"],
+      ["えのき", "エノキ", "えのきたけ"],
+      ["しいたけ", "シイタケ", "椎茸"],
+      ["しめじ", "シメジ"],
+      ["まいたけ", "マイタケ", "舞茸"],
+      ["エリンギ", "えりんぎ"],
+      ["みかん", "ミカン", "蜜柑"],
+      ["りんご", "リンゴ", "林檎"],
+      ["バナナ", "ばなな"],
+      ["豚肉", "豚", "ぶた", "ぶたにく", "ブタ", "ブタニク", "ポーク"],
+      ["鶏肉", "鶏", "とり", "とりにく", "チキン", "若鶏", "若どり"],
+      ["牛肉", "牛", "うし", "ぎゅう", "うしにく", "ぎゅうにく", "ビーフ"],
+      ["卵", "玉子", "たまご", "タマゴ", "エッグ"],
+      ["牛乳", "ぎゅうにゅう", "ギュウニュウ", "ミルク"],
+      ["豆腐", "とうふ", "トウフ"],
+      ["納豆", "なっとう", "ナットウ"],
+      ["さば", "サバ", "鯖"],
+      ["鮭", "さけ", "サケ", "しゃけ", "シャケ", "サーモン"],
+      ["まぐろ", "マグロ", "鮪"],
+      ["かつお", "カツオ", "鰹"],
+      ["えび", "エビ", "海老"],
+      ["いか", "イカ", "烏賊"],
+      ["ほっけ", "ホッケ"],
+      ["ラーメン", "らーめん", "拉麺"]
+    ];
+
+    function expandQueryKeywords(q) {
+      const qLower = q.trim().toLowerCase();
+      const qHira = katakanaToHiragana(qLower);
+      const qKata = hiraganaToKatakana(qLower);
+      const set = new Set([qLower, qHira, qKata]);
+      for (const group of SYNONYM_GROUPS) {
+        const matches = group.some(w => {
+          const wHira = katakanaToHiragana(w.toLowerCase());
+          return wHira === qHira || w.toLowerCase() === qLower;
+        });
+        if (matches) {
+          group.forEach(w => {
+            set.add(w.toLowerCase());
+            set.add(katakanaToHiragana(w.toLowerCase()));
+            set.add(hiraganaToKatakana(w.toLowerCase()));
+          });
+        }
+      }
+      return Array.from(set);
+    }
+
     function executeSearch(query) {
       const q = (query || '').trim().toLowerCase();
       const container = document.getElementById('searchResultList');
@@ -886,10 +959,13 @@
 
       // 今日以降に有効な特売のみを対象（過去終了分は完全除外）
       const todayStr = globalDealsData.target_date || new Date().toISOString().split('T')[0];
+      const keywords = expandQueryKeywords(q);
       const hits = allDeals.filter(d => {
         if (d.valid_to && d.valid_to < todayStr) return false;
         const text = `${d.ingredient_name || ''} ${d.product_raw_name || ''} ${d.category || ''} ${d.store_name || ''} ${d.chain || ''} ${d.note || ''}`.toLowerCase();
-        return text.includes(q);
+        const textHira = katakanaToHiragana(text);
+        const textKata = hiraganaToKatakana(text);
+        return keywords.some(kw => text.includes(kw) || textHira.includes(kw) || textKata.includes(kw));
       });
 
       // 価格が安い順にソート

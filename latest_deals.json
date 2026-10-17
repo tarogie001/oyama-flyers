@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 10:21",
+  "updated_at": "2026-10-17 13:58",
   "target_date": "2026-10-17",
   "target_date_label": "2026年10月17日",
   "buy_today": [
@@ -649,20 +649,6 @@
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
-        "store_id": "york_benimaru",
-        "store_name": "ヨークベニマル 小山雨ヶ谷店",
-        "chain": "ヨークベニマル",
-        "product_raw_name": "白菜 (1/4切)",
-        "category": "野菜",
-        "ingredient_name": "白菜",
-        "price": 178,
-        "unit": "1/4切",
-        "valid_from": "2026-10-18",
-        "valid_to": "2026-10-18",
-        "note": "10/18限り",
-        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-      },
-      {
         "store_id": "torisen",
         "store_name": "とりせん 小山土塔店",
         "chain": "とりせん",
@@ -1046,6 +1032,22 @@
         "valid_from": "2026-10-21",
         "valid_to": "2026-10-21",
         "note": "千葉県産他 塩焼き、照焼きに",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+      }
+    ],
+    "10/23(金)": [
+      {
+        "store_id": "japanmeat",
+        "store_name": "ジャパンミート生鮮館 小山店",
+        "chain": "ジャパンミート",
+        "product_raw_name": "はくさい",
+        "category": "野菜",
+        "ingredient_name": "白菜",
+        "price": 199,
+        "unit": "大株・1/2カット",
+        "valid_from": "2026-10-23",
+        "valid_to": "2026-10-23",
+        "note": "長野、群馬県産などの国内産",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       }
     ]
@@ -1502,21 +1504,6 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
-      "ingredient": "白菜",
-      "raw_name": "白菜 (1/4切)",
-      "category": "野菜",
-      "best_price": 178,
-      "unit": "1/4切",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "10/18(日)から",
-      "is_best_today": false,
-      "advice": "10/18の特売開始まで待機推奨",
-      "sort_date": "2026-10-18",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
       "ingredient": "鮭",
       "raw_name": "銀鮭切身",
       "category": "魚介類",
@@ -1934,6 +1921,21 @@
       "is_best_today": false,
       "advice": "10/22の特売開始まで待機推奨",
       "sort_date": "2026-10-22",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "白菜",
+      "raw_name": "はくさい",
+      "category": "野菜",
+      "best_price": 199,
+      "unit": "大株・1/2カット",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "best_day_label": "10/23(金)から",
+      "is_best_today": false,
+      "advice": "10/23の特売開始まで待機推奨",
+      "sort_date": "2026-10-23",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     }
   ],

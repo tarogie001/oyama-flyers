@@ -36,6 +36,21 @@ class WeeklyPlanner:
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
 
+    @staticmethod
+    def calc_normalized_price(deal: Dict[str, Any]) -> float:
+        """カットサイズ（1/4カット vs 1/2カットなど）を考慮した1玉換算の実質単価を算出"""
+        price = deal["price"]
+        unit = (deal.get("unit") or "").lower()
+        name = (deal.get("product_raw_name") or "").lower()
+        text = f"{unit} {name}"
+        if any(w in text for w in ["1/4", "1/4切", "1/4カット", "1/4個"]):
+            return price * 4.0  # 1/4カットは4倍して1玉換算
+        elif any(w in text for w in ["1/2", "1/2切", "1/2カット", "1/2個", "半身", "半切"]):
+            return price * 2.0  # 1/2カットは2倍して1玉換算
+        elif any(w in text for w in ["1/8", "1/8切", "1/8カット"]):
+            return price * 8.0
+        return float(price)
+
     def get_week_range(self, base_date: Optional[datetime.date] = None) -> tuple[datetime.date, datetime.date]:
         """基準日を含む週（月曜日〜日曜日）の開始日と終了日を取得"""
         if base_date is None:
@@ -105,17 +120,17 @@ class WeeklyPlanner:
         weekly_schedule: Dict[str, List[Dict[str, Any]]] = {}
 
         for ing_name, deals in ingredient_deals.items():
-            # 今週の全体最安値
-            deals_sorted = sorted(deals, key=lambda x: x["price"])
+            # 今週の全体最安値（カットサイズ換算の実質単価で判定）
+            deals_sorted = sorted(deals, key=lambda x: self.calc_normalized_price(x))
             best_deal_in_week = deals_sorted[0]
 
             # 今日の特売（本日有効なもの）
             today_deals = [d for d in deals if d["valid_from"] <= today_str <= d["valid_to"]]
-            best_deal_today = min(today_deals, key=lambda x: x["price"]) if today_deals else None
+            best_deal_today = min(today_deals, key=lambda x: self.calc_normalized_price(x)) if today_deals else None
 
             # 判定ロジック
             if best_deal_today:
-                if best_deal_today["price"] <= best_deal_in_week["price"]:
+                if self.calc_normalized_price(best_deal_today) <= self.calc_normalized_price(best_deal_in_week):
                     # 今日が週間最安値！
                     is_today_only = (best_deal_today["valid_to"] == today_str)
                     buy_today.append({
@@ -131,9 +146,9 @@ class WeeklyPlanner:
                     })
                 else:
                     # 今日買えるが、後日もっと安くなる！
-                    future_deals = [d for d in deals if d["valid_from"] > today_str and d["price"] < best_deal_today["price"]]
+                    future_deals = [d for d in deals if d["valid_from"] > today_str and self.calc_normalized_price(d) < self.calc_normalized_price(best_deal_today)]
                     if future_deals:
-                        target_future = min(future_deals, key=lambda x: x["price"])
+                        target_future = min(future_deals, key=lambda x: self.calc_normalized_price(x))
                         f_date = datetime.date.fromisoformat(target_future["valid_from"])
                         f_weekday = ["月", "火", "水", "木", "金", "土", "日"][f_date.weekday()]
                         wait_for_later.append({
@@ -167,8 +182,8 @@ class WeeklyPlanner:
             valid_deals = [d for d in deals if datetime.date.fromisoformat(d["valid_to"]) >= today_date]
             if not valid_deals:
                 continue
-            # 今日以降で最安値
-            cheapest = min(valid_deals, key=lambda x: x["price"])
+            # 今日以降で最安値（カットサイズ換算の実質単価で判定）
+            cheapest = min(valid_deals, key=lambda x: self.calc_normalized_price(x))
             c_start = datetime.date.fromisoformat(cheapest["valid_from"])
             c_end = datetime.date.fromisoformat(cheapest["valid_to"])
             
