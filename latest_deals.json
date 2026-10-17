@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 17:28",
+  "updated_at": "2026-10-17 19:11",
   "target_date": "2026-10-17",
   "target_date_label": "2026年10月17日",
   "buy_today": [
@@ -28,32 +28,6 @@
       "note": "本日限り！",
       "store_name": "とりせん 小山土塔店",
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
-    },
-    {
-      "ingredient": "鶏むね肉",
-      "raw_name": "国産若鶏むね肉 (唐揚げ用・焼肉用)",
-      "category": "精肉（鶏肉）",
-      "price": 67,
-      "unit": "100g",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
-      "ingredient": "国産若鶏手羽元・手羽先 (チルドまたは解凍100g)",
-      "raw_name": "国産若鶏手羽元・手羽先 (チルドまたは解凍100g)",
-      "category": "その他",
-      "price": 77,
-      "unit": "100g",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "サンヨー 旅麺",
@@ -242,12 +216,12 @@
     {
       "ingredient": "豚挽肉",
       "category": "精肉（豚肉）",
-      "today_price": 97,
+      "today_price": 368,
       "future_price": 69,
       "unit": "100g当り",
       "future_store": "ジャパンミート",
       "future_day": "10/20(火)",
-      "diff": 28
+      "diff": 299
     },
     {
       "ingredient": "鶏もも肉",
@@ -332,34 +306,6 @@
         "valid_to": "2026-10-17",
         "note": "チルドまたは解凍",
         "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
-      },
-      {
-        "store_id": "york_benimaru",
-        "store_name": "ヨークベニマル 小山雨ヶ谷店",
-        "chain": "ヨークベニマル",
-        "product_raw_name": "国産若鶏むね肉 (唐揚げ用・焼肉用)",
-        "category": "精肉（鶏肉）",
-        "ingredient_name": "鶏むね肉",
-        "price": 67,
-        "unit": "100g",
-        "valid_from": "2026-10-17",
-        "valid_to": "2026-10-17",
-        "note": "10/17限り",
-        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-      },
-      {
-        "store_id": "york_benimaru",
-        "store_name": "ヨークベニマル 小山雨ヶ谷店",
-        "chain": "ヨークベニマル",
-        "product_raw_name": "国産若鶏手羽元・手羽先 (チルドまたは解凍100g)",
-        "category": "その他",
-        "ingredient_name": "国産若鶏手羽元・手羽先 (チルドまたは解凍100g)",
-        "price": 77,
-        "unit": "100g",
-        "valid_from": "2026-10-17",
-        "valid_to": "2026-10-17",
-        "note": "10/17限り",
-        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
       },
       {
         "store_id": "japanmeat",
@@ -572,6 +518,20 @@
         "valid_to": "2026-10-18",
         "note": "飲料",
         "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+      },
+      {
+        "store_id": "japanmeat",
+        "store_name": "ジャパンミート生鮮館 小山店",
+        "chain": "ジャパンミート",
+        "product_raw_name": "国産若鶏ムネ肉",
+        "category": "精肉（鶏肉）",
+        "ingredient_name": "鶏むね肉",
+        "price": 69,
+        "unit": "100g当り",
+        "valid_from": "2026-10-18",
+        "valid_to": "2026-10-18",
+        "note": "国内産 5枚入",
+        "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
         "store_id": "york_benimaru",
@@ -1079,36 +1039,6 @@
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
-      "ingredient": "鶏むね肉",
-      "raw_name": "国産若鶏むね肉 (唐揚げ用・焼肉用)",
-      "category": "精肉（鶏肉）",
-      "best_price": 67,
-      "unit": "100g",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 10/17 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-17",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
-      "ingredient": "国産若鶏手羽元・手羽先 (チルドまたは解凍100g)",
-      "raw_name": "国産若鶏手羽元・手羽先 (チルドまたは解凍100g)",
-      "category": "その他",
-      "best_price": 77,
-      "unit": "100g",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 10/17 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-17",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
       "ingredient": "サンヨー 旅麺",
       "raw_name": "サンヨー 旅麺",
       "category": "その他",
@@ -1137,21 +1067,6 @@
       "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-10-17",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
-      "ingredient": "豚こま切れ肉",
-      "raw_name": "国産豚小間切落し (味付・解凍)",
-      "category": "精肉（豚肉）",
-      "best_price": 87,
-      "unit": "100g",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 10/17 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-10-17",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "えのき",
@@ -1394,6 +1309,21 @@
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
+      "ingredient": "鶏むね肉",
+      "raw_name": "国産若鶏ムネ肉",
+      "category": "精肉（鶏肉）",
+      "best_price": 69,
+      "unit": "100g当り",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "best_day_label": "10/18(日)から",
+      "is_best_today": false,
+      "advice": "10/18の特売開始まで待機推奨",
+      "sort_date": "2026-10-18",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
       "ingredient": "鶏もも肉",
       "raw_name": "とりせんの国産味彩鶏 モモ肉",
       "category": "精肉（鶏肉）",
@@ -1587,6 +1517,21 @@
       "advice": "10/19の特売開始まで待機推奨",
       "sort_date": "2026-10-19",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "豚こま切れ肉",
+      "raw_name": "国産豚小間切",
+      "category": "精肉（豚肉）",
+      "best_price": 118,
+      "unit": "100g当り",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "best_day_label": "10/19(月)から",
+      "is_best_today": false,
+      "advice": "10/19の特売開始まで待機推奨",
+      "sort_date": "2026-10-19",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
       "ingredient": "かつお",
@@ -1996,21 +1941,6 @@
       "note": "国内産・解凍品 骨付き肉"
     },
     {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "国産若鶏むね肉 (唐揚げ用・焼肉用)",
-      "category": "精肉（鶏肉）",
-      "ingredient_name": "鶏むね肉",
-      "price": 67,
-      "unit": "100g",
-      "valid_from": "2026-10-17",
-      "valid_to": "2026-10-17",
-      "date_label": "10/17(土)限り",
-      "note": "10/17限り"
-    },
-    {
       "store_id": "japanmeat",
       "store_name": "ジャパンミート生鮮館 小山店",
       "chain": "ジャパンミート",
@@ -2069,21 +1999,6 @@
       "valid_to": "2026-10-22",
       "date_label": "10/22(木)限り",
       "note": "絹・木綿"
-    },
-    {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "国産若鶏手羽元・手羽先 (チルドまたは解凍100g)",
-      "category": "その他",
-      "ingredient_name": "国産若鶏手羽元・手羽先 (チルドまたは解凍100g)",
-      "price": 77,
-      "unit": "100g",
-      "valid_from": "2026-10-17",
-      "valid_to": "2026-10-17",
-      "date_label": "10/17(土)限り",
-      "note": "10/17限り"
     },
     {
       "store_id": "japanmeat",
@@ -2146,36 +2061,6 @@
       "note": "ブラジル産・解凍品"
     },
     {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "国産豚小間切落し (味付・解凍)",
-      "category": "精肉（豚肉）",
-      "ingredient_name": "豚こま切れ肉",
-      "price": 87,
-      "unit": "100g",
-      "valid_from": "2026-10-17",
-      "valid_to": "2026-10-17",
-      "date_label": "10/17(土)限り",
-      "note": "10/17限り"
-    },
-    {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "国産豚挽肉 (解凍)",
-      "category": "精肉（豚肉）",
-      "ingredient_name": "豚挽肉",
-      "price": 97,
-      "unit": "100g",
-      "valid_from": "2026-10-17",
-      "valid_to": "2026-10-17",
-      "date_label": "10/17(土)限り",
-      "note": "10/17限り"
-    },
-    {
       "store_id": "torisen",
       "store_name": "とりせん 小山土塔店",
       "chain": "とりせん",
@@ -2219,21 +2104,6 @@
       "valid_to": "2026-10-21",
       "date_label": "10/21(水)限り",
       "note": "ブラジル産・解凍品 ブロック肉"
-    },
-    {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "国産牛豚合挽肉 (解凍)",
-      "category": "精肉（豚肉）",
-      "ingredient_name": "豚挽肉",
-      "price": 107,
-      "unit": "100g",
-      "valid_from": "2026-10-17",
-      "valid_to": "2026-10-17",
-      "date_label": "10/17(土)限り",
-      "note": "10/17限り"
     },
     {
       "store_id": "york_benimaru",
