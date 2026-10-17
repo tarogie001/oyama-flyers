@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17 19:11",
+  "updated_at": "2026-10-18 00:43",
   "target_date": "2026-10-17",
   "target_date_label": "2026年10月17日",
   "buy_today": [
@@ -213,16 +213,6 @@
     }
   ],
   "wait_for_later": [
-    {
-      "ingredient": "豚挽肉",
-      "category": "精肉（豚肉）",
-      "today_price": 368,
-      "future_price": 69,
-      "unit": "100g当り",
-      "future_store": "ジャパンミート",
-      "future_day": "10/20(火)",
-      "diff": 299
-    },
     {
       "ingredient": "鶏もも肉",
       "category": "精肉（鶏肉）",
@@ -852,8 +842,8 @@
         "store_name": "ジャパンミート生鮮館 小山店",
         "chain": "ジャパンミート",
         "product_raw_name": "長州どり挽肉LL",
-        "category": "精肉（豚肉）",
-        "ingredient_name": "豚挽肉",
+        "category": "精肉（鶏肉）",
+        "ingredient_name": "鶏挽肉",
         "price": 69,
         "unit": "100g当り",
         "valid_from": "2026-10-20",
@@ -1179,6 +1169,21 @@
       "category": "その他",
       "best_price": 278,
       "unit": "450g",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "best_day_label": "本日 10/17 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-10-17",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+    },
+    {
+      "ingredient": "豚挽肉",
+      "raw_name": "牛・豚合挽肉",
+      "category": "精肉（豚肉）",
+      "best_price": 368,
+      "unit": "1パック",
       "store": "とりせん",
       "store_id": "torisen",
       "store_name": "とりせん 小山土塔店",
@@ -1594,9 +1599,9 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
-      "ingredient": "豚挽肉",
+      "ingredient": "鶏挽肉",
       "raw_name": "長州どり挽肉LL",
-      "category": "精肉（豚肉）",
+      "category": "精肉（鶏肉）",
       "best_price": 69,
       "unit": "100g当り",
       "store": "ジャパンミート",
@@ -1961,8 +1966,8 @@
       "chain": "ジャパンミート",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/",
       "product_raw_name": "長州どり挽肉LL",
-      "category": "精肉（豚肉）",
-      "ingredient_name": "豚挽肉",
+      "category": "精肉（鶏肉）",
+      "ingredient_name": "鶏挽肉",
       "price": 69,
       "unit": "100g当り",
       "valid_from": "2026-10-20",
