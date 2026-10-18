@@ -159,7 +159,7 @@ class WeeklyPlanner:
                             "unit": target_future["unit"],
                             "future_store": target_future["chain"],
                             "future_day": f"{f_date.strftime('%m/%d')}({f_weekday})",
-                            "diff": best_deal_today["price"] - target_future["price"]
+                            "diff": int(self.calc_normalized_price(best_deal_today) - self.calc_normalized_price(target_future))
                         })
 
             # 週間スケジュール用（最安値の日に割り振り）
