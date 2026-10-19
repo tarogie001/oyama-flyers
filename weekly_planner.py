@@ -408,28 +408,14 @@ class WeeklyPlanner:
         except Exception:
             now_jst = datetime.datetime.now()
 
-        # 各店舗の最新チラシ期間・更新状況をDBから集計
-        conn_stat = sqlite3.connect(DB_FILE)
-        c_stat = conn_stat.cursor()
-        c_stat.execute("""
-            SELECT store_id, min(valid_from), max(valid_to), count(*)
-            FROM flyer_deals
-            WHERE valid_to >= ?
-            GROUP BY store_id
-        """, (today_iso,))
-        store_deals_stat = {r[0]: {"from": r[1], "to": r[2], "count": r[3]} for r in c_stat.fetchall()}
-        conn_stat.close()
+        # flyer_fetcher から全15店舗の最新チラシ更新日・特売期間をリアルタイム自動取得
+        from flyer_fetcher import get_latest_store_flyer_status
+        status_data = get_latest_store_flyer_status().get("stores", {})
 
         enriched_stores = []
         for s in self.stores:
-            stat = store_deals_stat.get(s["id"])
             s_copy = dict(s)
-            if stat:
-                f_from = stat['from'][5:].replace('-', '/')
-                f_to = stat['to'][5:].replace('-', '/')
-                s_copy["flyer_period"] = f"特売期間: {f_from}〜{f_to}"
-            else:
-                s_copy["flyer_period"] = "最新チラシ確認中"
+            s_copy["flyer_period"] = status_data.get(s["id"], "公式Webチラシ掲載中")
             enriched_stores.append(s_copy)
 
         export_data = {
