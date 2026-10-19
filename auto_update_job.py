@@ -42,12 +42,12 @@ def main():
     today_str = datetime.date.today().isoformat()
     log(f"📅 対象基準日: {today_str}")
 
-    # 1. Web上の新着チラシ掲載状況をチェック
-    log("🔍 各スーパーの新着チラシ公開状況をチェック中...")
+    # 1. Web上の新着チラシ掲載状況を自動巡回・最新化
+    log("🔍 全15店舗の新着チラシ公開状況を自動巡回・更新中...")
     python_exe = sys.executable
-    ret_chk, out_chk, _ = run_command([python_exe, "check_online_flyers.py"])
+    ret_chk, out_chk, _ = run_command([python_exe, "flyer_fetcher.py"])
     if ret_chk == 0:
-        log("✅ チラシ公開状況の確認完了")
+        log("✅ チラシ公開状況の自動更新完了")
     else:
         log("⚠️ チラシ確認中に軽微な警告がありました（処理は継続します）")
 
