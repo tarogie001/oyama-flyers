@@ -1,6 +1,6 @@
 """
 auto_gemini_crawler.py
-最新のチラシ画像を Gemini 1.5 Flash (Vision) で自動解析し、特売品を deals.db に自律登録するスクリプト
+最新のチラシ画像を Google Gemini AI (Vision) で自動解析し、特売品を deals.db に自律登録するスクリプト
 （GitHub Actions および ローカル共通）
 """
 
@@ -29,10 +29,11 @@ def run_ai_analysis():
     analyzer = DealAnalyzer()
     today_str = datetime.date.today().isoformat()
 
-    # 解析対象のチラシ画像リスト
+    # 解析対象のチラシ画像リスト（主力スーパーを網羅）
     tasks = [
-        {"store_id": "beisia", "store_name": "ベイシア", "images": ["beisia_pure_flyer.png"]},
-        {"store_id": "japanmeat", "store_name": "ジャパンミート", "images": ["japanmeat_clean.png"]},
+        {"store_id": "beisia", "store_name": "ベイシア", "images": ["beisia_pure_flyer.png", "beisia_pure_flyer_sub1.png"]},
+        {"store_id": "japanmeat", "store_name": "ジャパンミート", "images": ["japanmeat_clean.png", "japanmeat_clean_sub1.png"]},
+        {"store_id": "torisen", "store_name": "とりせん", "images": ["torisen_clean.png", "torisen_clean_sub1.png"]},
         {"store_id": "york_benimaru", "store_name": "ヨークベニマル", "images": ["york_benimaru_leaflet_large.png", "york_benimaru_leaflet_sub1.png"]},
         {"store_id": "tairaya", "store_name": "たいらや", "images": ["tairaya_leaflet_large.png"]},
         {"store_id": "maruetsu", "store_name": "マルエツ", "images": ["maruetsu_leaflet_large.png"]},
@@ -44,7 +45,7 @@ def run_ai_analysis():
         store_id = task["store_id"]
         store_name = task["store_name"]
 
-        # 存在する画像をすべて取得（ベニマルの日替わり＋週間など複数枚対応）
+        # 存在する画像をすべて取得（日替わり＋週間など複数枚対応）
         target_imgs = []
         for img_name in task["images"]:
             p = FLYERS_DIR / img_name
@@ -78,8 +79,8 @@ def run_ai_analysis():
             else:
                 print(f"[-] {store_name} ({target_img.name}): 今回はAI抽出結果がありませんでした")
 
-            # レート制限回避のクールダウン
-            time.sleep(20)
+            # レート制限回避のクールダウン（15秒）
+            time.sleep(15)
 
     print(f"\n🎉 AI画像解析が完了しました（合計 {total_added} 件の特売品を新規登録/更新）")
 

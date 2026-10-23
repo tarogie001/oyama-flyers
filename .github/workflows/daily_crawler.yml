@@ -1,7 +1,10 @@
 name: Daily Flyer Crawler & Deals Update
 
 on:
-  workflow_dispatch: # 手動実行のみに制限（ローカルでの厳格検証データ配信を優先）
+  schedule:
+    # 毎朝 日本時間 8:15 (UTC 23:15) に自動実行
+    - cron: '15 23 * * *'
+  workflow_dispatch: # GitHubのWeb画面から手動テスト実行可能
 
 jobs:
   crawl-and-update:
@@ -41,8 +44,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin main
           git reset --soft origin/main
-          git add latest_deals.json deals.db today_report.txt
-          git commit -m "chore(auto): update deals data [skip ci]" || echo "No changes to commit"
+          git add latest_deals.json deals.db today_report.txt store_flyer_status.json
+          git commit -m "chore(auto): daily flyer crawl & update deals [skip ci]" || echo "No changes to commit"
           git push origin main
 
       - name: Deploy to GitHub Pages
