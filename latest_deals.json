@@ -1,21 +1,8 @@
 {
-  "updated_at": "2026-11-27 14:11",
-  "target_date": "2026-11-27",
-  "target_date_label": "2026年11月27日",
+  "updated_at": "2026-11-28 14:06",
+  "target_date": "2026-11-28",
+  "target_date_label": "2026年11月28日",
   "buy_today": [
-    {
-      "ingredient": "ニンジン",
-      "raw_name": "千葉県などの国内産 人参",
-      "category": "野菜",
-      "price": 37,
-      "unit": "1本",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
     {
       "ingredient": "かぼちゃ",
       "raw_name": "国産かぼちゃ",
@@ -30,6 +17,58 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
+      "ingredient": "堀川 アラスカ倶楽部 (10本)",
+      "raw_name": "堀川 アラスカ倶楽部 (10本)",
+      "category": "その他",
+      "price": 88,
+      "unit": "1パック",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "ニッスイ そのままおいしい 生ちくわ (4本)",
+      "raw_name": "ニッスイ そのままおいしい 生ちくわ (4本)",
+      "category": "その他",
+      "price": 88,
+      "unit": "1パック",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "国産 若鶏手羽元・手羽先",
+      "raw_name": "国産 若鶏手羽元・手羽先",
+      "category": "その他",
+      "price": 88,
+      "unit": "100g",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "白菜",
+      "raw_name": "茨城などの国内産 白菜",
+      "category": "野菜",
+      "price": 88,
+      "unit": "1/4カット",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
       "ingredient": "鶏もも肉",
       "raw_name": "若鶏モモ肉",
       "category": "精肉（鶏肉）",
@@ -41,6 +80,32 @@
       "note": "今週最安値",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "しめじ",
+      "raw_name": "宮城県などの国内産 ホクトのぶなしめじ (100g、1袋)",
+      "category": "きのこ類",
+      "price": 98,
+      "unit": "1袋",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "エリンギ",
+      "raw_name": "新潟県産 ホクトのエリンギ (1パック)",
+      "category": "きのこ類",
+      "price": 98,
+      "unit": "1パック",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "豚挽肉",
@@ -82,6 +147,45 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
+      "ingredient": "大根",
+      "raw_name": "千葉県または他国内産 だいこん",
+      "category": "野菜",
+      "price": 179,
+      "unit": "1本",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "マルエツ 小山店",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "カップラーメン",
+      "raw_name": "マルちゃん 赤いきつねうどん",
+      "category": "麺類・インスタント",
+      "price": 118,
+      "unit": "96g",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "マルエツ 小山店",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "マルちゃん 麺づくり (鶏ガラ醤油・合わせ味噌・ピリ辛豆乳・五香粉香る甘醤油)・カップ焼そば",
+      "raw_name": "マルちゃん 麺づくり (鶏ガラ醤油・合わせ味噌・ピリ辛豆乳・五香粉香る甘醤油)・カップ焼そば",
+      "category": "その他",
+      "price": 118,
+      "unit": "1個",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
       "ingredient": "豚カタブロックL",
       "raw_name": "豚カタブロックL",
       "category": "その他",
@@ -108,17 +212,17 @@
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
-      "ingredient": "ブロッコリー",
-      "raw_name": "埼玉県または他国内産 ブロッコリー",
-      "category": "野菜",
+      "ingredient": "柿",
+      "raw_name": "和歌山県などの国内産 柿",
+      "category": "季節の果物",
       "price": 148,
       "unit": "1コ",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
+      "store": "とりせん",
+      "store_id": "torisen",
       "is_today_only": true,
       "note": "本日限り！",
-      "store_name": "マルエツ 小山店",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      "store_name": "とりせん 小山土塔店",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
       "ingredient": "生ラーメン",
@@ -147,6 +251,19 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "れんこん",
+      "raw_name": "徳島などの国内産 れんこん",
+      "category": "野菜",
+      "price": 178,
+      "unit": "100g",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
       "ingredient": "豚モモ（切り落とし・こま切れ）",
       "raw_name": "国産 豚もも切落し",
       "category": "精肉（豚肉）",
@@ -171,19 +288,6 @@
       "note": "今週最安値",
       "store_name": "ベイシア Foods Park 結城店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
-      "ingredient": "タカナシ 北海道 さわやか酪農",
-      "raw_name": "タカナシ 北海道 さわやか酪農",
-      "category": "その他",
-      "price": 197,
-      "unit": "1本 (1,000ml)",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "国産 豚肩ロースうす切り",
@@ -223,6 +327,45 @@
       "note": "今週最安値",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "天然ぶり切身",
+      "raw_name": "天然ぶり切身",
+      "category": "その他",
+      "price": 298,
+      "unit": "100g",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "フィリピン産 パインブロック",
+      "raw_name": "フィリピン産 パインブロック",
+      "category": "その他",
+      "price": 380,
+      "unit": "1パック",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "とりせん 小山土塔店",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+    },
+    {
+      "ingredient": "フィリピン産 パイン ブロック",
+      "raw_name": "フィリピン産 パイン ブロック",
+      "category": "その他",
+      "price": 380,
+      "unit": "1パック",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "とりせん 小山土塔店",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
       "ingredient": "さといも",
@@ -290,45 +433,6 @@
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
-      "ingredient": "蒸しだこ（真だこ）",
-      "raw_name": "蒸しだこ（真だこ）",
-      "category": "その他",
-      "price": 499,
-      "unit": "100g当り",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "マルエツ 小山店",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-    },
-    {
-      "ingredient": "まぐろ",
-      "raw_name": "刺身用解凍 きはだまぐろ角切り",
-      "category": "魚介類",
-      "price": 500,
-      "unit": "200g",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
-      "ingredient": "えびフライ",
-      "raw_name": "えびフライ",
-      "category": "その他",
-      "price": 500,
-      "unit": "14尾、1パック",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "is_today_only": true,
-      "note": "本日限り！",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
       "ingredient": "アメリカ・ロシア産 明太子(切子)",
       "raw_name": "アメリカ・ロシア産 明太子(切子)",
       "category": "その他",
@@ -366,6 +470,19 @@
       "note": "今週最安値",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "伊藤ハム The GRAND アルトバイエルン",
+      "raw_name": "伊藤ハム The GRAND アルトバイエルン",
+      "category": "その他",
+      "price": 680,
+      "unit": "1袋",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "とりせん 小山土塔店",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
       "ingredient": "国産牛 ももステーキ",
@@ -418,6 +535,32 @@
       "note": "今週最安値",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
+      "raw_name": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
+      "category": "その他",
+      "price": 899,
+      "unit": "100g当り",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "マルエツ 小山店",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "中国産 うなぎ蒲焼 (串) (3串、1パック)",
+      "raw_name": "中国産 うなぎ蒲焼 (串) (3串、1パック)",
+      "category": "その他",
+      "price": 980,
+      "unit": "1パック",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "ごま油香る 牛プルコギ",
@@ -509,48 +652,218 @@
       "note": "今週最安値",
       "store_name": "ジャパンミート生鮮館 小山店",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "または他宮崎県産 うなぎ長焼",
+      "raw_name": "または他宮崎県産 うなぎ長焼",
+      "category": "その他",
+      "price": 1780,
+      "unit": "1尾入",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "is_today_only": true,
+      "note": "本日限り！",
+      "store_name": "マルエツ 小山店",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     }
   ],
   "wait_for_later": [
     {
       "ingredient": "りんご",
       "category": "季節の果物",
-      "today_price": 598,
+      "today_price": 178,
       "future_price": 169,
       "unit": "1コ",
       "future_store": "マルエツ",
       "future_day": "11/29(日)",
-      "diff": 429
+      "diff": 9
+    },
+    {
+      "ingredient": "鮭",
+      "category": "魚介類",
+      "today_price": 438,
+      "future_price": 398,
+      "unit": "100g",
+      "future_store": "ヨークベニマル",
+      "future_day": "11/30(月)",
+      "diff": 40
+    },
+    {
+      "ingredient": "みかん",
+      "category": "季節の果物",
+      "today_price": 1000,
+      "future_price": 550,
+      "unit": "1パック",
+      "future_store": "ヨークベニマル",
+      "future_day": "11/29(日)",
+      "diff": 450
+    },
+    {
+      "ingredient": "まぐろ",
+      "category": "魚介類",
+      "today_price": 980,
+      "future_price": 398,
+      "unit": "100g",
+      "future_store": "ヨークベニマル",
+      "future_day": "11/30(月)",
+      "diff": 582
     }
   ],
   "no_deal_staples": [
     "卵",
     "キャベツ",
-    "白菜",
-    "大根",
+    "ニンジン",
     "玉ねぎ",
     "ネギ",
     "ほうれんそう",
+    "ブロッコリー",
     "レタス",
     "豚バラ（うすぎり）",
     "納豆",
-    "即席ラーメン",
-    "カップラーメン"
+    "即席ラーメン"
   ],
   "weekly_schedule": {
-    "11/27(金)": [
+    "11/29(日)": [
+      {
+        "store_id": "torisen",
+        "store_name": "とりせん 小山土塔店",
+        "chain": "とりせん",
+        "product_raw_name": "中国産などの原料 あさり",
+        "category": "その他",
+        "ingredient_name": "中国産などの原料 あさり",
+        "price": 78,
+        "unit": "100g当り",
+        "valid_from": "2026-11-29",
+        "valid_to": "2026-11-30",
+        "note": "",
+        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+      },
+      {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "国産 桜姫 もも肉",
+        "category": "その他",
+        "ingredient_name": "国産 桜姫 もも肉",
+        "price": 119,
+        "unit": "100g当り",
+        "valid_from": "2026-11-29",
+        "valid_to": "2026-11-29",
+        "note": "",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "鹿児島県または国内産 活〆ぶり（養殖） 切身",
+        "category": "その他",
+        "ingredient_name": "鹿児島県または国内産 活〆ぶり（養殖） 切身",
+        "price": 399,
+        "unit": "100g当り",
+        "valid_from": "2026-11-29",
+        "valid_to": "2026-11-29",
+        "note": "",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "プリマハム 香薫あらびきウインナー（大袋）",
+        "category": "お菓子",
+        "ingredient_name": "お得なお菓子",
+        "price": 599,
+        "unit": "400g",
+        "valid_from": "2026-11-29",
+        "valid_to": "2026-11-29",
+        "note": "",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
+        "store_id": "torisen",
+        "store_name": "とりせん 小山土塔店",
+        "chain": "とりせん",
+        "product_raw_name": "栃木県その他国内産 いちご",
+        "category": "その他",
+        "ingredient_name": "栃木県その他国内産 いちご",
+        "price": 798,
+        "unit": "1パック",
+        "valid_from": "2026-11-29",
+        "valid_to": "2026-11-29",
+        "note": "11/29日限定",
+        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+      },
+      {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "蒸しほたて貝",
+        "category": "その他",
+        "ingredient_name": "蒸しほたて貝",
+        "price": 1000,
+        "unit": "1パック（14玉入）",
+        "valid_from": "2026-11-29",
+        "valid_to": "2026-11-29",
+        "note": "",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      }
+    ],
+    "11/28(土)": [
       {
         "store_id": "york_benimaru",
         "store_name": "ヨークベニマル 小山雨ヶ谷店",
         "chain": "ヨークベニマル",
-        "product_raw_name": "千葉県などの国内産 人参",
+        "product_raw_name": "堀川 アラスカ倶楽部 (10本)",
+        "category": "その他",
+        "ingredient_name": "堀川 アラスカ倶楽部 (10本)",
+        "price": 88,
+        "unit": "1パック",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+      },
+      {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "ニッスイ そのままおいしい 生ちくわ (4本)",
+        "category": "その他",
+        "ingredient_name": "ニッスイ そのままおいしい 生ちくわ (4本)",
+        "price": 88,
+        "unit": "1パック",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+      },
+      {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "国産 若鶏手羽元・手羽先",
+        "category": "その他",
+        "ingredient_name": "国産 若鶏手羽元・手羽先",
+        "price": 88,
+        "unit": "100g",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+      },
+      {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "茨城などの国内産 白菜",
         "category": "野菜",
-        "ingredient_name": "ニンジン",
-        "price": 37,
-        "unit": "1本",
-        "valid_from": "2026-11-27",
-        "valid_to": "2026-11-27",
-        "note": "土物野菜の日",
+        "ingredient_name": "白菜",
+        "price": 88,
+        "unit": "1/4カット",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "",
         "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
       },
       {
@@ -582,6 +895,48 @@
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
       },
       {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "千葉県または他国内産 だいこん",
+        "category": "野菜",
+        "ingredient_name": "大根",
+        "price": 179,
+        "unit": "1本",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "マルちゃん 赤いきつねうどん",
+        "category": "麺類・インスタント",
+        "ingredient_name": "カップラーメン",
+        "price": 118,
+        "unit": "96g",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "お1人様合わせて3点限り",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "マルちゃん 麺づくり (鶏ガラ醤油・合わせ味噌・ピリ辛豆乳・五香粉香る甘醤油)・カップ焼そば",
+        "category": "その他",
+        "ingredient_name": "マルちゃん 麺づくり (鶏ガラ醤油・合わせ味噌・ピリ辛豆乳・五香粉香る甘醤油)・カップ焼そば",
+        "price": 118,
+        "unit": "1個",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "カップラーメンの日 一家族様計8コ限り nanaco 10ポイントプレゼント",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+      },
+      {
         "store_id": "japanmeat",
         "store_name": "ジャパンミート生鮮館 小山店",
         "chain": "ジャパンミート",
@@ -599,20 +954,6 @@
         "store_id": "maruetsu",
         "store_name": "マルエツ 小山店",
         "chain": "マルエツ",
-        "product_raw_name": "埼玉県または他国内産 ブロッコリー",
-        "category": "野菜",
-        "ingredient_name": "ブロッコリー",
-        "price": 148,
-        "unit": "1コ",
-        "valid_from": "2026-11-27",
-        "valid_to": "2026-11-27",
-        "note": "",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
         "product_raw_name": "牛肉・豚肉挽肉（解凍）",
         "category": "その他",
         "ingredient_name": "牛肉・豚肉挽肉（解凍）",
@@ -622,6 +963,20 @@
         "valid_to": "2026-11-29",
         "note": "原料原産地は商品に記載",
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "徳島などの国内産 れんこん",
+        "category": "野菜",
+        "ingredient_name": "れんこん",
+        "price": 178,
+        "unit": "100g",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
       },
       {
         "store_id": "beisia",
@@ -652,20 +1007,6 @@
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
       },
       {
-        "store_id": "york_benimaru",
-        "store_name": "ヨークベニマル 小山雨ヶ谷店",
-        "chain": "ヨークベニマル",
-        "product_raw_name": "タカナシ 北海道 さわやか酪農",
-        "category": "その他",
-        "ingredient_name": "タカナシ 北海道 さわやか酪農",
-        "price": 197,
-        "unit": "1本 (1,000ml)",
-        "valid_from": "2026-11-27",
-        "valid_to": "2026-11-27",
-        "note": "",
-        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-      },
-      {
         "store_id": "beisia",
         "store_name": "ベイシア Foods Park 結城店",
         "chain": "ベイシア",
@@ -692,6 +1033,34 @@
         "valid_to": "2026-12-01",
         "note": "",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+      },
+      {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "天然ぶり切身",
+        "category": "その他",
+        "ingredient_name": "天然ぶり切身",
+        "price": 298,
+        "unit": "100g",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+      },
+      {
+        "store_id": "torisen",
+        "store_name": "とりせん 小山土塔店",
+        "chain": "とりせん",
+        "product_raw_name": "フィリピン産 パイン ブロック",
+        "category": "その他",
+        "ingredient_name": "フィリピン産 パイン ブロック",
+        "price": 380,
+        "unit": "1パック",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "",
+        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       },
       {
         "store_id": "beisia",
@@ -736,48 +1105,6 @@
         "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       },
       {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "蒸しだこ（真だこ）",
-        "category": "その他",
-        "ingredient_name": "蒸しだこ（真だこ）",
-        "price": 499,
-        "unit": "100g当り",
-        "valid_from": "2026-11-27",
-        "valid_to": "2026-11-27",
-        "note": "",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "york_benimaru",
-        "store_name": "ヨークベニマル 小山雨ヶ谷店",
-        "chain": "ヨークベニマル",
-        "product_raw_name": "刺身用解凍 きはだまぐろ角切り",
-        "category": "魚介類",
-        "ingredient_name": "まぐろ",
-        "price": 500,
-        "unit": "200g",
-        "valid_from": "2026-11-27",
-        "valid_to": "2026-11-27",
-        "note": "お魚コーナー",
-        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-      },
-      {
-        "store_id": "york_benimaru",
-        "store_name": "ヨークベニマル 小山雨ヶ谷店",
-        "chain": "ヨークベニマル",
-        "product_raw_name": "えびフライ",
-        "category": "その他",
-        "ingredient_name": "えびフライ",
-        "price": 500,
-        "unit": "14尾、1パック",
-        "valid_from": "2026-11-27",
-        "valid_to": "2026-11-27",
-        "note": "お魚コーナー",
-        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-      },
-      {
         "store_id": "japanmeat",
         "store_name": "ジャパンミート生鮮館 小山店",
         "chain": "ジャパンミート",
@@ -804,6 +1131,20 @@
         "valid_to": "2026-11-30",
         "note": "",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+      },
+      {
+        "store_id": "torisen",
+        "store_name": "とりせん 小山土塔店",
+        "chain": "とりせん",
+        "product_raw_name": "伊藤ハム The GRAND アルトバイエルン",
+        "category": "その他",
+        "ingredient_name": "伊藤ハム The GRAND アルトバイエルン",
+        "price": 680,
+        "unit": "1袋",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "",
+        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       },
       {
         "store_id": "beisia",
@@ -860,6 +1201,34 @@
         "valid_to": "2026-11-30",
         "note": "",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+      },
+      {
+        "store_id": "maruetsu",
+        "store_name": "マルエツ 小山店",
+        "chain": "マルエツ",
+        "product_raw_name": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
+        "category": "その他",
+        "ingredient_name": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
+        "price": 899,
+        "unit": "100g当り",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "",
+        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "中国産 うなぎ蒲焼 (串) (3串、1パック)",
+        "category": "その他",
+        "ingredient_name": "中国産 うなぎ蒲焼 (串) (3串、1パック)",
+        "price": 980,
+        "unit": "1パック",
+        "valid_from": "2026-11-28",
+        "valid_to": "2026-11-28",
+        "note": "まぐろの日",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
       },
       {
         "store_id": "beisia",
@@ -944,150 +1313,6 @@
         "valid_to": "2026-11-30",
         "note": "",
         "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-      }
-    ],
-    "11/29(日)": [
-      {
-        "store_id": "torisen",
-        "store_name": "とりせん 小山土塔店",
-        "chain": "とりせん",
-        "product_raw_name": "中国産などの原料 あさり",
-        "category": "その他",
-        "ingredient_name": "中国産などの原料 あさり",
-        "price": 78,
-        "unit": "100g当り",
-        "valid_from": "2026-11-29",
-        "valid_to": "2026-11-30",
-        "note": "",
-        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "国産 桜姫 むね肉",
-        "category": "精肉（鶏肉）",
-        "ingredient_name": "鶏むね肉",
-        "price": 89,
-        "unit": "100g当り",
-        "valid_from": "2026-11-29",
-        "valid_to": "2026-11-29",
-        "note": "",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "国産 桜姫 もも肉",
-        "category": "その他",
-        "ingredient_name": "国産 桜姫 もも肉",
-        "price": 119,
-        "unit": "100g当り",
-        "valid_from": "2026-11-29",
-        "valid_to": "2026-11-29",
-        "note": "",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "鹿児島県または国内産 活〆ぶり（養殖） 切身",
-        "category": "その他",
-        "ingredient_name": "鹿児島県または国内産 活〆ぶり（養殖） 切身",
-        "price": 399,
-        "unit": "100g当り",
-        "valid_from": "2026-11-29",
-        "valid_to": "2026-11-29",
-        "note": "",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "プリマハム 香薫あらびきウインナー（大袋）",
-        "category": "お菓子",
-        "ingredient_name": "お得なお菓子",
-        "price": 599,
-        "unit": "400g",
-        "valid_from": "2026-11-29",
-        "valid_to": "2026-11-29",
-        "note": "",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "torisen",
-        "store_name": "とりせん 小山土塔店",
-        "chain": "とりせん",
-        "product_raw_name": "栃木県その他国内産 いちご",
-        "category": "その他",
-        "ingredient_name": "栃木県その他国内産 いちご",
-        "price": 798,
-        "unit": "1パック",
-        "valid_from": "2026-11-29",
-        "valid_to": "2026-11-29",
-        "note": "11/29日限定",
-        "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "蒸しほたて貝",
-        "category": "その他",
-        "ingredient_name": "蒸しほたて貝",
-        "price": 1000,
-        "unit": "1パック（14玉入）",
-        "valid_from": "2026-11-29",
-        "valid_to": "2026-11-29",
-        "note": "",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      }
-    ],
-    "11/28(土)": [
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "千葉県または他国内産 だいこん",
-        "category": "野菜",
-        "ingredient_name": "大根",
-        "price": 179,
-        "unit": "1本",
-        "valid_from": "2026-11-28",
-        "valid_to": "2026-11-28",
-        "note": "",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "マルちゃん 赤いきつねうどん",
-        "category": "麺類・インスタント",
-        "ingredient_name": "カップラーメン",
-        "price": 118,
-        "unit": "96g",
-        "valid_from": "2026-11-28",
-        "valid_to": "2026-11-28",
-        "note": "お1人様合わせて3点限り",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-      },
-      {
-        "store_id": "maruetsu",
-        "store_name": "マルエツ 小山店",
-        "chain": "マルエツ",
-        "product_raw_name": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
-        "category": "その他",
-        "ingredient_name": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
-        "price": 899,
-        "unit": "100g当り",
-        "valid_from": "2026-11-28",
-        "valid_to": "2026-11-28",
-        "note": "",
-        "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
       },
       {
         "store_id": "maruetsu",
@@ -1120,6 +1345,20 @@
         "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
       },
       {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "宮城県産または茨城県産 ピーマン",
+        "category": "その他",
+        "ingredient_name": "宮城県産または茨城県産 ピーマン",
+        "price": 128,
+        "unit": "1袋",
+        "valid_from": "2026-11-30",
+        "valid_to": "2026-11-30",
+        "note": "",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+      },
+      {
         "store_id": "maruetsu",
         "store_name": "マルエツ 小山店",
         "chain": "マルエツ",
@@ -1132,55 +1371,24 @@
         "valid_to": "2026-11-30",
         "note": "",
         "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      },
+      {
+        "store_id": "york_benimaru",
+        "store_name": "ヨークベニマル 小山雨ヶ谷店",
+        "chain": "ヨークベニマル",
+        "product_raw_name": "刺身用 きはだまぐろ切出し",
+        "category": "魚介類",
+        "ingredient_name": "まぐろ",
+        "price": 398,
+        "unit": "100g",
+        "valid_from": "2026-11-30",
+        "valid_to": "2026-11-30",
+        "note": "",
+        "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
       }
     ]
   },
   "best_buy_schedule": [
-    {
-      "ingredient": "玉ねぎ",
-      "raw_name": "北海道産 玉ねぎ",
-      "category": "野菜",
-      "best_price": 37,
-      "unit": "1コ",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 11/27 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
-      "ingredient": "北海道産 じゃが芋",
-      "raw_name": "北海道産 じゃが芋",
-      "category": "その他",
-      "best_price": 37,
-      "unit": "1コ",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 11/27 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
-      "ingredient": "ニンジン",
-      "raw_name": "千葉県などの国内産 人参",
-      "category": "野菜",
-      "best_price": 37,
-      "unit": "1本",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 11/27 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
     {
       "ingredient": "かぼちゃ",
       "raw_name": "国産かぼちゃ",
@@ -1193,8 +1401,68 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "堀川 アラスカ倶楽部 (10本)",
+      "raw_name": "堀川 アラスカ倶楽部 (10本)",
+      "category": "その他",
+      "best_price": 88,
+      "unit": "1パック",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "ニッスイ そのままおいしい 生ちくわ (4本)",
+      "raw_name": "ニッスイ そのままおいしい 生ちくわ (4本)",
+      "category": "その他",
+      "best_price": 88,
+      "unit": "1パック",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "国産 若鶏手羽元・手羽先",
+      "raw_name": "国産 若鶏手羽元・手羽先",
+      "category": "その他",
+      "best_price": 88,
+      "unit": "100g",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "白菜",
+      "raw_name": "茨城などの国内産 白菜",
+      "category": "野菜",
+      "best_price": 88,
+      "unit": "1/4カット",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "鶏もも肉",
@@ -1208,8 +1476,38 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "しめじ",
+      "raw_name": "宮城県などの国内産 ホクトのぶなしめじ (100g、1袋)",
+      "category": "きのこ類",
+      "best_price": 98,
+      "unit": "1袋",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "エリンギ",
+      "raw_name": "新潟県産 ホクトのエリンギ (1パック)",
+      "category": "きのこ類",
+      "best_price": 98,
+      "unit": "1パック",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "豚挽肉",
@@ -1223,7 +1521,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1238,7 +1536,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1253,8 +1551,38 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "カップラーメン",
+      "raw_name": "マルちゃん 赤いきつねうどん",
+      "category": "麺類・インスタント",
+      "best_price": 118,
+      "unit": "96g",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "store_name": "マルエツ 小山店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "マルちゃん 麺づくり (鶏ガラ醤油・合わせ味噌・ピリ辛豆乳・五香粉香る甘醤油)・カップ焼そば",
+      "raw_name": "マルちゃん 麺づくり (鶏ガラ醤油・合わせ味噌・ピリ辛豆乳・五香粉香る甘醤油)・カップ焼そば",
+      "category": "その他",
+      "best_price": 118,
+      "unit": "1個",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "豚カタブロックL",
@@ -1268,7 +1596,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1283,23 +1611,23 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
-      "ingredient": "ブロッコリー",
-      "raw_name": "埼玉県または他国内産 ブロッコリー",
-      "category": "野菜",
+      "ingredient": "柿",
+      "raw_name": "和歌山県などの国内産 柿",
+      "category": "季節の果物",
       "best_price": 148,
       "unit": "1コ",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "best_day_label": "本日 11/27 限り！",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "best_day_label": "本日 11/28 限り！",
       "is_best_today": true,
       "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
       "ingredient": "生ラーメン",
@@ -1313,7 +1641,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1328,7 +1656,37 @@
       "best_day_label": "本日〜11/29まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "れんこん",
+      "raw_name": "徳島などの国内産 れんこん",
+      "category": "野菜",
+      "best_price": 178,
+      "unit": "100g",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "大根",
+      "raw_name": "千葉県または他国内産 だいこん",
+      "category": "野菜",
+      "best_price": 179,
+      "unit": "1本",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "store_name": "マルエツ 小山店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
@@ -1343,7 +1701,7 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
@@ -1358,23 +1716,38 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
-      "ingredient": "タカナシ 北海道 さわやか酪農",
-      "raw_name": "タカナシ 北海道 さわやか酪農",
-      "category": "その他",
-      "best_price": 197,
-      "unit": "1本 (1,000ml)",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 11/27 限り！",
+      "ingredient": "玉ねぎ",
+      "raw_name": "たまねぎ",
+      "category": "野菜",
+      "best_price": 199,
+      "unit": "3〜4個入・1ネット",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+      "advice": "現在底値！今日買ってもOKです",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "ニンジン",
+      "raw_name": "にんじん",
+      "category": "野菜",
+      "best_price": 199,
+      "unit": "3本入・1袋",
+      "store": "ジャパンミート",
+      "store_id": "japanmeat",
+      "store_name": "ジャパンミート生鮮館 小山店",
+      "best_day_label": "本日〜11/30まで",
+      "is_best_today": true,
+      "advice": "現在底値！今日買ってもOKです",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "ごぼう",
@@ -1388,7 +1761,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1403,7 +1776,7 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
@@ -1418,8 +1791,23 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
+      "ingredient": "牛乳",
+      "raw_name": "明治 おいしい牛乳",
+      "category": "日配品・大豆製品",
+      "best_price": 268,
+      "unit": "1本",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
       "ingredient": "しらす",
@@ -1433,8 +1821,23 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "天然ぶり切身",
+      "raw_name": "天然ぶり切身",
+      "category": "その他",
+      "best_price": 298,
+      "unit": "100g",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "ジャガイモ",
@@ -1448,23 +1851,8 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
-      "ingredient": "トマト",
-      "raw_name": "熊本県または他国内産 ミニトマト（徳用）",
-      "category": "野菜",
-      "best_price": 299,
-      "unit": "1パック（400g入）",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "best_day_label": "本日 11/27 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
       "ingredient": "チーズ",
@@ -1478,8 +1866,38 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
+    },
+    {
+      "ingredient": "フィリピン産 パインブロック",
+      "raw_name": "フィリピン産 パインブロック",
+      "category": "その他",
+      "best_price": 380,
+      "unit": "1パック",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+    },
+    {
+      "ingredient": "フィリピン産 パイン ブロック",
+      "raw_name": "フィリピン産 パイン ブロック",
+      "category": "その他",
+      "best_price": 380,
+      "unit": "1パック",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
       "ingredient": "さといも",
@@ -1493,7 +1911,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1508,23 +1926,8 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
-    },
-    {
-      "ingredient": "鮭",
-      "raw_name": "ノルウェー産他 生アトランティックサーモン刺身用",
-      "category": "魚介類",
-      "best_price": 438,
-      "unit": "100g当",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "best_day_label": "本日〜11/30まで",
-      "is_best_today": true,
-      "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
       "ingredient": "牛ハラミ焼肉用",
@@ -1538,7 +1941,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1553,7 +1956,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1568,53 +1971,8 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
-    },
-    {
-      "ingredient": "蒸しだこ（真だこ）",
-      "raw_name": "蒸しだこ（真だこ）",
-      "category": "その他",
-      "best_price": 499,
-      "unit": "100g当り",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "best_day_label": "本日 11/27 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-    },
-    {
-      "ingredient": "まぐろ",
-      "raw_name": "刺身用解凍 きはだまぐろ角切り",
-      "category": "魚介類",
-      "best_price": 500,
-      "unit": "200g",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 11/27 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
-    },
-    {
-      "ingredient": "えびフライ",
-      "raw_name": "えびフライ",
-      "category": "その他",
-      "best_price": 500,
-      "unit": "14尾、1パック",
-      "store": "ヨークベニマル",
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "best_day_label": "本日 11/27 限り！",
-      "is_best_today": true,
-      "advice": "本日が今週の底値！今日中に買いましょう",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "たら",
@@ -1628,7 +1986,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1643,7 +2001,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1658,7 +2016,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1673,8 +2031,23 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "伊藤ハム The GRAND アルトバイエルン",
+      "raw_name": "伊藤ハム The GRAND アルトバイエルン",
+      "category": "その他",
+      "best_price": 680,
+      "unit": "1袋",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
       "ingredient": "国産牛 ももステーキ",
@@ -1688,7 +2061,7 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
@@ -1703,7 +2076,7 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
@@ -1718,7 +2091,7 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
@@ -1733,8 +2106,38 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
+    },
+    {
+      "ingredient": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
+      "raw_name": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
+      "category": "その他",
+      "best_price": 899,
+      "unit": "100g当り",
+      "store": "マルエツ",
+      "store_id": "maruetsu",
+      "store_name": "マルエツ 小山店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "中国産 うなぎ蒲焼 (串) (3串、1パック)",
+      "raw_name": "中国産 うなぎ蒲焼 (串) (3串、1パック)",
+      "category": "その他",
+      "best_price": 980,
+      "unit": "1パック",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
+      "sort_date": "2026-11-28",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "ごま油香る 牛プルコギ",
@@ -1748,7 +2151,7 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
@@ -1763,7 +2166,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1778,7 +2181,7 @@
       "best_day_label": "本日〜12/01まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/"
     },
     {
@@ -1793,7 +2196,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1808,7 +2211,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1823,22 +2226,7 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
-      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
-      "ingredient": "みかん",
-      "raw_name": "佐賀美人みかん",
-      "category": "季節の果物",
-      "best_price": 1000,
-      "unit": "2kg入・1箱",
-      "store": "ジャパンミート",
-      "store_id": "japanmeat",
-      "store_name": "ジャパンミート生鮮館 小山店",
-      "best_day_label": "本日〜11/30まで",
-      "is_best_today": true,
-      "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
     },
     {
@@ -1853,83 +2241,8 @@
       "best_day_label": "本日〜11/30まで",
       "is_best_today": true,
       "advice": "現在底値！今日買ってもOKです",
-      "sort_date": "2026-11-27",
+      "sort_date": "2026-11-28",
       "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/898425/"
-    },
-    {
-      "ingredient": "カップラーメン",
-      "raw_name": "マルちゃん 赤いきつねうどん",
-      "category": "麺類・インスタント",
-      "best_price": 118,
-      "unit": "96g",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "best_day_label": "11/28(土)から",
-      "is_best_today": false,
-      "advice": "11/28の特売開始まで待機推奨",
-      "sort_date": "2026-11-28",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-    },
-    {
-      "ingredient": "大根",
-      "raw_name": "千葉県または他国内産 だいこん",
-      "category": "野菜",
-      "best_price": 179,
-      "unit": "1本",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "best_day_label": "11/28(土)から",
-      "is_best_today": false,
-      "advice": "11/28の特売開始まで待機推奨",
-      "sort_date": "2026-11-28",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
-    },
-    {
-      "ingredient": "牛乳",
-      "raw_name": "明治 おいしい牛乳",
-      "category": "日配品・大豆製品",
-      "best_price": 268,
-      "unit": "1本",
-      "store": "とりせん",
-      "store_id": "torisen",
-      "store_name": "とりせん 小山土塔店",
-      "best_day_label": "11/28(土)から",
-      "is_best_today": false,
-      "advice": "11/28の特売開始まで待機推奨",
-      "sort_date": "2026-11-28",
-      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
-    },
-    {
-      "ingredient": "フィリピン産 パインブロック",
-      "raw_name": "フィリピン産 パインブロック",
-      "category": "その他",
-      "best_price": 380,
-      "unit": "1パック",
-      "store": "とりせん",
-      "store_id": "torisen",
-      "store_name": "とりせん 小山土塔店",
-      "best_day_label": "11/28(土)から",
-      "is_best_today": false,
-      "advice": "11/28の特売開始まで待機推奨",
-      "sort_date": "2026-11-28",
-      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
-    },
-    {
-      "ingredient": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
-      "raw_name": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
-      "category": "その他",
-      "best_price": 899,
-      "unit": "100g当り",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "best_day_label": "11/28(土)から",
-      "is_best_today": false,
-      "advice": "11/28の特売開始まで待機推奨",
-      "sort_date": "2026-11-28",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
       "ingredient": "または他宮崎県産 うなぎ長焼",
@@ -1940,11 +2253,26 @@
       "store": "マルエツ",
       "store_id": "maruetsu",
       "store_name": "マルエツ 小山店",
-      "best_day_label": "11/28(土)から",
-      "is_best_today": false,
-      "advice": "11/28の特売開始まで待機推奨",
+      "best_day_label": "本日 11/28 限り！",
+      "is_best_today": true,
+      "advice": "本日が今週の底値！今日中に買いましょう",
       "sort_date": "2026-11-28",
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "鶏むね肉",
+      "raw_name": "国産 若鶏むね肉",
+      "category": "精肉（鶏肉）",
+      "best_price": 78,
+      "unit": "100g",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "11/29(日)から",
+      "is_best_today": false,
+      "advice": "11/29の特売開始まで待機推奨",
+      "sort_date": "2026-11-29",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "中国産などの原料 あさり",
@@ -1962,19 +2290,19 @@
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
-      "ingredient": "鶏むね肉",
-      "raw_name": "国産 桜姫 むね肉",
-      "category": "精肉（鶏肉）",
-      "best_price": 89,
-      "unit": "100g当り",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
+      "ingredient": "ネギ",
+      "raw_name": "福島・茨城などの国内産 長ねぎ",
+      "category": "野菜",
+      "best_price": 108,
+      "unit": "1束",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
       "best_day_label": "11/29(日)から",
       "is_best_today": false,
       "advice": "11/29の特売開始まで待機推奨",
       "sort_date": "2026-11-29",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "国産 桜姫 もも肉",
@@ -2007,6 +2335,21 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "キャベツ",
+      "raw_name": "茨城などの国内産 キャベツ",
+      "category": "野菜",
+      "best_price": 198,
+      "unit": "1コ",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "11/29(日)から",
+      "is_best_today": false,
+      "advice": "11/29の特売開始まで待機推奨",
+      "sort_date": "2026-11-29",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
       "ingredient": "卵",
       "raw_name": "たまご",
       "category": "日配品・大豆製品",
@@ -2022,19 +2365,19 @@
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
-      "ingredient": "柿",
-      "raw_name": "広島県または国内産 生かき（加熱用）",
-      "category": "季節の果物",
-      "best_price": 359,
-      "unit": "各1パック（80g入）",
-      "store": "マルエツ",
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
+      "ingredient": "きゅうり",
+      "raw_name": "福島・茨城などの国内産 きゅうり",
+      "category": "野菜",
+      "best_price": 378,
+      "unit": "1袋",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
       "best_day_label": "11/29(日)から",
       "is_best_today": false,
       "advice": "11/29の特売開始まで待機推奨",
       "sort_date": "2026-11-29",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "即席ラーメン",
@@ -2052,6 +2395,21 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "ほっけ",
+      "raw_name": "昆布仕込み塩ほっけ",
+      "category": "魚介類",
+      "best_price": 398,
+      "unit": "1パック",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "11/29(日)から",
+      "is_best_today": false,
+      "advice": "11/29の特売開始まで待機推奨",
+      "sort_date": "2026-11-29",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
       "ingredient": "鹿児島県または国内産 活〆ぶり（養殖） 切身",
       "raw_name": "鹿児島県または国内産 活〆ぶり（養殖） 切身",
       "category": "その他",
@@ -2065,6 +2423,21 @@
       "advice": "11/29の特売開始まで待機推奨",
       "sort_date": "2026-11-29",
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "みかん",
+      "raw_name": "愛媛などの国内産 みかん",
+      "category": "季節の果物",
+      "best_price": 550,
+      "unit": "1パック",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "11/29(日)から",
+      "is_best_today": false,
+      "advice": "11/29の特売開始まで待機推奨",
+      "sort_date": "2026-11-29",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "お得なお菓子",
@@ -2112,6 +2485,21 @@
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
     },
     {
+      "ingredient": "豚こま切れ肉",
+      "raw_name": "国産 豚肉こま切れ",
+      "category": "精肉（豚肉）",
+      "best_price": 108,
+      "unit": "100gあたり",
+      "store": "とりせん",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "best_day_label": "11/30(月)から",
+      "is_best_today": false,
+      "advice": "11/30の特売開始まで待機推奨",
+      "sort_date": "2026-11-30",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
+    },
+    {
       "ingredient": "バナナ",
       "raw_name": "フィリピン産などの バナナ",
       "category": "季節の果物",
@@ -2127,6 +2515,21 @@
       "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/"
     },
     {
+      "ingredient": "宮城県産または茨城県産 ピーマン",
+      "raw_name": "宮城県産または茨城県産 ピーマン",
+      "category": "その他",
+      "best_price": 128,
+      "unit": "1袋",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "11/30(月)から",
+      "is_best_today": false,
+      "advice": "11/30の特売開始まで待機推奨",
+      "sort_date": "2026-11-30",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
       "ingredient": "茨城県または他国内産 ピーマン",
       "raw_name": "茨城県または他国内産 ピーマン",
       "category": "その他",
@@ -2140,6 +2543,36 @@
       "advice": "11/30の特売開始まで待機推奨",
       "sort_date": "2026-11-30",
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/"
+    },
+    {
+      "ingredient": "鮭",
+      "raw_name": "サーモントラウト切身",
+      "category": "魚介類",
+      "best_price": 398,
+      "unit": "100g",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "11/30(月)から",
+      "is_best_today": false,
+      "advice": "11/30の特売開始まで待機推奨",
+      "sort_date": "2026-11-30",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
+    },
+    {
+      "ingredient": "まぐろ",
+      "raw_name": "刺身用 きはだまぐろ切出し",
+      "category": "魚介類",
+      "best_price": 398,
+      "unit": "100g",
+      "store": "ヨークベニマル",
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "best_day_label": "11/30(月)から",
+      "is_best_today": false,
+      "advice": "11/30の特売開始まで待機推奨",
+      "sort_date": "2026-11-30",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/"
     },
     {
       "ingredient": "さば",
@@ -2158,51 +2591,6 @@
     }
   ],
   "all_deals": [
-    {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "北海道産 玉ねぎ",
-      "category": "野菜",
-      "ingredient_name": "玉ねぎ",
-      "price": 37,
-      "unit": "1コ",
-      "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
-      "note": "土物野菜の日"
-    },
-    {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "北海道産 じゃが芋",
-      "category": "その他",
-      "ingredient_name": "北海道産 じゃが芋",
-      "price": 37,
-      "unit": "1コ",
-      "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
-      "note": "土物野菜の日"
-    },
-    {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "千葉県などの国内産 人参",
-      "category": "野菜",
-      "ingredient_name": "ニンジン",
-      "price": 37,
-      "unit": "1本",
-      "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
-      "note": "土物野菜の日"
-    },
     {
       "store_id": "japanmeat",
       "store_name": "ジャパンミート生鮮館 小山店",
@@ -2279,6 +2667,81 @@
       "note": ""
     },
     {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "国産 若鶏むね肉",
+      "category": "精肉（鶏肉）",
+      "ingredient_name": "鶏むね肉",
+      "price": 78,
+      "unit": "100g",
+      "valid_from": "2026-11-29",
+      "valid_to": "2026-11-29",
+      "date_label": "11/29(日)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "堀川 アラスカ倶楽部 (10本)",
+      "category": "その他",
+      "ingredient_name": "堀川 アラスカ倶楽部 (10本)",
+      "price": 88,
+      "unit": "1パック",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "ニッスイ そのままおいしい 生ちくわ (4本)",
+      "category": "その他",
+      "ingredient_name": "ニッスイ そのままおいしい 生ちくわ (4本)",
+      "price": 88,
+      "unit": "1パック",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "国産 若鶏手羽元・手羽先",
+      "category": "その他",
+      "ingredient_name": "国産 若鶏手羽元・手羽先",
+      "price": 88,
+      "unit": "100g",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "茨城などの国内産 白菜",
+      "category": "野菜",
+      "ingredient_name": "白菜",
+      "price": 88,
+      "unit": "1/4カット",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
+    },
+    {
       "store_id": "japanmeat",
       "store_name": "ジャパンミート生鮮館 小山店",
       "chain": "ジャパンミート",
@@ -2306,6 +2769,51 @@
       "valid_from": "2026-11-29",
       "valid_to": "2026-11-29",
       "date_label": "11/29(日)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "宮城県などの国内産 ホクトのぶなしめじ (100g、1袋)",
+      "category": "きのこ類",
+      "ingredient_name": "しめじ",
+      "price": 98,
+      "unit": "1袋",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": "きのこの日"
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "新潟県産 ホクトのエリンギ (1パック)",
+      "category": "きのこ類",
+      "ingredient_name": "エリンギ",
+      "price": 98,
+      "unit": "1パック",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": "きのこの日"
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "ホクトのぶなしめじ",
+      "category": "きのこ類",
+      "ingredient_name": "しめじ",
+      "price": 98,
+      "unit": "1パック",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
       "note": ""
     },
     {
@@ -2429,18 +2937,33 @@
       "note": ""
     },
     {
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "chain": "マルエツ",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/",
-      "product_raw_name": "国産 若どりもも肉",
-      "category": "精肉（鶏肉）",
-      "ingredient_name": "鶏もも肉",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "chain": "とりせん",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
+      "product_raw_name": "国産 豚肉こま切れ",
+      "category": "精肉（豚肉）",
+      "ingredient_name": "豚こま切れ肉",
       "price": 108,
-      "unit": "100g当り",
-      "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
+      "unit": "100gあたり",
+      "valid_from": "2026-11-30",
+      "valid_to": "2026-11-30",
+      "date_label": "11/30(月)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "福島・茨城などの国内産 長ねぎ",
+      "category": "野菜",
+      "ingredient_name": "ネギ",
+      "price": 108,
+      "unit": "1束",
+      "valid_from": "2026-11-29",
+      "valid_to": "2026-11-29",
+      "date_label": "11/29(日)限り",
       "note": ""
     },
     {
@@ -2472,6 +2995,36 @@
       "valid_to": "2026-11-28",
       "date_label": "11/28(土)限り",
       "note": "お1人様合わせて3点限り"
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "マルちゃん 麺づくり (鶏ガラ醤油・合わせ味噌・ピリ辛豆乳・五香粉香る甘醤油)・カップ焼そば",
+      "category": "その他",
+      "ingredient_name": "マルちゃん 麺づくり (鶏ガラ醤油・合わせ味噌・ピリ辛豆乳・五香粉香る甘醤油)・カップ焼そば",
+      "price": 118,
+      "unit": "1個",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": "カップラーメンの日 一家族様計8コ限り nanaco 10ポイントプレゼント"
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "マルちゃん 赤いきつね・緑のたぬき",
+      "category": "麺類・インスタント",
+      "ingredient_name": "カップラーメン",
+      "price": 118,
+      "unit": "1コ",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
     },
     {
       "store_id": "japanmeat",
@@ -2534,6 +3087,36 @@
       "note": ""
     },
     {
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "chain": "とりせん",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
+      "product_raw_name": "甘熟王バナナ",
+      "category": "季節の果物",
+      "ingredient_name": "バナナ",
+      "price": 128,
+      "unit": "1袋",
+      "valid_from": "2026-11-30",
+      "valid_to": "2026-11-30",
+      "date_label": "11/30(月)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "宮城県産または茨城県産 ピーマン",
+      "category": "その他",
+      "ingredient_name": "宮城県産または茨城県産 ピーマン",
+      "price": 128,
+      "unit": "1袋",
+      "valid_from": "2026-11-30",
+      "valid_to": "2026-11-30",
+      "date_label": "11/30(月)限り",
+      "note": ""
+    },
+    {
       "store_id": "maruetsu",
       "store_name": "マルエツ 小山店",
       "chain": "マルエツ",
@@ -2549,18 +3132,33 @@
       "note": ""
     },
     {
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "chain": "マルエツ",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/",
-      "product_raw_name": "埼玉県または他国内産 ブロッコリー",
-      "category": "野菜",
-      "ingredient_name": "ブロッコリー",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "chain": "とりせん",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
+      "product_raw_name": "和歌山県などの国内産 柿",
+      "category": "季節の果物",
+      "ingredient_name": "柿",
       "price": 148,
       "unit": "1コ",
-      "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "明治 ブルガリアヨーグルト",
+      "category": "日配品・大豆製品",
+      "ingredient_name": "ヨーグルト",
+      "price": 158,
+      "unit": "1コ",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
       "note": ""
     },
     {
@@ -2607,6 +3205,36 @@
       "valid_to": "2026-11-29",
       "date_label": "11/29(日)限り",
       "note": "3コで480円"
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "青森県などの国内産 ふじりんご",
+      "category": "季節の果物",
+      "ingredient_name": "りんご",
+      "price": 178,
+      "unit": "1個",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "徳島などの国内産 れんこん",
+      "category": "野菜",
+      "ingredient_name": "れんこん",
+      "price": 178,
+      "unit": "100g",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
     },
     {
       "store_id": "beisia",
@@ -2658,14 +3286,29 @@
       "store_name": "ヨークベニマル 小山雨ヶ谷店",
       "chain": "ヨークベニマル",
       "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "タカナシ 北海道 さわやか酪農",
-      "category": "その他",
-      "ingredient_name": "タカナシ 北海道 さわやか酪農",
-      "price": 197,
-      "unit": "1本 (1,000ml)",
-      "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
+      "product_raw_name": "茨城などの国内産 キャベツ",
+      "category": "野菜",
+      "ingredient_name": "キャベツ",
+      "price": 198,
+      "unit": "1コ",
+      "valid_from": "2026-11-29",
+      "valid_to": "2026-11-29",
+      "date_label": "11/29(日)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "フィリピン産 バナナ（甘熟王）",
+      "category": "季節の果物",
+      "ingredient_name": "バナナ",
+      "price": 198,
+      "unit": "1袋",
+      "valid_from": "2026-11-30",
+      "valid_to": "2026-11-30",
+      "date_label": "11/30(月)限り",
       "note": ""
     },
     {
@@ -2774,6 +3417,21 @@
       "note": "1パック限り"
     },
     {
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "chain": "とりせん",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
+      "product_raw_name": "たまご 10個入",
+      "category": "日配品・大豆製品",
+      "ingredient_name": "卵",
+      "price": 228,
+      "unit": "1パック",
+      "valid_from": "2026-11-29",
+      "valid_to": "2026-11-29",
+      "date_label": "11/29(日)限り",
+      "note": "お1家族様1パック限り"
+    },
+    {
       "store_id": "beisia",
       "store_name": "ベイシア Foods Park 結城店",
       "chain": "ベイシア",
@@ -2849,6 +3507,21 @@
       "note": ""
     },
     {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "天然ぶり切身",
+      "category": "その他",
+      "ingredient_name": "天然ぶり切身",
+      "price": 298,
+      "unit": "100g",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
+    },
+    {
       "store_id": "japanmeat",
       "store_name": "ジャパンミート生鮮館 小山店",
       "chain": "ジャパンミート",
@@ -2877,21 +3550,6 @@
       "valid_to": "2026-11-30",
       "date_label": "11/21(土)〜11/30(月)",
       "note": ""
-    },
-    {
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "chain": "マルエツ",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/",
-      "product_raw_name": "熊本県または他国内産 ミニトマト（徳用）",
-      "category": "野菜",
-      "ingredient_name": "トマト",
-      "price": 299,
-      "unit": "1パック（400g入）",
-      "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
-      "note": "400g入 大量目がおトク！"
     },
     {
       "store_id": "maruetsu",
@@ -2999,6 +3657,36 @@
       "note": ""
     },
     {
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "chain": "ベイシア",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/",
+      "product_raw_name": "ミックスチーズ",
+      "category": "日配品・大豆製品",
+      "ingredient_name": "チーズ",
+      "price": 359,
+      "unit": "1袋 (200g+30g)",
+      "valid_from": "2026-11-25",
+      "valid_to": "2026-12-01",
+      "date_label": "11/25(水)〜12/01(火)",
+      "note": "30g増量 (200g+30g)"
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "福島・茨城などの国内産 きゅうり",
+      "category": "野菜",
+      "ingredient_name": "きゅうり",
+      "price": 378,
+      "unit": "1袋",
+      "valid_from": "2026-11-29",
+      "valid_to": "2026-11-29",
+      "date_label": "11/29(日)限り",
+      "note": ""
+    },
+    {
       "store_id": "maruetsu",
       "store_name": "マルエツ 小山店",
       "chain": "マルエツ",
@@ -3027,6 +3715,66 @@
       "valid_to": "2026-11-28",
       "date_label": "11/28(土)限り",
       "note": "11/28土限定"
+    },
+    {
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "chain": "とりせん",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
+      "product_raw_name": "フィリピン産 パイン ブロック",
+      "category": "その他",
+      "ingredient_name": "フィリピン産 パイン ブロック",
+      "price": 380,
+      "unit": "1パック",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "昆布仕込み塩ほっけ",
+      "category": "魚介類",
+      "ingredient_name": "ほっけ",
+      "price": 398,
+      "unit": "1パック",
+      "valid_from": "2026-11-29",
+      "valid_to": "2026-11-29",
+      "date_label": "11/29(日)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "刺身用 きはだまぐろ切出し",
+      "category": "魚介類",
+      "ingredient_name": "まぐろ",
+      "price": 398,
+      "unit": "100g",
+      "valid_from": "2026-11-30",
+      "valid_to": "2026-11-30",
+      "date_label": "11/30(月)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "サーモントラウト切身",
+      "category": "魚介類",
+      "ingredient_name": "鮭",
+      "price": 398,
+      "unit": "100g",
+      "valid_from": "2026-11-30",
+      "valid_to": "2026-11-30",
+      "date_label": "11/30(月)限り",
+      "note": ""
     },
     {
       "store_id": "beisia",
@@ -3254,18 +4002,18 @@
       "note": "11/27金〜30月の4日間"
     },
     {
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "chain": "マルエツ",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/",
-      "product_raw_name": "蒸しだこ（真だこ）",
-      "category": "その他",
-      "ingredient_name": "蒸しだこ（真だこ）",
-      "price": 499,
-      "unit": "100g当り",
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "chain": "とりせん",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
+      "product_raw_name": "山形県産 ラ・フランス (洋梨)",
+      "category": "季節の果物",
+      "ingredient_name": "なし",
+      "price": 498,
+      "unit": "4コ入 1パック",
       "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
+      "valid_to": "2026-11-30",
+      "date_label": "11/27(金)〜11/30(月)",
       "note": ""
     },
     {
@@ -3288,30 +4036,15 @@
       "store_name": "ヨークベニマル 小山雨ヶ谷店",
       "chain": "ヨークベニマル",
       "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "刺身用解凍 きはだまぐろ角切り",
-      "category": "魚介類",
-      "ingredient_name": "まぐろ",
-      "price": 500,
-      "unit": "200g",
-      "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
-      "note": "お魚コーナー"
-    },
-    {
-      "store_id": "york_benimaru",
-      "store_name": "ヨークベニマル 小山雨ヶ谷店",
-      "chain": "ヨークベニマル",
-      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "product_raw_name": "えびフライ",
-      "category": "その他",
-      "ingredient_name": "えびフライ",
-      "price": 500,
-      "unit": "14尾、1パック",
-      "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
-      "note": "お魚コーナー"
+      "product_raw_name": "愛媛などの国内産 みかん",
+      "category": "季節の果物",
+      "ingredient_name": "みかん",
+      "price": 550,
+      "unit": "1パック",
+      "valid_from": "2026-11-29",
+      "valid_to": "2026-11-29",
+      "date_label": "11/29(日)限り",
+      "note": ""
     },
     {
       "store_id": "japanmeat",
@@ -3359,6 +4092,21 @@
       "note": "11/27金〜30月の4日間"
     },
     {
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "chain": "とりせん",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
+      "product_raw_name": "青森県その他国内産 ぐんま名月 りんご",
+      "category": "季節の果物",
+      "ingredient_name": "りんご",
+      "price": 598,
+      "unit": "大玉2コ入 1パック",
+      "valid_from": "2026-11-27",
+      "valid_to": "2026-11-30",
+      "date_label": "11/27(金)〜11/30(月)",
+      "note": ""
+    },
+    {
       "store_id": "japanmeat",
       "store_name": "ジャパンミート生鮮館 小山店",
       "chain": "ジャパンミート",
@@ -3401,6 +4149,21 @@
       "valid_from": "2026-11-29",
       "valid_to": "2026-11-29",
       "date_label": "11/29(日)限り",
+      "note": ""
+    },
+    {
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "chain": "とりせん",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
+      "product_raw_name": "伊藤ハム The GRAND アルトバイエルン",
+      "category": "その他",
+      "ingredient_name": "伊藤ハム The GRAND アルトバイエルン",
+      "price": 680,
+      "unit": "1袋",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
       "note": ""
     },
     {
@@ -3524,6 +4287,21 @@
       "note": "11/29日限定"
     },
     {
+      "store_id": "torisen",
+      "store_name": "とりせん 小山土塔店",
+      "chain": "とりせん",
+      "flyer_url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
+      "product_raw_name": "栃木県その他国内産 いちご",
+      "category": "その他",
+      "ingredient_name": "栃木県その他国内産 いちご",
+      "price": 798,
+      "unit": "1パック",
+      "valid_from": "2026-11-29",
+      "valid_to": "2026-11-29",
+      "date_label": "11/29(日)限り",
+      "note": ""
+    },
+    {
       "store_id": "japanmeat",
       "store_name": "ジャパンミート生鮮館 小山店",
       "chain": "ジャパンミート",
@@ -3563,6 +4341,51 @@
       "ingredient_name": "豪州産または牛・豚交雑種 国産牛 サーロインステーキ用",
       "price": 899,
       "unit": "100g当り",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": ""
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "刺身用生本まぐろ 中トロサク (養殖、100g)",
+      "category": "魚介類",
+      "ingredient_name": "まぐろ",
+      "price": 980,
+      "unit": "100g",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": "まぐろの日"
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "中国産 うなぎ蒲焼 (串) (3串、1パック)",
+      "category": "その他",
+      "ingredient_name": "中国産 うなぎ蒲焼 (串) (3串、1パック)",
+      "price": 980,
+      "unit": "1パック",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-28",
+      "date_label": "11/28(土)限り",
+      "note": "まぐろの日"
+    },
+    {
+      "store_id": "york_benimaru",
+      "store_name": "ヨークベニマル 小山雨ヶ谷店",
+      "chain": "ヨークベニマル",
+      "flyer_url": "https://tokubai.co.jp/ヨークベニマル/9580/",
+      "product_raw_name": "天然きはだまぐろ",
+      "category": "魚介類",
+      "ingredient_name": "まぐろ",
+      "price": 980,
+      "unit": "1柵",
       "valid_from": "2026-11-28",
       "valid_to": "2026-11-28",
       "date_label": "11/28(土)限り",
@@ -3693,21 +4516,6 @@
       "store_name": "マルエツ 小山店",
       "chain": "マルエツ",
       "flyer_url": "https://www.maruetsu.co.jp/store/9219/",
-      "product_raw_name": "しらす干",
-      "category": "魚介類",
-      "ingredient_name": "しらす",
-      "price": 1000,
-      "unit": "1パック（260g入）",
-      "valid_from": "2026-11-27",
-      "valid_to": "2026-11-27",
-      "date_label": "11/27(金)限り",
-      "note": "260g入"
-    },
-    {
-      "store_id": "maruetsu",
-      "store_name": "マルエツ 小山店",
-      "chain": "マルエツ",
-      "flyer_url": "https://www.maruetsu.co.jp/store/9219/",
       "product_raw_name": "蒸しほたて貝",
       "category": "その他",
       "ingredient_name": "蒸しほたて貝",
@@ -3779,6 +4587,21 @@
       "note": ""
     },
     {
+      "store_id": "beisia",
+      "store_name": "ベイシア Foods Park 結城店",
+      "chain": "ベイシア",
+      "flyer_url": "https://www.shufoo.net/pntweb/shopDetail/239309/",
+      "product_raw_name": "生食用 まぐろ中とろ",
+      "category": "魚介類",
+      "ingredient_name": "まぐろ",
+      "price": 1290,
+      "unit": "1パック",
+      "valid_from": "2026-11-28",
+      "valid_to": "2026-11-29",
+      "date_label": "11/28(土)〜11/29(日)",
+      "note": "28日・29日限り"
+    },
+    {
       "store_id": "japanmeat",
       "store_name": "ジャパンミート生鮮館 小山店",
       "chain": "ジャパンミート",
@@ -3832,7 +4655,7 @@
       "type": "tokubai",
       "area": "小山市雨ケ谷町",
       "url": "https://tokubai.co.jp/ヨークベニマル/9580/",
-      "flyer_period": "11月27日更新"
+      "flyer_period": "11月28日更新"
     },
     {
       "id": "torisen",
@@ -3842,7 +4665,7 @@
       "area": "小山市土塔",
       "shufoo_id": "269396",
       "url": "https://www.torisen.co.jp/shop/oyamashi/%e5%b0%8f%e5%b1%b1%e5%9c%9f%e5%a1%94%e5%ba%97/",
-      "flyer_period": "11/27号_"
+      "flyer_period": "本日更新! (特売: 11/28〜11/30)"
     },
     {
       "id": "tairaya",
@@ -3860,7 +4683,7 @@
       "type": "shufoo",
       "area": "結城市・小山日常圏",
       "url": "https://www.shufoo.net/pntweb/shopDetail/239309/",
-      "flyer_period": "11/25号 BLACK FRIDAY (特売: 11/28〜12/01)"
+      "flyer_period": "本日更新! (特売: 11/28〜12/01)"
     },
     {
       "id": "otani",
@@ -3887,7 +4710,7 @@
       "type": "tokubai",
       "area": "小山市城東",
       "url": "https://tokubai.co.jp/%E3%83%A4%E3%82%AA%E3%83%8F%E3%83%B3/259695",
-      "flyer_period": "11月27日更新"
+      "flyer_period": "11月28日更新"
     },
     {
       "id": "joyfoods",
@@ -3896,7 +4719,7 @@
       "type": "shufoo",
       "area": "小山市西城南",
       "url": "https://www.shufoo.net/pntweb/shopDetail/860898/",
-      "flyer_period": "ジョイフーズ★11/24～11/30★"
+      "flyer_period": "ジョイフーズ★11/28～11/30★"
     },
     {
       "id": "trial",
@@ -3923,7 +4746,7 @@
       "type": "official",
       "area": "小山市城山町",
       "url": "https://www.maruetsu.co.jp/store/9219/",
-      "flyer_period": "公式Webチラシ掲載中"
+      "flyer_period": "本日更新! (特売: 11/28〜11/30)"
     },
     {
       "id": "japanmeat",
@@ -3932,7 +4755,7 @@
       "type": "shufoo",
       "area": "小山市喜沢",
       "url": "https://www.shufoo.net/pntweb/shopDetail/898425/",
-      "flyer_period": "11月21日号 (特売: 11/21〜11/30)"
+      "flyer_period": "11月28日号 (特売: 11/21〜11/30)"
     },
     {
       "id": "kawachi",
